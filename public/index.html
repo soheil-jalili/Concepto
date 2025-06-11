@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Concepto</title>
     <link rel="stylesheet" href="assets/css/output.css" />
-    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/svg">
+    <link rel="shortcut icon" href="assets/images/logo.svg" type="image/svg" />
   </head>
   <body>
     <svg class="hidden">
-      <svg
+      <symbol
         xmlns="http://www.w3.org/2000/svg"
-        width="199"
-        height="24"
         viewBox="0 0 199 24"
         fill="none"
         id="logo"
@@ -71,7 +69,103 @@
           d="M187.011 -0.000244141C184.806 -0.000244141 182.795 0.512304 180.958 1.5358C179.122 2.55946 177.66 3.98308 176.58 5.80762C175.5 7.63233 174.959 9.69196 174.959 11.984C174.959 14.2759 175.5 16.3349 176.58 18.1707C177.66 20.0066 179.122 21.4399 180.958 22.4636C182.795 23.4871 184.806 23.9997 187.011 23.9997C189.214 23.9997 191.237 23.4871 193.063 22.4636C194.888 21.4399 196.331 20.0064 197.4 18.1707C198.469 16.3349 199 14.2759 199 11.984C199 9.69196 198.478 7.63233 197.421 5.80762C196.363 3.98308 194.911 2.55946 193.074 1.5358C191.237 0.512304 189.214 -0.000244141 187.011 -0.000244141ZM187.011 5.17641C188.881 5.17641 190.382 5.79323 191.505 7.02815C192.629 8.26322 193.189 9.91441 193.189 11.984C193.189 14.0311 192.629 15.6725 191.505 16.9187C190.382 18.1648 188.881 18.7915 187.011 18.7915C185.118 18.7915 183.619 18.1747 182.494 16.9396C181.371 15.7047 180.8 14.0533 180.8 11.984C180.8 9.89218 181.371 8.23107 182.494 7.00719C183.619 5.78332 185.118 5.17641 187.011 5.17641Z"
           fill="#0D6EFD"
         />
-      </svg>
+      </symbol>
+
+      <symbol
+        id="search"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        />
+      </symbol>
+
+      <symbol
+        id="bolt"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z"
+        />
+      </symbol>
+
+      <symbol
+        id="login"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+        />
+      </symbol>
     </svg>
+
+    <!-- Start Header -->
+    <header class="pt-6">
+      <div class="container">
+        <!-- Start Main Header Item -->
+        <div class="flex__center">
+          <div class="flex items-center gap-x-6">
+            <!-- Logo -->
+            <a href="#">
+              <svg class="w-49.5 h-6">
+                <use href="#logo"></use>
+              </svg>
+            </a>
+
+            <form
+              action="#"
+              class="w-[439px] h-12 bg-search_box rounded-xl flex items-center gap-x-2.5 px-2"
+            >
+              <button class="cursor-pointer">
+                <svg class="w-6 h-6 text-placeholder">
+                  <use href="#search"></use>
+                </svg>
+              </button>
+              <input
+                type="text"
+                placeholder="جستجو کسب‌ و کار"
+                class="w-full outline-none placeholder:text-placeholder"
+              />
+            </form>
+          </div>
+
+          <div class="flex items-center gap-x-4">
+            <a href="#" class="flex items-center gap-x-2 bg-primary text-white px-4 rounded-xl h-12">
+              <svg class="w-6 h-6">
+                <use href="#bolt"></use>
+              </svg>
+              رایگان شروع کن!
+            </a>
+            <a href="#" class="flex items-center gap-x-2 border border-gray-8 px-4 rounded-xl h-12">
+              <svg class="w-6 h-6">
+                <use href="#login"></use>
+              </svg>
+              ورود/ثبت نام</a
+            >
+          </div>
+        </div>
+        <!-- End Main Header Item -->
+      </div>
+    </header>
+    <!-- End Header -->
   </body>
 </html>
