@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# dotenv environment variables
+.env
+.env.*
+
+# Build output
+dist/
+build/
+public/build/
+out/
+.next/
+.svelte-kit/
+
+# Tailwind CSS generated files
+*.css.map
+*.tmp.css
+*.tmp
+*.cache/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Misc
+*.local
