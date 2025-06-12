@@ -131,28 +131,48 @@
           d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
         />
       </symbol>
+
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        id="close"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </symbol>
     </svg>
 
     <!-- Start Header -->
-    <header class="lg:pt-6 pt-3">
+    <header
+      class="lg:pt-6 pt-3 border-b border-b-search_box md:border-none pb-4 md:pb-0"
+    >
       <div class="container">
         <!-- Start Main Header Item -->
         <div class="flex flex-wrap md:flex-nowrap items-center gap-3">
-          <button class="md:hidden w-8 h-8 rounded-lg bg-search_box justify-center flex items-center cursor-pointer">
+          <button
+            class="md:hidden w-8 h-8 rounded-lg bg-search_box justify-center flex items-center cursor-pointer"
+            id="btn__menu"
+          >
             <svg class="w-5 h-5">
               <use href="#bars"></use>
             </svg>
           </button>
 
           <a href="#">
-            <svg class="lg:w-49.5 lg:h-6 w-25 h-4">
+            <svg class="md:w-30.5 lg:w-49.5 lg:h-6 w-25 h-4">
               <use href="#logo"></use>
             </svg>
           </a>
 
           <form
             action="#"
-            class="order-1 md:order-none lg:order-none w-full lg:w-[439px] h-12 bg-search_box rounded-xl flex items-center gap-x-2.5 px-2"
+            class="order-1 md:order-none lg:order-none w-full md:w-[439px] h-12 bg-search_box rounded-xl flex items-center gap-x-2.5 px-2"
           >
             <button class="cursor-pointer">
               <svg class="w-6 h-6 text-placeholder">
@@ -166,7 +186,9 @@
             />
           </form>
 
-          <div class="flex items-center gap-x-2 lg:gap-x-4 mr-auto max-[310px]:hidden">
+          <div
+            class="flex items-center gap-x-2 lg:gap-x-4 mr-auto max-[310px]:hidden"
+          >
             <a
               href="#"
               class="flex items-center gap-x-2 bg-primary text-white px-4 rounded-xl h-12 text-lg shrink-0"
@@ -187,7 +209,6 @@
             </a>
           </div>
         </div>
-
         <!-- End Main Header Item -->
 
         <!-- Start Sub Header -->
@@ -209,8 +230,35 @@
           </li>
         </ul>
         <!-- End Sub Header -->
+
+        <!-- Start Mobile Menu -->
+        <div
+          class="fixed w-1/2 px-3 bg-search_box md:hidden bottom-0 -right-1/2 to-0 h-full transition-all z-50"
+          id="menu__items"
+        >
+          <div class="flex items-center justify-between mt-2">
+            <a href="#">
+              <svg class="w-20 h-6">
+                <use href="#logo"></use>
+              </svg>
+            </a>
+
+            <button class="cursor-pointer" id="closeBtn">
+              <svg class="w-5 h-5">
+                <use href="#close"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- End Mobile Menu -->
       </div>
     </header>
     <!-- End Header -->
+
+    <div
+      class="fixed opacity-0 invisible w-full h-full top-0 right-0 left-0 bottom-0 bg-black/20"
+      id="overlay"
+    ></div>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
