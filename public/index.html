@@ -146,6 +146,19 @@
           d="M6 18 18 6M6 6l12 12"
         />
       </symbol>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        id="left-arrow"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+          clip-rule="evenodd"
+        />
+      </svg>
     </svg>
 
     <!-- Start Header -->
@@ -294,10 +307,50 @@
     </header>
     <!-- End Header -->
 
+    <!-- Start Main -->
+    <main>
+      <div class="container">
+        <!-- Hero Section -->
+        <section class="mt-23 flex flex-col gap-y-6 text-center">
+          <h1 class="text-Primary_shade_7 font-IRANSansX-Bold text-[56px]">
+            با سرچ کمتر نتیجه بهتر بگیر
+          </h1>
+          <p class="text-Primary_shade_5">
+            کانسپتو اولین مرجع معتبر معرفی استارتاپ ها و شرکت های ایرانی
+          </p>
+
+          <div class="flex items-center gap-x-4 justify-center">
+            <a
+              href="#"
+              class="flex items-center gap-x-2 bg-primary text-white px-4 rounded-xl h-12 text-lg shrink-0"
+            >
+              <svg class="w-6 h-6">
+                <use href="#bolt"></use>
+              </svg>
+              <span class="hidden xl:inline-block"> رایگان شروع کن! </span>
+            </a>
+            <a
+              href="#"
+              class="flex items-center gap-x-2 border border-gray-8 px-4 rounded-xl h-12 text-lg shrink-0"
+            >
+              <span class="hidden xl:inline-block">درباره کانسپتو</span>
+              <svg class="w-6 h-6">
+                <use href="#left-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- End Main -->
+
+    <!-- Start Overlay -->
     <div
       class="fixed opacity-0 invisible w-full h-full top-0 right-0 left-0 bottom-0 bg-black/20"
       id="overlay"
     ></div>
+    <!-- End Overlay -->
+
     <script src="assets/js/app.js"></script>
   </body>
 </html>
