@@ -178,17 +178,17 @@
           </button>
 
           <a href="#">
-            <svg class="md:w-30.5 lg:w-49.5 lg:h-6 w-25 h-4">
+            <svg class="md:w-30.5 lg:w-49.5 lg:h-6 w-25 h-4 max-[190px]:hidden">
               <use href="#logo"></use>
             </svg>
           </a>
 
           <form
             action="#"
-            class="order-1 md:order-none lg:order-none w-full md:w-[439px] h-12 bg-search_box rounded-xl flex items-center gap-x-2.5 px-2"
+            class="order-1 md:order-none max-[224px]:gap-x-1 lg:order-none w-full md:w-[439px] h-12 bg-search_box rounded-xl flex items-center gap-x-2.5 px-2"
           >
             <button class="cursor-pointer">
-              <svg class="w-6 h-6 text-placeholder">
+              <svg class="w-6 h-6 text-placeholder" id="search__icon">
                 <use href="#search"></use>
               </svg>
             </button>
@@ -196,6 +196,7 @@
               type="text"
               placeholder="جستجو کسب‌ و کار"
               class="w-full outline-none placeholder:text-placeholder"
+              id="search__input"
             />
           </form>
 
@@ -250,7 +251,7 @@
           id="menu__items"
         >
           <div
-            class="flex items-center border-b border-search_box pb-2 justify-between mt-2"
+            class="flex items-center border-b border-search_box pb-2 justify-between mt-2 max-[160px]:flex-wrap max-[160px]:justify-center"
           >
             <a href="#">
               <svg class="w-20 h-6">
@@ -333,13 +334,13 @@
               <svg class="w-6 h-6">
                 <use href="#bolt"></use>
               </svg>
-              <span class="xl:inline-block"> رایگان شروع کن! </span>
+              <span class="max-[201px]:hidden"> رایگان شروع کن! </span>
             </a>
             <a
               href="#"
               class="flex items-center gap-x-2 border border-gray-8 px-4 rounded-xl h-12 text-lg shrink-0"
             >
-              <span class="xl:inline-block">درباره کانسپتو</span>
+              <span class="max-[201px]:hidden">درباره کانسپتو</span>
               <svg class="w-6 h-6">
                 <use href="#left-arrow"></use>
               </svg>
@@ -353,19 +354,91 @@
             <img
               src="assets/images/hero/2.png"
               alt="Hero 2"
-              class="w-[1016px] h-[588.26px]"
+              class="md:block w-[1016px] h-[588.26px] max-[460px]:hidden"
             />
-
             <img
               src="assets/images/hero/3.png"
               alt="Hero 3"
-              class="w-[287px] absolute lg:-right-[2rem] lg:-top-[8rem] xl:-top-[7rem] xl:-right-[7rem] hidden lg:block"
+              class="hidden w-[287px] absolute right-0 top-0 lg:block lg:-right-[2rem] lg:-top-[8rem] xl:-top-[7rem] xl:-right-[7rem]"
             />
             <img
               src="assets/images/hero/1.png"
               alt="Hero 1"
-              class="absolute -bottom-[8rem] hidden xl:-left-[-4rem] xl:block 2xl:lg:-left-[7rem] max-w-[447px]"
+              class="absolute -bottom-[8rem] hidden xl:block xl:-left-[5rem] 2xl:-left-[7rem] max-w-[447px]"
             />
+            <img
+              src="assets/images/hero/hero_mobile.png"
+              alt="Hero 1"
+              class="w-full h-auto object-cover max-[460px]:block hidden"
+            />
+          </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="py-3 lg:py-20 xl:py-42">
+          <div
+            class="flex flex-wrap md:flex-wrap gap-y-8 items-center justify-between lg:gap-x-5 xl:gap-x-6"
+          >
+            <div
+              class="flex items-center max-[420px]:flex-col gap-x-2.5 max-[420px]:mx-auto"
+            >
+              <div
+                class="max-[162px]:w-13 max-[162px]:h-13 w-[85px] h-[85px] bg-secondary_tint_3 rounded-full max-[310px]:flex-col shrink"
+              ></div>
+
+              <div
+                class="flex gap-x-4 items-center max-[420px]:translate-x-0 max-[640px]:translate-x-14 sm:translate-x-10 flex-wrap max-[311px]:mt-3 max-[228px]:text-center max-[363px]:justify-center max-[363px]:mt-4"
+              >
+                <span
+                  class="left_to_right text-[30px] font-IRANSansX-Medium max-[190px]:text-lg"
+                  >+112,610</span
+                >
+                <span class="text-xl shrink-0 line-clamp-2 max-[190px]:text-lg"
+                  >شرکت فعال</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex items-center max-[420px]:flex-col gap-x-2.5 max-[420px]:mx-auto"
+            >
+              <div
+                class="max-[162px]:w-13 max-[162px]:h-13 w-[85px] h-[85px] bg-secondary_tint_3 rounded-full max-[310px]:flex-col shrink"
+              ></div>
+
+              <div
+                class="flex gap-x-4 items-center max-[420px]:translate-x-0 max-[640px]:translate-x-14 sm:translate-x-10 flex-wrap max-[311px]:mt-3 max-[228px]:text-center max-[363px]:justify-center max-[363px]:mt-4"
+              >
+                <span
+                  class="left_to_right text-[30px] font-IRANSansX-Medium max-[190px]:text-lg"
+                  >+11</span
+                >
+                <span class="text-xl max-[310px]:text-lg max-[190px]:text-lg"
+                  >میلیارد تومان سرمایه گذاری</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex items-center max-[420px]:flex-col gap-x-2.5 max-[420px]:mx-auto"
+            >
+              <div
+                class="max-[162px]:w-13 max-[162px]:h-13 w-[85px] h-[85px] bg-secondary_tint_3 rounded-full max-[310px]:flex-col shrink"
+              ></div>
+
+              <div
+                class="flex gap-x-4 items-center max-[420px]:translate-x-0 max-[640px]:translate-x-14 sm:translate-x-10 flex-wrap max-[311px]:mt-3 max-[228px]:text-center max-[363px]:justify-center max-[363px]:mt-4"
+              >
+                <span
+                  class="left_to_right text-[30px] font-IRANSansX-Medium max-[190px]:text-lg"
+                  >+496</span
+                >
+                <span
+                  class="text-xl max-[310px]:text-lg line-clamp-2 max-[190px]:text-lg"
+                  >سرمایه گذار</span
+                >
+              </div>
+            </div>
           </div>
         </section>
       </div>
