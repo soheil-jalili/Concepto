@@ -311,15 +311,21 @@
     <main>
       <div class="container">
         <!-- Hero Section -->
-        <section class="mt-23 flex flex-col gap-y-6 text-center mb-8">
-          <h1 class="text-Primary_shade_7 font-IRANSansX-Bold text-[56px]">
+        <section
+          class="mt-8 lg:mt-20 flex flex-col gap-y-6 max-[310px]:gap-y-4 text-center mb-8"
+        >
+          <h1
+            class="text-Primary_shade_7 font-IRANSansX-Bold text-xl md:text-[56px]"
+          >
             با سرچ کمتر نتیجه بهتر بگیر
           </h1>
           <p class="text-Primary_shade_5">
             کانسپتو اولین مرجع معتبر معرفی استارتاپ ها و شرکت های ایرانی
           </p>
 
-          <div class="flex items-center gap-x-4 justify-center">
+          <div
+            class="flex items-center gap-x-4 justify-center flex-wrap gap-y-2"
+          >
             <a
               href="#"
               class="flex items-center gap-x-2 bg-primary text-white px-4 rounded-xl h-12 text-lg shrink-0"
@@ -327,13 +333,13 @@
               <svg class="w-6 h-6">
                 <use href="#bolt"></use>
               </svg>
-              <span class="hidden xl:inline-block"> رایگان شروع کن! </span>
+              <span class="xl:inline-block"> رایگان شروع کن! </span>
             </a>
             <a
               href="#"
               class="flex items-center gap-x-2 border border-gray-8 px-4 rounded-xl h-12 text-lg shrink-0"
             >
-              <span class="hidden xl:inline-block">درباره کانسپتو</span>
+              <span class="xl:inline-block">درباره کانسپتو</span>
               <svg class="w-6 h-6">
                 <use href="#left-arrow"></use>
               </svg>
@@ -341,7 +347,9 @@
           </div>
 
           <!-- Hero Images -->
-          <div class="flex flex-col justify-center mt-5 relative mx-auto">
+          <div
+            class="flex flex-col justify-center mt-5 relative mx-auto *:object-cover *:h-auto"
+          >
             <img
               src="assets/images/hero/2.png"
               alt="Hero 2"
@@ -351,12 +359,12 @@
             <img
               src="assets/images/hero/3.png"
               alt="Hero 3"
-              class="w-[287px] h-[465px] absolute -top-[7rem] -right-[7rem]"
+              class="w-[287px] absolute lg:-right-[2rem] lg:-top-[8rem] xl:-top-[7rem] xl:-right-[7rem] hidden lg:block"
             />
             <img
               src="assets/images/hero/1.png"
               alt="Hero 1"
-              class="absolute -bottom-[8rem] -left-[9rem]"
+              class="absolute -bottom-[8rem] hidden xl:-left-[-4rem] xl:block 2xl:lg:-left-[7rem] max-w-[447px]"
             />
           </div>
         </section>
