@@ -233,10 +233,12 @@
 
         <!-- Start Mobile Menu -->
         <div
-          class="fixed w-1/2 px-3 bg-search_box md:hidden bottom-0 -right-1/2 to-0 h-full transition-all z-50"
+          class="fixed w-1/2 max-[310px]:w-3/4 max-[310px]:-right-3/4 px-3 bg-white md:hidden bottom-0 -right-1/2 to-0 h-full transition-all z-50"
           id="menu__items"
         >
-          <div class="flex items-center justify-between mt-2">
+          <div
+            class="flex items-center border-b border-search_box pb-2 justify-between mt-2"
+          >
             <a href="#">
               <svg class="w-20 h-6">
                 <use href="#logo"></use>
@@ -248,6 +250,43 @@
                 <use href="#close"></use>
               </svg>
             </button>
+          </div>
+
+          <!-- Mobile Menu Item -->
+          <ul
+            class="flex gap-y-6 mt-5 pb-5 max-[310px]:border-b border-b-search_box flex-col"
+          >
+            <li>
+              <a href="#">شرکت ها</a>
+            </li>
+            <li>
+              <a href="#">فرصت های شغلی</a>
+            </li>
+            <li>
+              <a href="#">اخبار و رویدادها</a>
+            </li>
+            <li>
+              <a href="#">درباره ما</a>
+            </li>
+            <li>
+              <a href="#">تماس با ما</a>
+            </li>
+          </ul>
+
+          <!-- Main Btns max:[310px] -->
+          <div class="mt-3 hidden max-[310px]:flex flex-col gap-y-6">
+            <a href="#" class="flex items-center gap-x-2 shrink-0">
+              <svg class="w-5 h-5">
+                <use href="#bolt"></use>
+              </svg>
+              <span> رایگان شروع کن! </span>
+            </a>
+            <a href="#" class="flex items-center gap-x-2 shrink-0">
+              <svg class="w-5 h-5">
+                <use href="#login"></use>
+              </svg>
+              <span> ورود/ثبت نام </span>
+            </a>
           </div>
         </div>
         <!-- End Mobile Menu -->
