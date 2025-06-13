@@ -547,6 +547,12 @@
   .py-18 {
     padding-block: calc(var(--spacing) * 18);
   }
+  .py-20 {
+    padding-block: calc(var(--spacing) * 20);
+  }
+  .py-29 {
+    padding-block: calc(var(--spacing) * 29);
+  }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
   }
@@ -564,6 +570,15 @@
   }
   .pb-5 {
     padding-bottom: calc(var(--spacing) * 5);
+  }
+  .pb-18 {
+    padding-bottom: calc(var(--spacing) * 18);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pb-40 {
+    padding-bottom: calc(var(--spacing) * 40);
   }
   .left_to_right {
     text-align: left;
@@ -773,6 +788,16 @@
       justify-content: center;
     }
   }
+  .max-md\:gap-y-4 {
+    @media (width < 48rem) {
+      row-gap: calc(var(--spacing) * 4);
+    }
+  }
+  .max-md\:gap-y-6 {
+    @media (width < 48rem) {
+      row-gap: calc(var(--spacing) * 6);
+    }
+  }
   .max-md\:gap-y-\[4rem\] {
     @media (width < 48rem) {
       row-gap: 4rem;
@@ -781,6 +806,16 @@
   .max-md\:gap-y-\[6rem\] {
     @media (width < 48rem) {
       row-gap: 6rem;
+    }
+  }
+  .max-md\:gap-y-\[9rem\] {
+    @media (width < 48rem) {
+      row-gap: 9rem;
+    }
+  }
+  .max-md\:gap-y-\[rem\] {
+    @media (width < 48rem) {
+      row-gap: rem;
     }
   }
   .sm\:w-auto {
@@ -1030,6 +1065,11 @@
       left: calc(5rem * -1);
     }
   }
+  .xl\:my-40 {
+    @media (width >= 80rem) {
+      margin-block: calc(var(--spacing) * 40);
+    }
+  }
   .xl\:block {
     @media (width >= 80rem) {
       display: block;
@@ -1068,6 +1108,26 @@
   .xl\:py-30 {
     @media (width >= 80rem) {
       padding-block: calc(var(--spacing) * 30);
+    }
+  }
+  .xl\:py-40 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 40);
+    }
+  }
+  .xl\:py-60 {
+    @media (width >= 80rem) {
+      padding-block: calc(var(--spacing) * 60);
+    }
+  }
+  .xl\:pb-4 {
+    @media (width >= 80rem) {
+      padding-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .xl\:pb-40 {
+    @media (width >= 80rem) {
+      padding-bottom: calc(var(--spacing) * 40);
     }
   }
   .\32 xl\:-left-\[7rem\] {
