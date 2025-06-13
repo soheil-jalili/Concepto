@@ -201,7 +201,7 @@
           </form>
 
           <div
-            class="flex items-center gap-x-2 lg:gap-x-4 mr-auto max-[310px]:hidden"
+            class="flex items-center gap-x-2 lg:gap-x-4 mr-auto max-[325px]:hidden"
           >
             <a
               href="#"
@@ -247,7 +247,7 @@
 
         <!-- Start Mobile Menu -->
         <div
-          class="fixed w-1/2 max-[310px]:w-3/4 max-[310px]:-right-3/4 px-3 bg-white md:hidden bottom-0 -right-1/2 to-0 h-full transition-all z-50"
+          class="fixed w-1/2 max-[325px]:w-3/4 max-[325px]:-right-3/4 px-3 bg-white md:hidden bottom-0 -right-1/2 to-0 h-full transition-all z-50"
           id="menu__items"
         >
           <div
@@ -287,8 +287,8 @@
             </li>
           </ul>
 
-          <!-- Main Btns max:[310px] -->
-          <div class="mt-3 hidden max-[310px]:flex flex-col gap-y-6">
+          <!-- Main Btns max:[325px] -->
+          <div class="mt-3 hidden max-[325px]:flex flex-col gap-y-6">
             <a href="#" class="flex items-center gap-x-2 shrink-0">
               <svg class="w-5 h-5">
                 <use href="#bolt"></use>
@@ -443,13 +443,13 @@
         </section>
 
         <!-- Features -->
-        <section class="pb-20">
+        <section class="pb-20 xl:pb-40">
           <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 lg:grid-cols-3 items-center lg:gap-x-6 md:gap-x-4 md:gap-y-6 max-md:gap-y-[4rem]"
           >
             <div class="flex items-center justify-center flex-col">
               <div
-                class="bg-Primary_tint_3 relative rounded-2xl w-full xl:w-full lg:rounded-4xl h-21 md:h-[137px] mb-4 flex justify-center"
+                class="min-[234px]:bg-Primary_tint_3 bg-none relative rounded-2xl w-full xl:w-full lg:rounded-4xl h-21 md:h-[137px] mb-4 flex justify-center"
               >
                 <img
                   src="assets/images/features/feature1.png"
@@ -461,7 +461,7 @@
             </div>
             <div class="flex items-center justify-center flex-col">
               <div
-                class="bg-Primary_tint_5 relative rounded-2xl w-full xl:w-full lg:rounded-4xl h-21 md:h-[137px] mb-4 flex justify-center"
+                class="min-[234px]:bg-Primary_tint_5 bg-none relative rounded-2xl w-full xl:w-full lg:rounded-4xl h-21 md:h-[137px] mb-4 flex justify-center"
               >
                 <img
                   src="assets/images/features/feature2.png"
@@ -473,7 +473,7 @@
             </div>
             <div class="flex items-center justify-center flex-col">
               <div
-                class="bg-Primary_tint_8 relative rounded-2xl w-full xl:w-full lg:rounded-4xl h-21 md:h-[137px] mb-4 flex justify-center"
+                class="min-[234px]:bg-Primary_tint_8 bg-none relative rounded-2xl w-full xl:w-full lg:rounded-4xl h-21 md:h-[137px] mb-4 flex justify-center"
               >
                 <img
                   src="assets/images/features/feature1.png"
@@ -486,9 +486,26 @@
           </div>
         </section>
 
-     
+        <!-- Categories -->
+        <section class="pb-20 xl:pb-40">
+          <!-- Title Categories Section -->
+          <div class="flex items-center gap-x-2">
+            <h4
+              class="text-gray-7 md:text-placeholder shrink-0 text-base md:text-2xl"
+            >
+              دسته بندی ها
+            </h4>
+            <span
+              class="border border-r border-gray-2 w-full max-[210px]:hidden"
+            ></span>
 
-        
+            <div class="lg:hidden">
+              <svg class="w-6 h-6 text-placeholder">
+                <use href="#left-arrow"></use>
+              </svg>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <!-- End Main -->

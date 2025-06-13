@@ -8,7 +8,7 @@ menuBtn.addEventListener("click", () => {
   menuItems.classList.remove(
     "-right-1/2",
     "-right-3/4",
-    "max-[310px]:-right-3/4"
+    "max-[325px]:-right-3/4"
   );
 
   menuItems.classList.add("right-0");
@@ -18,7 +18,7 @@ menuBtn.addEventListener("click", () => {
 const closeMenu = () => {
   menuItems.classList.remove("right-0");
 
-  menuItems.classList.add("-right-1/2", "max-[310px]:-right-3/4");
+  menuItems.classList.add("-right-1/2", "max-[325px]:-right-3/4");
 
   overlay.classList.remove("visible", "opacity-100");
 };
