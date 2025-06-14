@@ -41,7 +41,7 @@
 
   --color-search_box: #e9eaee;
   --color-placeholder: #737993;
-  --color-gray-2: #CBCED7;
+  --color-gray-2: #cbced7;
   --color-gray-7: #444859;
   --color-gray-8: #2e303b;
 
@@ -90,4 +90,11 @@
   #search__icon {
     display: none;
   }
+}
+
+@utility bg__banner {
+  background-image: url("../images/Banner.png");
+  @apply bg-no-repeat bg-cover;
+  width: 100%;
+  height: 470.83px;
 }

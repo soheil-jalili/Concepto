@@ -34,7 +34,7 @@
     --color-Primary_shade_5: #013075;
     --color-search_box: #e9eaee;
     --color-placeholder: #737993;
-    --color-gray-2: #CBCED7;
+    --color-gray-2: #cbced7;
     --color-gray-7: #444859;
     --color-gray-8: #2e303b;
     --color-secondary_tint_3: #ffecb3;
@@ -207,14 +207,8 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .-right-1 {
-    right: calc(var(--spacing) * -1);
-  }
   .-right-1\/2 {
     right: calc(calc(1/2 * 100%) * -1);
-  }
-  .-right-3 {
-    right: calc(var(--spacing) * -3);
   }
   .-right-3\/4 {
     right: calc(calc(3/4 * 100%) * -1);
@@ -280,6 +274,9 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
@@ -304,8 +301,12 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
+  .bg__banner {
+    background-image: url("../images/Banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 470.83px;
   }
   .size-6 {
     width: calc(var(--spacing) * 6);
@@ -340,9 +341,6 @@
   }
   .h-full {
     height: 100%;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -380,26 +378,23 @@
   .max-w-\[447px\] {
     max-width: 447px;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
   .shrink {
     flex-shrink: 1;
   }
   .shrink-0 {
     flex-shrink: 0;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
   }
-  .resize {
-    resize: both;
+  .\[grid-template-columns\:repeat\(4\,56px\)\] {
+    grid-template-columns: repeat(4,56px);
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .\[grid-template-rows\:repeat\(2\,86px\)\] {
+    grid-template-rows: repeat(2,86px);
   }
   .flex-col {
     flex-direction: column;
@@ -428,6 +423,9 @@
   .gap-x-4 {
     column-gap: calc(var(--spacing) * 4);
   }
+  .gap-x-5 {
+    column-gap: calc(var(--spacing) * 5);
+  }
   .gap-x-6 {
     column-gap: calc(var(--spacing) * 6);
   }
@@ -436,6 +434,9 @@
   }
   .gap-y-2 {
     row-gap: calc(var(--spacing) * 2);
+  }
+  .gap-y-5 {
+    row-gap: calc(var(--spacing) * 5);
   }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
@@ -479,18 +480,6 @@
   .border-b-search_box {
     border-bottom-color: var(--color-search_box);
   }
-  .bg-Primary_tint_3 {
-    background-color: var(--color-Primary_tint_3);
-  }
-  .bg-Primary_tint_5 {
-    background-color: var(--color-Primary_tint_5);
-  }
-  .bg-Primary_tint_8 {
-    background-color: var(--color-Primary_tint_8);
-  }
-  .bg-black {
-    background-color: var(--color-black);
-  }
   .bg-black\/20 {
     background-color: color-mix(in srgb, #000 20%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -529,9 +518,6 @@
   }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
-  }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
   }
   .pt-5\.5 {
     padding-top: calc(var(--spacing) * 5.5);
@@ -591,18 +577,11 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-0 {
     opacity: 0%;
   }
   .opacity-100 {
     opacity: 100%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -732,16 +711,6 @@
       display: none;
     }
   }
-  .max-\[210px\]\:bg-Primary_tint_5 {
-    @media (width < 210px) {
-      background-color: var(--color-Primary_tint_5);
-    }
-  }
-  .max-\[210px\]\:bg-none {
-    @media (width < 210px) {
-      background-image: none;
-    }
-  }
   .max-\[201px\]\:hidden {
     @media (width < 201px) {
       display: none;
@@ -783,36 +752,6 @@
       row-gap: 4rem;
     }
   }
-  .min-\[23\]\:bg-Primary_tint_8 {
-    @media (width >= 23) {
-      background-color: var(--color-Primary_tint_8);
-    }
-  }
-  .min-\[234\]\:bg-Primary_tint_8 {
-    @media (width >= 234) {
-      background-color: var(--color-Primary_tint_8);
-    }
-  }
-  .min-\[325\]\:bg-Primary_tint_8 {
-    @media (width >= 325) {
-      background-color: var(--color-Primary_tint_8);
-    }
-  }
-  .min-\[210px\]\:bg-Primary_tint_3 {
-    @media (width >= 210px) {
-      background-color: var(--color-Primary_tint_3);
-    }
-  }
-  .min-\[210px\]\:bg-Primary_tint_5 {
-    @media (width >= 210px) {
-      background-color: var(--color-Primary_tint_5);
-    }
-  }
-  .min-\[210px\]\:bg-Primary_tint_8 {
-    @media (width >= 210px) {
-      background-color: var(--color-Primary_tint_8);
-    }
-  }
   .min-\[234px\]\:bg-Primary_tint_3 {
     @media (width >= 234px) {
       background-color: var(--color-Primary_tint_3);
@@ -825,11 +764,6 @@
   }
   .min-\[234px\]\:bg-Primary_tint_8 {
     @media (width >= 234px) {
-      background-color: var(--color-Primary_tint_8);
-    }
-  }
-  .min-\[325px\]\:bg-Primary_tint_8 {
-    @media (width >= 325px) {
       background-color: var(--color-Primary_tint_8);
     }
   }
@@ -884,9 +818,19 @@
       width: 439px;
     }
   }
+  .md\:\[grid-template-columns\:repeat\(7\,96px\)\] {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(7,96px);
+    }
+  }
   .md\:grid-cols-3 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .md\:\[grid-template-rows\:repeat\(2\,141px\)\] {
+    @media (width >= 48rem) {
+      grid-template-rows: repeat(2,141px);
     }
   }
   .md\:flex-nowrap {
@@ -1100,11 +1044,6 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -1124,7 +1063,6 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-outline-style: solid;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
