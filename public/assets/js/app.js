@@ -25,3 +25,8 @@ const closeMenu = () => {
 
 overlay.addEventListener("click", closeMenu);
 closeBtn.addEventListener("click", closeMenu);
+
+
+
+// Slider
+var swiper = new Swiper(".mySwiper", {});

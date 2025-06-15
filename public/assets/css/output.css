@@ -1,4 +1,4 @@
-/*! tailwindcss v4.1.9 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.1.10 | MIT License | https://tailwindcss.com */
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -10,8 +10,6 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-xs: 0.75rem;
-    --text-xs--line-height: calc(1 / 0.75);
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
@@ -34,7 +32,6 @@
     --color-primary: #0d6efd;
     --color-Primary_shade_7: #00183b;
     --color-Primary_shade_5: #013075;
-    --color-Primary_shade_1: #0260eb;
     --color-search_box: #e9eaee;
     --color-placeholder: #737993;
     --color-gray-2: #cbced7;
@@ -210,14 +207,8 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
-  .-right-1 {
-    right: calc(var(--spacing) * -1);
-  }
   .-right-1\/2 {
     right: calc(calc(1/2 * 100%) * -1);
-  }
-  .-right-3 {
-    right: calc(var(--spacing) * -3);
   }
   .-right-3\/4 {
     right: calc(calc(3/4 * 100%) * -1);
@@ -310,9 +301,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .bg__banner {
     background-image: url("../images/Banner.png");
     background-size: cover;
@@ -354,9 +342,6 @@
   .h-full {
     height: 100%;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -393,23 +378,14 @@
   .max-w-\[447px\] {
     max-width: 447px;
   }
-  .flex-shrink {
-    flex-shrink: 1;
-  }
   .shrink {
     flex-shrink: 1;
   }
   .shrink-0 {
     flex-shrink: 0;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .\[grid-template-columns\:repeat\(4\,56px\)\] {
     grid-template-columns: repeat(4,56px);
@@ -499,9 +475,6 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
-  .border-Primary_shade_1 {
-    border-color: var(--color-Primary_shade_1);
-  }
   .border-gray-2 {
     border-color: var(--color-gray-2);
   }
@@ -516,9 +489,6 @@
   }
   .border-b-search_box {
     border-bottom-color: var(--color-search_box);
-  }
-  .bg-black {
-    background-color: var(--color-black);
   }
   .bg-black\/20 {
     background-color: color-mix(in srgb, #000 20%, transparent);
@@ -544,9 +514,6 @@
   .object-cover {
     object-fit: cover;
   }
-  .p-1 {
-    padding: calc(var(--spacing) * 1);
-  }
   .p-1\.5 {
     padding: calc(var(--spacing) * 1.5);
   }
@@ -564,9 +531,6 @@
   }
   .pt-3 {
     padding-top: calc(var(--spacing) * 3);
-  }
-  .pt-5 {
-    padding-top: calc(var(--spacing) * 5);
   }
   .pt-5\.5 {
     padding-top: calc(var(--spacing) * 5.5);
@@ -608,10 +572,6 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
   .text-\[30px\] {
     font-size: 30px;
   }
@@ -630,18 +590,11 @@
   .text-white {
     color: var(--color-white);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
   .opacity-0 {
     opacity: 0%;
   }
   .opacity-100 {
     opacity: 100%;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
   .transition-all {
     transition-property: all;
@@ -878,11 +831,6 @@
       width: 439px;
     }
   }
-  .md\:\[grid-template-columns\:repeat\(7\,96px\)\] {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(7,96px);
-    }
-  }
   .md\:\[grid-template-columns\:repeat\(7\,108px\)\] {
     @media (width >= 48rem) {
       grid-template-columns: repeat(7,108px);
@@ -968,6 +916,11 @@
   .lg\:block {
     @media (width >= 64rem) {
       display: block;
+    }
+  }
+  .lg\:grid {
+    @media (width >= 64rem) {
+      display: grid;
     }
   }
   .lg\:hidden {
@@ -1104,12 +1057,11 @@
     display: none;
   }
 }
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
+.swiper-slide {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
 }
-@property --tw-outline-style {
+@property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -1133,7 +1085,6 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-outline-style: solid;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
