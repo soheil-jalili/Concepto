@@ -30,6 +30,9 @@ closeBtn.addEventListener("click", closeMenu);
 const swiper = new Swiper(".swiper", {
   spaceBetween: 24,
   slidesPerView: 1,
+  observer: true,
+  observeParents: true,
+
   breakpoints: {
     520: {
       slidesPerView: 1,
