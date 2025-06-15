@@ -42,3 +42,11 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+// Popular Companis
+const popularCompany = new Swiper(".popular__swiper", {
+  spaceBetween: 24,
+  slidesPerView: 4,
+  observer: true,
+  observeParents: true,
+});
