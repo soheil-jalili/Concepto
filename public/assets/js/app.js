@@ -45,7 +45,7 @@ const swiper = new Swiper(".swiper", {
 
 // Popular Companis
 const popularCompany = new Swiper(".popular__swiper", {
-  spaceBetween: 24,
+  spaceBetween: 50,
   slidesPerView: 4,
   observer: true,
   observeParents: true,
