@@ -43,10 +43,74 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// Popular Companis
+// Popular Companies Swiper
 const popularCompany = new Swiper(".popular__swiper", {
-  spaceBetween: 50,
-  slidesPerView: 4,
-  observer: true,
-  observeParents: true,
+  grabCursor: true,
+  slidesPerView: 1,
+  spaceBetween: 14,
+
+  breakpoints: {
+    343: {
+      slidesPerView: 1.9,
+      spaceBetween: 16,
+    },
+    640: {
+      slidesPerView: 2.3,
+      spaceBetween: 14,
+    },
+
+    768: {
+      slidesPerView: 2.3,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 3.8,
+      spaceBetween: 24,
+    },
+    1025: {
+      slidesPerView: 3.2,
+      spaceBetween: 24,
+    },
+
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+  },
+});
+
+// News Swiper
+const news = new Swiper(".news", {
+  grabCursor: true,
+  slidesPerView: 1.2,
+  spaceBetween: 14,
+
+  breakpoints: {
+    343: {
+      slidesPerView: 2.3,
+      spaceBetween: 32,
+    },
+    640: {
+      slidesPerView: 2.3,
+      spaceBetween: 14,
+    },
+    768: {
+      slidesPerView: 1.8,
+      spaceBetween: 24,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+
+    1025: {
+      slidesPerView: 2.3,
+      spaceBetween: 24,
+    },
+
+    1280: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+  },
 });
