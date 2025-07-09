@@ -47,6 +47,7 @@
   --color-gray-6: #5b6176;
   --color-gray-7: #444859;
   --color-gray-8: #2e303b;
+  --color-gray-box-job: #f6f6f6;
 
   --color-secondary_tint_2: #ffc51a;
   --color-secondary_tint_3: #ffecb3;
@@ -103,25 +104,28 @@
   height: 29.427rem;
 }
 
-.swiper-slide {
-  display: grid !important;
-  grid-template-columns: repeat(4, 120px);
-  grid-template-rows: repeat(2, auto);
-  row-gap: 24px;
-  justify-content: space-between;
+@media only screen and (max-width: 1024px) {
+  .lg__swiper > .swiper-wrapper > .swiper-slide {
+    display: grid !important;
+    grid-template-columns: repeat(4, 120px);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 24px;
+    justify-content: space-between;
+  }
 }
-
-.swiper-slide {
-  display: grid !important;
-  grid-template-columns: repeat(4, 110px);
-  grid-template-rows: repeat(2, auto);
-  row-gap: 24px;
-  justify-content: space-between;
-  column-gap: 16px;
+@media only screen and (max-width: 500px) {
+  .five_hundred > .swiper-wrapper .swiper-slide {
+    display: grid !important;
+    grid-template-columns: repeat(4, 110px);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 24px;
+    justify-content: space-between;
+    column-gap: 16px;
+  }
 }
-
 @media only screen and (max-width: 519px) {
-  .five_hundred .swiper-slide {
+  .five_hundred > .swiper-wrapper > .swiper-slide {
+    display: grid !important;
     grid-template-columns: repeat(3, 110px);
     justify-content: space-between;
     column-gap: 12px;
@@ -129,13 +133,13 @@
 }
 
 @media only screen and (max-width: 530px) {
-  .swiper-slide {
+  .five_hundred > .swiper-wrapper .swiper-slide {
     column-gap: 10px;
   }
 }
 
 @media only screen and (max-width: 416px) {
-  .five_hundred .swiper-slide {
+  .five_hundred > .swiper-wrapper .swiper-slide {
     grid-template-columns: repeat(2, 110px);
     justify-content: space-around;
     column-gap: 12px;
@@ -151,12 +155,11 @@
 }
 
 @media only screen and (max-width: 275px) {
-  .five_hundred .swiper-slide {
+  .five_hundred > .swiper-wrapper .swiper-slide {
     grid-template-columns: repeat(1, 110px);
     justify-content: space-around;
     column-gap: 12px;
   }
-
 }
 
 @media only screen and (min-width: 1024px) {

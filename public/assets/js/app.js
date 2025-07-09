@@ -50,14 +50,16 @@ const popularCompany = new Swiper(".popular__swiper", {
   spaceBetween: 90,
 
   breakpoints: {
-    330: {
-      slidesPerView: 1.2,
+    300: {
+      slidesPerView: 1.6,
       spaceBetween: 14,
     },
+    330: {
+      slidesPerView: 3,
+    },
 
-    359: {
-      slidesPerView: 1.3,
-      spaceBetween: 14,
+    350: {
+      slidesPerView: 1,
     },
 
     411: {
@@ -80,8 +82,8 @@ const popularCompany = new Swiper(".popular__swiper", {
       spaceBetween: 52,
     },
     555: {
-      slidesPerView: 2.2,
-      spaceBetween: 54,
+      slidesPerView: 2.1,
+      spaceBetween: 24,
     },
     640: {
       slidesPerView: 2.3,
@@ -114,12 +116,12 @@ const news = new Swiper(".news", {
       slidesPerView: 1.3,
       spaceBetween: 32,
     },
-    
+
     400: {
       slidesPerView: 1.5,
       spaceBetween: 32,
     },
-    
+
     436: {
       slidesPerView: 1.5,
       spaceBetween: 32,
@@ -131,8 +133,8 @@ const news = new Swiper(".news", {
     },
 
     540: {
-      slidesPerView: 2,
-      spaceBetween: 62,
+      slidesPerView: 2.1,
+      spaceBetween: 24,
     },
     640: {
       slidesPerView: 2.3,
@@ -156,5 +158,16 @@ const news = new Swiper(".news", {
       slidesPerView: 3,
       spaceBetween: 24,
     },
+  },
+});
+
+// Job Swiper
+var jobSwiper = new Swiper(".job__swiper", {
+  grabCursor: true,
+  slidesPerView: 5,
+  spaceBetween: 24,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
