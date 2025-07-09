@@ -47,24 +47,48 @@ const swiper = new Swiper(".swiper", {
 const popularCompany = new Swiper(".popular__swiper", {
   grabCursor: true,
   slidesPerView: 1,
-  spaceBetween: 14,
+  spaceBetween: 90,
 
   breakpoints: {
-    343: {
-      slidesPerView: 1.9,
-      spaceBetween: 16,
-    },
-    640: {
-      slidesPerView: 2.3,
+    330: {
+      slidesPerView: 1.2,
       spaceBetween: 14,
     },
 
-    768: {
+    359: {
+      slidesPerView: 1.3,
+      spaceBetween: 14,
+    },
+
+    411: {
+      slidesPerView: 1.5,
+      spaceBetween: 32,
+    },
+
+    420: {
+      slidesPerView: 1.6,
+      spaceBetween: 32,
+    },
+
+    486: {
+      slidesPerView: 2,
+      spaceBetween: 82,
+    },
+
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 52,
+    },
+    555: {
+      slidesPerView: 2.2,
+      spaceBetween: 54,
+    },
+    640: {
       slidesPerView: 2.3,
       spaceBetween: 24,
     },
     1024: {
-      slidesPerView: 3.8,
+      slidesPerView: 3.1,
       spaceBetween: 24,
     },
     1025: {
@@ -82,13 +106,33 @@ const popularCompany = new Swiper(".popular__swiper", {
 // News Swiper
 const news = new Swiper(".news", {
   grabCursor: true,
-  slidesPerView: 1.2,
-  spaceBetween: 14,
+  slidesPerView: 1,
+  spaceBetween: 32,
 
   breakpoints: {
-    343: {
-      slidesPerView: 2.3,
+    360: {
+      slidesPerView: 1.3,
       spaceBetween: 32,
+    },
+    
+    400: {
+      slidesPerView: 1.5,
+      spaceBetween: 32,
+    },
+    
+    436: {
+      slidesPerView: 1.5,
+      spaceBetween: 32,
+    },
+
+    460: {
+      slidesPerView: 1.8,
+      spaceBetween: 32,
+    },
+
+    540: {
+      slidesPerView: 2,
+      spaceBetween: 62,
     },
     640: {
       slidesPerView: 2.3,
@@ -99,7 +143,7 @@ const news = new Swiper(".news", {
       spaceBetween: 24,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 2.3,
       spaceBetween: 24,
     },
 

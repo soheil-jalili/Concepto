@@ -141,12 +141,22 @@
     column-gap: 12px;
   }
 }
+@media only screen and (max-width: 300px) {
+  .popular__swiper > .swiper-wrapper > .swiper-slide {
+    width: 100% !important;
+  }
+  .news > .swiper-wrapper > .swiper-slide {
+    width: 100% !important;
+  }
+}
+
 @media only screen and (max-width: 275px) {
   .five_hundred .swiper-slide {
     grid-template-columns: repeat(1, 110px);
     justify-content: space-around;
     column-gap: 12px;
   }
+
 }
 
 @media only screen and (min-width: 1024px) {

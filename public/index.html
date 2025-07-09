@@ -197,6 +197,18 @@
           clip-rule="evenodd"
         />
       </symbol>
+
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 21"
+        fill="none"
+        id="calendar"
+      >
+        <path
+          d="M5.83333 9.6687H7.5V11.3354H5.83333V9.6687ZM17.5 5.50203V17.1687C17.5 18.0854 16.75 18.8354 15.8333 18.8354H4.16667C3.24167 18.8354 2.5 18.0854 2.5 17.1687L2.50833 5.50203C2.50833 4.58537 3.24167 3.83537 4.16667 3.83537H5V2.1687H6.66667V3.83537H13.3333V2.1687H15V3.83537H15.8333C16.75 3.83537 17.5 4.58537 17.5 5.50203ZM4.16667 7.1687H15.8333V5.50203H4.16667V7.1687ZM15.8333 17.1687V8.83537H4.16667V17.1687H15.8333ZM12.5 11.3354H14.1667V9.6687H12.5V11.3354ZM9.16667 11.3354H10.8333V9.6687H9.16667V11.3354Z"
+          fill="#9095AA"
+        />
+      </symbol>
     </svg>
 
     <!-- Start Header -->
@@ -1019,11 +1031,9 @@
         <div class="container 2xl:p-0 overflow-x-hidden">
           <!-- Popular Companis Header -->
           <div
-            class="flex items-center justify-between text-white pt-20 text-sm gap-x-1 md:gap-x-0 gap-y-4 sm:gap-y-14 sm:text-2xl"
+            class="flex items-center max-md:pb-4 justify-between font-IRANSansX-Medium sm:font-IRANSansX-Bold text-white pt-20 text-base gap-x-1 md:gap-x-0 gap-y-4 sm:gap-y-14 sm:text-2xl"
           >
-            <p class="font-IRANSansX-Regular sm:font-IRANSansX-Bold">
-              شرکت‌های محبوب
-            </p>
+            <p class="font-IRANSansX-Regular">شرکت‌های محبوب</p>
             <a href="#" class="flex items-center text-lg">
               <span class="hidden sm:block">مشاهده همه</span>
               <svg class="w-6 h-6">
@@ -1032,7 +1042,6 @@
             </a>
           </div>
           <!-- Popular Companis Body -->
-          <!-- grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 sm:gap-x-10 xl:gap-x-8 2xl:gap-x-24  -->
           <div class="popular__swiper rounded-3xl mt-4 md:mt-14">
             <div class="swiper-wrapper">
               <!-- Card Item -->
@@ -1050,19 +1059,23 @@
                           alt="Snap"
                         />
                       </a>
-                      <div class="flex flex-col gap-y-1">
-                        <p class="text-gray-7 text-sm md:text-xs">شرکت اسنپ</p>
+                      <div class="flex flex-col mb-2 gap-y-1">
+                        <p
+                          class="text-gray-7 text-sm md:text-xs font-IRANSansX-Bold"
+                        >
+                          شرکت اسنپ
+                        </p>
                         <p class="text-placeholder text-xs">تجارت الکترونیک</p>
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-x-2.5 *:p-2">
+                    <div class="flex items-center gap-x-2.5 *:p-2 *:shrink-0">
                       <div
                         class="rounded-[8px] border border-gray-1 flex gap-y-2 flex-col"
                       >
                         <p class="text-xs">سرمایه گذاران جدید</p>
                         <p class="text-primary font-IRANSansX-Bold text-sm">
-                          398
+                          21,394
                         </p>
                       </div>
                       <div
@@ -1070,19 +1083,23 @@
                       >
                         <p class="text-xs">مخاطبین جدید</p>
                         <p class="text-primary font-IRANSansX-Bold text-sm">
-                          21,394
+                          398
                         </p>
                       </div>
                     </div>
 
-                    <p class="text-gray-6 line-clamp-2 max-h-12.5">
-                      از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید
-                      بلیط سفر، مشاوره‌ی پزشکی و روانشناسی، رزرو هتل و را
-                      میتوانید با سوپراپلیکیشن اسنپ انجام دهید.
-                    </p>
+                    <div class="min-h-11">
+                      <p
+                        class="text-gray-6 line-clamp-2 text-xs leading-[180%] font-IRANSansX-Medium"
+                      >
+                        از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی،
+                        خرید بلیط سفر، مشاوره‌ی پزشکی و روانشناسی، رزرو هتل و را
+                        میتوانید با سوپراپلیکیشن اسنپ انجام دهید.
+                      </p>
+                    </div>
 
                     <div
-                      class="flex items-center text-gray-4 justify-between mt-2"
+                      class="flex items-center md:pt-4 text-gray-4 justify-between"
                     >
                       <div class="flex items-center gap-x-2">
                         <svg class="w-5 h-5">
@@ -1095,7 +1112,10 @@
                         <svg class="w-3.5 h-3.5 text-secondary_tint_2">
                           <use href="#star"></use>
                         </svg>
-                        <span class="text-placeholder text-base">5</span>
+                        <span
+                          class="text-placeholder text-base font-IRANSansX-Medium"
+                          >5</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -1116,23 +1136,27 @@
                     <div class="flex items-end gap-x-4">
                       <a href="#">
                         <img
-                          src="assets/images/companies/thumbnail/snap.png"
+                          src="assets/images/companies/thumbnail/digikala.png"
                           alt="Snap"
                         />
                       </a>
-                      <div class="flex flex-col gap-y-1">
-                        <p class="text-gray-7 text-sm md:text-xs">شرکت اسنپ</p>
+                      <div class="flex flex-col mb-2 gap-y-1">
+                        <p
+                          class="text-gray-7 text-sm md:text-xs font-IRANSansX-Bold"
+                        >
+                          شرکت دیجی کالا
+                        </p>
                         <p class="text-placeholder text-xs">تجارت الکترونیک</p>
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-x-2.5 *:p-2">
+                    <div class="flex items-center gap-x-2.5 *:p-2 *:shrink-0">
                       <div
                         class="rounded-[8px] border border-gray-1 flex gap-y-2 flex-col"
                       >
                         <p class="text-xs">سرمایه گذاران جدید</p>
                         <p class="text-primary font-IRANSansX-Bold text-sm">
-                          398
+                          25,120
                         </p>
                       </div>
                       <div
@@ -1140,19 +1164,22 @@
                       >
                         <p class="text-xs">مخاطبین جدید</p>
                         <p class="text-primary font-IRANSansX-Bold text-sm">
-                          21,394
+                          432
                         </p>
                       </div>
                     </div>
 
-                    <p class="text-gray-6 line-clamp-2 max-h-12.5">
-                      از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید
-                      بلیط سفر، مشاوره‌ی پزشکی و روانشناسی، رزرو هتل و را
-                      میتوانید با سوپراپلیکیشن اسنپ انجام دهید.
-                    </p>
-
+                    <div class="min-h-11">
+                      <p
+                        class="text-gray-6 line-clamp-2 text-xs leading-[180%] font-IRANSansX-Medium"
+                      >
+                        هر آنچه که نیاز دارید با بهترین قیمت از دیجی‌کالا بخرید!
+                        جدیدترین انواع گوشی موبایل، لپ تاپ، لباس، لوازم آرایشی و
+                        بهداشتی، کتاب، لوازم خانگی، خودرو و.
+                      </p>
+                    </div>
                     <div
-                      class="flex items-center text-gray-4 justify-between mt-2"
+                      class="flex items-center md:pt-4 text-gray-4 justify-between"
                     >
                       <div class="flex items-center gap-x-2">
                         <svg class="w-5 h-5">
@@ -1165,7 +1192,10 @@
                         <svg class="w-3.5 h-3.5 text-secondary_tint_2">
                           <use href="#star"></use>
                         </svg>
-                        <span class="text-placeholder text-base">5</span>
+                        <span
+                          class="text-placeholder text-base font-IRANSansX-Medium"
+                          >4</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -1186,23 +1216,27 @@
                     <div class="flex items-end gap-x-4">
                       <a href="#">
                         <img
-                          src="assets/images/companies/thumbnail/snap.png"
+                          src="assets/images/companies/thumbnail/farabi.png"
                           alt="Snap"
                         />
                       </a>
-                      <div class="flex flex-col gap-y-1">
-                        <p class="text-gray-7 text-sm md:text-xs">شرکت اسنپ</p>
+                      <div class="flex flex-col mb-2 gap-y-1">
+                        <p
+                          class="text-gray-7 text-sm md:text-xs font-IRANSansX-Bold"
+                        >
+                          کارگزاری فارابی
+                        </p>
                         <p class="text-placeholder text-xs">تجارت الکترونیک</p>
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-x-2.5 *:p-2">
+                    <div class="flex items-center gap-x-2.5 *:p-2 *:shrink-0">
                       <div
                         class="rounded-[8px] border border-gray-1 flex gap-y-2 flex-col"
                       >
                         <p class="text-xs">سرمایه گذاران جدید</p>
                         <p class="text-primary font-IRANSansX-Bold text-sm">
-                          398
+                          29,120
                         </p>
                       </div>
                       <div
@@ -1210,19 +1244,23 @@
                       >
                         <p class="text-xs">مخاطبین جدید</p>
                         <p class="text-primary font-IRANSansX-Bold text-sm">
-                          21,394
+                          392
                         </p>
                       </div>
                     </div>
 
-                    <p class="text-gray-6 line-clamp-2 max-h-12.5">
-                      از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید
-                      بلیط سفر، مشاوره‌ی پزشکی و روانشناسی، رزرو هتل و را
-                      میتوانید با سوپراپلیکیشن اسنپ انجام دهید.
-                    </p>
+                    <div class="min-h-11">
+                      <p
+                        class="text-gray-6 line-clamp-2 font-IRANSansX-Medium text-xs leading-[180%]"
+                      >
+                        کارگزاری بورس خدماتی شامل خرید و فروش سهام و دریافت کد
+                        بورسی را ارائه می‌کند؛ همه این خدمات در کارگزاری فارابی
+                        به‌صورت غیرحضوری در اختیار شماست.
+                      </p>
+                    </div>
 
                     <div
-                      class="flex items-center text-gray-4 justify-between mt-2"
+                      class="flex items-center md:pt-4 text-gray-4 justify-between"
                     >
                       <div class="flex items-center gap-x-2">
                         <svg class="w-5 h-5">
@@ -1235,7 +1273,10 @@
                         <svg class="w-3.5 h-3.5 text-secondary_tint_2">
                           <use href="#star"></use>
                         </svg>
-                        <span class="text-placeholder text-base">5</span>
+                        <span
+                          class="text-placeholder text-base font-IRANSansX-Medium"
+                          >5</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -1252,7 +1293,7 @@
                     alt="Snap"
                   />
 
-                  <div class="px-4 -translate-y-4 flex flex-col gap-y-3.5">
+                  <div class="px-4 -translate-y-4 flex mb-2 flex-col gap-y-3.5">
                     <div class="flex items-end gap-x-4">
                       <a href="#">
                         <img
@@ -1260,19 +1301,23 @@
                           alt="Snap"
                         />
                       </a>
-                      <div class="flex flex-col gap-y-1">
-                        <p class="text-gray-7 text-sm md:text-xs">شرکت اسنپ</p>
+                      <div class="flex flex-col mb-2 gap-y-1">
+                        <p
+                          class="text-gray-7 text-sm md:text-xs font-IRANSansX-Bold"
+                        >
+                          شرکت علی بابا
+                        </p>
                         <p class="text-placeholder text-xs">تجارت الکترونیک</p>
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-x-2.5 *:p-2">
+                    <div class="flex items-center gap-x-2.5 *:p-2 *:shrink-0">
                       <div
                         class="rounded-[8px] border border-gray-1 flex gap-y-2 flex-col"
                       >
                         <p class="text-xs">سرمایه گذاران جدید</p>
                         <p class="text-primary font-IRANSansX-Bold text-sm">
-                          398
+                          26,750
                         </p>
                       </div>
                       <div
@@ -1280,19 +1325,22 @@
                       >
                         <p class="text-xs">مخاطبین جدید</p>
                         <p class="text-primary font-IRANSansX-Bold text-sm">
-                          21,394
+                          234
                         </p>
                       </div>
                     </div>
 
-                    <p class="text-gray-6 line-clamp-2 max-h-12.5">
-                      از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید
-                      بلیط سفر، مشاوره‌ی پزشکی و روانشناسی، رزرو هتل و را
-                      میتوانید با سوپراپلیکیشن اسنپ انجام دهید.
-                    </p>
-
+                    <div class="min-h-11">
+                      <p
+                        class="text-gray-6 line-clamp-2 text-xs leading-[180%] font-IRANSansX-Medium"
+                      >
+                        علی‌بابا برندی از هلدینگ پرافتخار توشا (توسعه تجربه
+                        شایسته سفر) است، سامانه‌ای که به‌واسطه پشتیبانی و حمایت
+                        شما در سکوی اول گردشگری کشور ایستاده.
+                      </p>
+                    </div>
                     <div
-                      class="flex items-center text-gray-4 justify-between mt-2"
+                      class="flex items-center md:pt-4 text-gray-4 justify-between"
                     >
                       <div class="flex items-center gap-x-2">
                         <svg class="w-5 h-5">
@@ -1305,7 +1353,10 @@
                         <svg class="w-3.5 h-3.5 text-secondary_tint_2">
                           <use href="#star"></use>
                         </svg>
-                        <span class="text-placeholder text-base">5</span>
+                        <span
+                          class="text-placeholder text-base font-IRANSansX-Medium"
+                          >5</span
+                        >
                       </div>
                     </div>
                   </div>
@@ -1339,9 +1390,9 @@
         <div class="container 2xl:p-0 overflow-x-hidden rounded-3xl">
           <!-- News Companis Header -->
           <div
-            class="flex items-center justify-between text-white pt-20 text-sm gap-x-1 md:gap-x-0 gap-y-4 sm:gap-y-14 sm:text-2xl"
+            class="flex items-center justify-between text-white max-md:pb-4 pt-20 text-base gap-x-1 md:gap-x-0 gap-y-4 sm:gap-y-14 sm:text-2xl"
           >
-            <p class="font-IRANSansX-Regular sm:font-IRANSansX-Bold">
+            <p class="font-IRANSansX-Medium sm:font-IRANSansX-Bold">
               تازه‌ترین اخبار
             </p>
             <a href="#" class="flex items-center text-lg">
@@ -1352,7 +1403,7 @@
             </a>
           </div>
           <!-- Popular News Body -->
-          <div class="news mt-4 md:mt-14">
+          <div class="news mt-5 md:mt-14">
             <div class="swiper-wrapper">
               <!-- Card Item -->
               <div class="swiper-slide">
@@ -1370,13 +1421,13 @@
                       اسنپ رکورد خود را با بیش از ۵ میلیون سفر روزانه شکست
                     </h6>
 
-                    <p
-                      class="line-clamp-2 max-h-12.5 text-gray-6 text-xs md:text-sm"
-                    >
-                      در ماه پایانی سال ۱۴۰۲، اسنپ رکورد ۵ میلیون و ۱۳۹ هزار و
-                      ۶۵ سفر روزانه در سرویس خودرو و باکس را زد. این رکورد در
-                      روز چهارشنبه، دوم اسفند، ثبت شد.
-                    </p>
+                    <div class="min-h-12.5">
+                      <p class="line-clamp-2 text-gray-6 text-xs md:text-sm">
+                        در ماه پایانی سال ۱۴۰۲، اسنپ رکورد ۵ میلیون و ۱۳۹ هزار و
+                        ۶۵ سفر روزانه در سرویس خودرو و باکس را زد. این رکورد در
+                        روز چهارشنبه، دوم اسفند، ثبت شد.
+                      </p>
+                    </div>
 
                     <div
                       class="flex items-center text-gray-4 justify-between mt-2"
@@ -1392,8 +1443,8 @@
                       </div>
 
                       <div class="flex items-center gap-x-2">
-                        <svg class="w-3.5 h-3.5 text-secondary_tint_2">
-                          <use href="#star"></use>
+                        <svg class="w-5 h-5">
+                          <use href="#calendar"></use>
                         </svg>
                         <span class="text-placeholder text-sm">1402/12/11</span>
                       </div>
@@ -1415,16 +1466,16 @@
                     <h6
                       class="text-gray-7 line-clamp-2 max-h-12.5 font-IRANSansX-Bold text-sm md:text-base"
                     >
-                      اسنپ رکورد خود را با بیش از ۵ میلیون سفر روزانه شکست
+                      بار دیگر اسنپ فود به دلیل مشکل فنی از دسترس خارج شد
                     </h6>
 
-                    <p
-                      class="line-clamp-2 max-h-12.5 text-gray-6 text-xs md:text-sm"
-                    >
-                      در ماه پایانی سال ۱۴۰۲، اسنپ رکورد ۵ میلیون و ۱۳۹ هزار و
-                      ۶۵ سفر روزانه در سرویس خودرو و باکس را زد. این رکورد در
-                      روز چهارشنبه، دوم اسفند، ثبت شد.
-                    </p>
+                    <div class="min-h-12.5">
+                      <p class="line-clamp-2 text-gray-6 text-xs md:text-sm">
+                        بار دیگر اسنپ‌فود به‌دلیل مشکل فنی از دسترس کاربران خارج
+                        شد. این مشکل اوایل بهمن هم تکرار شده بود و رفع آن
+                        ساعت‌ها طول کشید.
+                      </p>
+                    </div>
 
                     <div
                       class="flex items-center text-gray-4 justify-between mt-2"
@@ -1440,10 +1491,10 @@
                       </div>
 
                       <div class="flex items-center gap-x-2">
-                        <svg class="w-3.5 h-3.5 text-secondary_tint_2">
-                          <use href="#star"></use>
+                        <svg class="w-5 h-5">
+                          <use href="#calendar"></use>
                         </svg>
-                        <span class="text-placeholder text-sm">1402/12/11</span>
+                        <span class="text-placeholder text-sm">1402/12/15</span>
                       </div>
                     </div>
                   </div>
@@ -1463,16 +1514,18 @@
                     <h6
                       class="text-gray-7 line-clamp-2 max-h-12.5 font-IRANSansX-Bold text-sm md:text-base"
                     >
-                      اسنپ رکورد خود را با بیش از ۵ میلیون سفر روزانه شکست
+                      رکورد ثبت سفارش آنلاین خدمات گردشگری شکسته شد: ثبت 2 خدمت
+                      در هر ثانیه
                     </h6>
 
-                    <p
-                      class="line-clamp-2 max-h-12.5 text-gray-6 text-xs md:text-sm"
-                    >
-                      در ماه پایانی سال ۱۴۰۲، اسنپ رکورد ۵ میلیون و ۱۳۹ هزار و
-                      ۶۵ سفر روزانه در سرویس خودرو و باکس را زد. این رکورد در
-                      روز چهارشنبه، دوم اسفند، ثبت شد.
-                    </p>
+                    <div class="min-h-12.5">
+                      <p
+                        class="line-clamp-2 text-gray-6 text-xs md:text-sm leading-[180%]"
+                      >
+                        با نزدیکی به سال نو و افزایش سفرهای بین شهری، رکورد ثبت
+                        سفارش آنلاین خدمات گردشگری شکسته شد.
+                      </p>
+                    </div>
 
                     <div
                       class="flex items-center text-gray-4 justify-between mt-2"
@@ -1488,10 +1541,10 @@
                       </div>
 
                       <div class="flex items-center gap-x-2">
-                        <svg class="w-3.5 h-3.5 text-secondary_tint_2">
-                          <use href="#star"></use>
+                        <svg class="w-5 h-5">
+                          <use href="#calendar"></use>
                         </svg>
-                        <span class="text-placeholder text-sm">1402/12/11</span>
+                        <span class="text-placeholder text-sm">1402/12/3</span>
                       </div>
                     </div>
                   </div>
