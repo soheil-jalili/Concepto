@@ -43,6 +43,8 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+// todo:fix slider popular & news slider responsive
+
 // Popular Companies Swiper
 const popularCompany = new Swiper(".popular__swiper", {
   grabCursor: true,
@@ -162,12 +164,38 @@ const news = new Swiper(".news", {
 });
 
 // Job Swiper
-var jobSwiper = new Swiper(".job__swiper", {
+const jobSwiper = new Swiper(".job__swiper", {
   grabCursor: true,
   slidesPerView: 5,
   spaceBetween: 24,
+
+  breakpoints: {
+    340: {
+      slidesPerView: 1.5,
+      spaceBetween: 24,
+    },
+    540: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 24,
+    },
+
+    996: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+    },
+
+    1024: {
+      slidesPerView: 4.9,
+      spaceBetween: 24,
+    },
+  },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".job-button-next",
+    prevEl: ".job-button-prev",
   },
 });

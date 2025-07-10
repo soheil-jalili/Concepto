@@ -55,6 +55,7 @@
   /* Shadows */
   --shadow-1: 0 2px 32px 0 rgba(28, 28, 28, 0.06);
   --shadow-2: 0 3px 10px 0 rgba(28, 28, 28, 0.03);
+  --shadow-prev-next: 0 50px 50px 0 rgba(0, 0, 0, 0.05);
 
   /* Blur */
   --blur-20: blur(20px);
@@ -166,4 +167,23 @@
   .lg__swiper .swiper-slide {
     display: none !important;
   }
+}
+
+.job__swiper {
+  position: relative;
+}
+
+.job-button-next,
+.job-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.job-button-next {
+  right: -20px;
+}
+.job-button-prev {
+  left: -20px;
 }
