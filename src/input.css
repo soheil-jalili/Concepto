@@ -43,6 +43,10 @@
   left: -20px;
 }
 
+#email__news > input::placeholder {
+  @apply text-placeholder;
+}
+
 .event__image__border {
   content: "";
   position: absolute;

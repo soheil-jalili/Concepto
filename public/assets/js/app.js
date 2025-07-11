@@ -43,7 +43,6 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// todo:fix slider popular & news slider responsive
 
 // Popular Companies Swiper
 const popularCompany = new Swiper(".popular__swiper", {
