@@ -318,21 +318,6 @@
       </symbol>
 
       <symbol
-        id="phone"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
-        />
-      </symbol>
-
-      <symbol
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
@@ -403,6 +388,37 @@
       >
         <path
           d="M17.2137 13.3283L17.8356 9.23311H13.9452V6.5768C13.9452 5.45617 14.4877 4.3632 16.2301 4.3632H18V0.876797C18 0.876797 16.3945 0.600098 14.8603 0.600098C11.6548 0.600098 9.56164 2.56189 9.56164 6.11194V9.23311H6V13.3283H9.56164V23.2285C10.2767 23.342 11.0082 23.4001 11.7534 23.4001C12.4986 23.4001 13.2301 23.342 13.9452 23.2285V13.3283H17.2137Z"
+          fill="white"
+        />
+      </symbol>
+
+      <symbol
+        id="phone"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        fill="none"
+      >
+        <path
+          d="M3.54 2C3.6 2.89 3.75 3.76 3.99 4.59L2.79 5.79C2.38 4.59 2.12 3.32 2.03 2H3.54ZM13.4 14.02C14.25 14.26 15.12 14.41 16 14.47V15.96C14.68 15.87 13.41 15.61 12.2 15.21L13.4 14.02ZM4.5 0H1C0.45 0 0 0.45 0 1C0 10.39 7.61 18 17 18C17.55 18 18 17.55 18 17V13.51C18 12.96 17.55 12.51 17 12.51C15.76 12.51 14.55 12.31 13.43 11.94C13.33 11.9 13.22 11.89 13.12 11.89C12.86 11.89 12.61 11.99 12.41 12.18L10.21 14.38C7.38 12.93 5.06 10.62 3.62 7.79L5.82 5.59C6.1 5.31 6.18 4.92 6.07 4.57C5.7 3.45 5.5 2.25 5.5 1C5.5 0.45 5.05 0 4.5 0Z"
+          fill="white"
+        />
+      </symbol>
+      <symbol
+        id="location-on"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="25"
+        viewBox="0 0 24 25"
+        fill="none"
+      >
+        <path
+          d="M12 2.5C8.13 2.5 5 5.63 5 9.5C5 14.75 12 22.5 12 22.5C12 22.5 19 14.75 19 9.5C19 5.63 15.87 2.5 12 2.5ZM7 9.5C7 6.74 9.24 4.5 12 4.5C14.76 4.5 17 6.74 17 9.5C17 12.38 14.12 16.69 12 19.38C9.92 16.71 7 12.35 7 9.5Z"
+          fill="white"
+        />
+        <path
+          d="M12 12C13.3807 12 14.5 10.8807 14.5 9.5C14.5 8.11929 13.3807 7 12 7C10.6193 7 9.5 8.11929 9.5 9.5C9.5 10.8807 10.6193 12 12 12Z"
           fill="white"
         />
       </symbol>
@@ -1955,11 +1971,13 @@
               <div class="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
                 <div class="flex gap-y-3 flex-col min-h-25.5">
                   <a href="#">
-                    <h5 class="font-IRANSansX-Bold text-[20px] text-gray-7">
+                    <h5
+                      class="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7"
+                    >
                       بوت کمپ برنامه نویسی دیجی کالا
                     </h5>
                   </a>
-                  <p class="line-clamp-2 text-base text-placeholder">
+                  <p class="line-clamp-2 text-sm md:text-base text-placeholder">
                     در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید
                     منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت
                     امکان استخدام در دیجی‌کالا را خواهید داشت
@@ -1967,18 +1985,22 @@
                 </div>
 
                 <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-x-2 text-placeholder">
-                    <svg class="w-5 h-5">
+                  <div
+                    class="flex items-center gap-x-1 md:gap-x-2 text-placeholder"
+                  >
+                    <svg class="w-4 md:w-5 h-4 md:h-5">
                       <use href="#location"></use>
                     </svg>
-                    <p class="text-sm">تهران، ایران</p>
+                    <p class="md:text-sm text-xs">تهران، ایران</p>
                   </div>
 
-                  <div class="flex items-center gap-x-2">
-                    <svg class="w-5 h-5">
+                  <div class="flex items-center gap-x-1 md:gap-x-2">
+                    <svg class="w-4 md:w-5 h-4 md:h-5">
                       <use href="#calendar"></use>
                     </svg>
-                    <span class="text-placeholder text-sm">29 بهمن</span>
+                    <span class="text-placeholder md:text-sm text-xs"
+                      >29 بهمن</span
+                    >
                   </div>
                 </div>
               </div>
@@ -1996,11 +2018,13 @@
               <div class="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
                 <div class="flex gap-y-3 flex-col min-h-25.5">
                   <a href="#">
-                    <h5 class="font-IRANSansX-Bold text-[20px] text-gray-7">
+                    <h5
+                      class="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7"
+                    >
                       بوت کمپ برنامه نویسی دیجی کالا
                     </h5>
                   </a>
-                  <p class="line-clamp-2 text-base text-placeholder">
+                  <p class="line-clamp-2 text-sm md:text-base text-placeholder">
                     در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید
                     منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت
                     امکان استخدام در دیجی‌کالا را خواهید داشت
@@ -2008,18 +2032,22 @@
                 </div>
 
                 <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-x-2 text-placeholder">
-                    <svg class="w-5 h-5">
+                  <div
+                    class="flex items-center gap-x-1 md:gap-x-2 text-placeholder"
+                  >
+                    <svg class="w-4 md:w-5 h-4 md:h-5">
                       <use href="#location"></use>
                     </svg>
-                    <p class="text-sm">تهران، ایران</p>
+                    <p class="md:text-sm text-xs">تهران، ایران</p>
                   </div>
 
-                  <div class="flex items-center gap-x-2">
-                    <svg class="w-5 h-5">
+                  <div class="flex items-center gap-x-1 md:gap-x-2">
+                    <svg class="w-4 md:w-5 h-4 md:h-5">
                       <use href="#calendar"></use>
                     </svg>
-                    <span class="text-placeholder text-sm">29 بهمن</span>
+                    <span class="text-placeholder md:text-sm text-xs"
+                      >29 بهمن</span
+                    >
                   </div>
                 </div>
               </div>
@@ -2037,11 +2065,13 @@
               <div class="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
                 <div class="flex gap-y-3 flex-col min-h-25.5">
                   <a href="#">
-                    <h5 class="font-IRANSansX-Bold text-[20px] text-gray-7">
+                    <h5
+                      class="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7"
+                    >
                       بوت کمپ برنامه نویسی دیجی کالا
                     </h5>
                   </a>
-                  <p class="line-clamp-2 text-base text-placeholder">
+                  <p class="line-clamp-2 text-sm md:text-base text-placeholder">
                     در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید
                     منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت
                     امکان استخدام در دیجی‌کالا را خواهید داشت
@@ -2049,18 +2079,22 @@
                 </div>
 
                 <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-x-2 text-placeholder">
-                    <svg class="w-5 h-5">
+                  <div
+                    class="flex items-center gap-x-1 md:gap-x-2 text-placeholder"
+                  >
+                    <svg class="w-4 md:w-5 h-4 md:h-5">
                       <use href="#location"></use>
                     </svg>
-                    <p class="text-sm">تهران، ایران</p>
+                    <p class="md:text-sm text-xs">تهران، ایران</p>
                   </div>
 
-                  <div class="flex items-center gap-x-2">
-                    <svg class="w-5 h-5">
+                  <div class="flex items-center gap-x-1 md:gap-x-2">
+                    <svg class="w-4 md:w-5 h-4 md:h-5">
                       <use href="#calendar"></use>
                     </svg>
-                    <span class="text-placeholder text-sm">29 بهمن</span>
+                    <span class="text-placeholder md:text-sm text-xs"
+                      >29 بهمن</span
+                    >
                   </div>
                 </div>
               </div>
@@ -2078,11 +2112,13 @@
               <div class="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
                 <div class="flex gap-y-3 flex-col min-h-25.5">
                   <a href="#">
-                    <h5 class="font-IRANSansX-Bold text-[20px] text-gray-7">
+                    <h5
+                      class="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7"
+                    >
                       بوت کمپ برنامه نویسی دیجی کالا
                     </h5>
                   </a>
-                  <p class="line-clamp-2 text-base text-placeholder">
+                  <p class="line-clamp-2 text-sm md:text-base text-placeholder">
                     در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید
                     منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت
                     امکان استخدام در دیجی‌کالا را خواهید داشت
@@ -2090,18 +2126,22 @@
                 </div>
 
                 <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-x-2 text-placeholder">
-                    <svg class="w-5 h-5">
+                  <div
+                    class="flex items-center gap-x-1 md:gap-x-2 text-placeholder"
+                  >
+                    <svg class="w-4 md:w-5 h-4 md:h-5">
                       <use href="#location"></use>
                     </svg>
-                    <p class="text-sm">تهران، ایران</p>
+                    <p class="md:text-sm text-xs">تهران، ایران</p>
                   </div>
 
-                  <div class="flex items-center gap-x-2">
-                    <svg class="w-5 h-5">
+                  <div class="flex items-center gap-x-1 md:gap-x-2">
+                    <svg class="w-4 md:w-5 h-4 md:h-5">
                       <use href="#calendar"></use>
                     </svg>
-                    <span class="text-placeholder text-sm">29 بهمن</span>
+                    <span class="text-placeholder md:text-sm text-xs"
+                      >29 بهمن</span
+                    >
                   </div>
                 </div>
               </div>
@@ -2116,16 +2156,49 @@
     <footer>
       <div class="bg__footer">
         <div class="container">
-          <div class="grid grid-cols-[664px_1fr] gap-x-20">
+          <div class="grid grid-cols-1 md:grid-cols-[664px_1fr] gap-x-20">
             <!-- Right Section Footer -->
-            <div class="mt-28">
-              <div class="grid grid-cols-3 mb-9">
+            <div class="mt-32 md:mt-38">
+              <div class="flex flex-col md:hidden gap-y-4 mb-9 md:mb-0">
+                <p class="text-white font-IRANSansX-Bold text-base">
+                  برای کسب اطلاعات بیشتر در خبرنامه ما عضو شوید
+                </p>
+
+                <!-- Email News Mobile -->
+                <form
+                  action="#"
+                  class="text-sm flex bg-white h-13 rounded-lg justify-between items-center gap-x-4 pr-2 pl-2"
+                  id="email__news"
+                >
+                  <input
+                    type="email"
+                    placeholder="ایمیل خود را وارد کنید"
+                    name="email-news"
+                    class="outline-0 w-full text-xs md:text-base"
+                  />
+                  <button
+                    class="w-[93px] h-8 bg-primary rounded-lg cursor-pointer flex items-center gap-x-1 px-3 justify-center"
+                    type="submit"
+                  >
+                    <span class="text-sm md:text-base text-white font-IRANSansX-Medium"
+                      >عضویت</span
+                    >
+                    <svg class="text-white w-5 h-5">
+                      <use href="#check"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+
+              <div
+                class="grid grid-cols-[139.33px_139.33px_139.33px] md:grid-cols-3 mb-9 justify-between"
+              >
                 <div class="text-white">
                   <h6 class="mb-4 text-sm md:text-base font-IRANSansX-Bold">
                     کانسپتو
                   </h6>
                   <div
-                    class="flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm"
+                    class="inline-flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm"
                   >
                     <a href="#">درباره ما</a>
                     <a href="#">تماس با ما</a>
@@ -2139,7 +2212,7 @@
                     کانسپتو
                   </h6>
                   <div
-                    class="flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm"
+                    class="inline-flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm"
                   >
                     <a href="#">درباره ما</a>
                     <a href="#">تماس با ما</a>
@@ -2153,7 +2226,7 @@
                     کانسپتو
                   </h6>
                   <div
-                    class="flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm"
+                    class="inline-flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm"
                   >
                     <a href="#">درباره ما</a>
                     <a href="#">تماس با ما</a>
@@ -2163,7 +2236,7 @@
                 </div>
               </div>
 
-              <div class="flex flex-col gap-y-4">
+              <div class="flex flex-col gap-y-4 mb-9 md:mb-0">
                 <svg class="w-[132.52px] h-4">
                   <use href="#logo__footer"></use>
                 </svg>
@@ -2176,7 +2249,7 @@
             </div>
 
             <!-- Right Section Footer -->
-            <div class="mt-28">
+            <div class="md:mt-38">
               <!-- New News -->
               <p
                 class="text-white font-IRANSansX-Bold text-base hidden md:block"
@@ -2187,23 +2260,22 @@
               <!-- Email News -->
               <form
                 action="#"
-                class="text-base md:mt-4 bg-white h-13 flex rounded-[50px] justify-between items-center gap-x-4 pr-3 pl-2"
+                class="text-sm hidden md:flex md:text-base md:mt-4 bg-white h-13 rounded-lg md:rounded-[50px] justify-between items-center gap-x-4 pr-3 pl-[6px]"
                 id="email__news"
               >
                 <input
                   type="email"
                   placeholder="ایمیل خود را وارد کنید"
                   name="email-news"
-                  class="outline-0 w-full"
+                  class="outline-0 w-full text-xs md:text-base"
                 />
                 <button
-                  class="w-[107px] h-10 p-3 bg-primary rounded-full cursor-pointer flex items-center gap-x-2 justify-center"
+                  class="w-[93px] h-8 md:w-[107px] md:h-10 p-3 bg-primary rounded-lg md:rounded-full cursor-pointer flex items-center gap-x-2 justify-center"
                   type="submit"
                 >
                   <span class="text-base text-white font-IRANSansX-Medium"
                     >عضویت</span
                   >
-
                   <svg class="text-white w-6 h-6">
                     <use href="#check"></use>
                   </svg>
@@ -2211,13 +2283,15 @@
               </form>
 
               <!-- Locations & Call -->
-              <div class="flex flex-col gap-y-4 md:mt-8">
+              <div class="flex flex-col gap-y-4 md:mt-8 mb-9 md:mb-0">
                 <div class="text-white flex items-center gap-x-1">
                   <svg class="w-6 h-6">
-                    <use href="#location"></use>
+                    <use href="#location-on"></use>
                   </svg>
-                  <span class="text-base font-IRANSansX-Bold">آدرس:</span>
-                  <span class="text-sm"
+                  <span class="text-sm md:text-base font-IRANSansX-Bold"
+                    >آدرس:</span
+                  >
+                  <span class="text-xs md:text-sm"
                     >تهران، خیابان ولیعصر، خیابان سرو، ساختمان کانسپتو</span
                   >
                 </div>
@@ -2225,32 +2299,44 @@
                   <svg class="w-6 h-6">
                     <use href="#phone"></use>
                   </svg>
-                  <span class="text-base font-IRANSansX-Bold"
-                    >شماره تماس: 09123456789</span
-                  >
+                  <p class="*:font-IRANSansX-Bold">
+                    <span class="md:text-base text-sm">شماره تماس:</span>
+                    <span class="md:text-base text-xs font-IRANSansX-Medium"
+                      >09123456789</span
+                    >
+                  </p>
                 </div>
               </div>
 
               <!-- Socials -->
-              <div class="md:mt-8 flex justify-between items-center">
+              <div class="md:mt-8 flex justify-between items-start mb-9 md:mb-0">
                 <div class="flex flex-col gap-y-4">
-                  <p class="font-IRANSansX-Bold text-white text-base">
+                  <p class="font-IRANSansX-Medium md:font-IRANSansX-Bold text-white text-sm md:text-base">
                     ما را در شبکه های اجتماعی دنبال کنید:
                   </p>
 
                   <div class="flex items-center gap-x-8">
-                    <svg class="w-6 h-6">
-                      <use href="#twitter"></use>
-                    </svg>
-                    <svg class="w-6 h-6">
-                      <use href="#instagram"></use>
-                    </svg>
-                    <svg class="w-6 h-6">
-                      <use href="#linkdin"></use>
-                    </svg>
-                    <svg class="w-6 h-6">
-                      <use href="#facebook"></use>
-                    </svg>
+                    <a href="#">
+                      <svg class="w-6 h-6">
+                        <use href="#twitter"></use>
+                      </svg>
+                    </a>
+                    <a href="#">
+                      <svg class="w-6 h-6">
+                        <use href="#instagram"></use>
+                      </svg>
+                    </a>
+                    <a href="#">
+                      <svg class="w-6 h-6">
+                        <use href="#linkdin"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#">
+                      <svg class="w-6 h-6">
+                        <use href="#facebook"></use>
+                      </svg>
+                    </a>
                   </div>
                 </div>
 
@@ -2295,4 +2381,5 @@
 <!-- // TODO:check style of jobs -->
 <!-- // TODO:finish footer and responsive it for other devices -->
 <!-- // TODO:check sizes and gap footer -->
+<!-- // TODO:HEIGHT BG__FOOTER MAX-1200  -->
 <!-- // TODO:check all project styles , font, size .... -->
