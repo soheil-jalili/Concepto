@@ -3,20 +3,20 @@
 @layer base {
   @font-face {
     font-family: "IRANSansX-Regular";
-    src: url("../fonts/woff/IRANSansXFaNum-Regular.woff") format("woff"),
-      url("../fonts/woff2/IRANSansXFaNum-Regular.woff2") format("woff2");
+    src: url("/assets/fonts/woff/IRANSansXFaNum-Regular.woff") format("woff"),
+      url("/assets/fonts/woff2/IRANSansXFaNum-Regular.woff2") format("woff2");
     font-display: swap;
   }
   @font-face {
     font-family: "IRANSansX-Medium";
-    src: url("../fonts/woff/IRANSansXFaNum-Medium.woff") format("woff"),
-      url("../fonts/woff2/IRANSansXFaNum-Medium.woff2") format("woff2");
+    src: url("/assets/fonts/woff/IRANSansXFaNum-Medium.woff") format("woff"),
+      url("/assets/fonts/woff2/IRANSansXFaNum-Medium.woff2") format("woff2");
     font-display: swap;
   }
   @font-face {
     font-family: "IRANSansX-Bold";
-    src: url("../fonts/woff/IRANSansXFaNum-Bold.woff") format("woff"),
-      url("../fonts/woff2/IRANSansXFaNum-Bold.woff2") format("woff2");
+    src: url("/assets/fonts/woff/IRANSansXFaNum-Bold.woff") format("woff"),
+      url("/assets/fonts/woff2/IRANSansXFaNum-Bold.woff2") format("woff2");
     font-display: swap;
   }
   * {
@@ -135,22 +135,21 @@
 }
 
 @utility bg__banner {
-  background-image: url("../images/Banner.png");
+  background-image: url("/assets/images/Banner.png");
   @apply bg-no-repeat bg-cover;
   width: 100%;
   height: 29.427rem;
 }
 @utility bg__footer {
-  background-image: url("../images/bg__footer.png");
+  background-image: url("/assets/images/bg__footer.png");
   @apply bg-no-repeat  bg-cover;
   width: 100%;
-
   @apply md:h-[487px];
 }
 
 @media only screen and (max-width: 546px) {
   .bg__footer {
-    background-image: url("../images/footer/footer__mobile.png");
+    background-image: url("/assets/images/footer/footer__mobile.png");
     @apply bg-no-repeat  bg-cover;
     /* height: 643px !important; */
     overflow: hidden;
