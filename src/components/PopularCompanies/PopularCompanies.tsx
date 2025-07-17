@@ -10,7 +10,7 @@ const PopularCompanies: React.FC = () => {
           <PopularCompaniesHeader />
           {/* <!-- Popular Companis Body --> */}
           <div className="popular__swiper rounded-3xl mt-4 md:mt-14">
-            <Swiper spaceBetween={50} slidesPerView={4} grabCursor>
+            <Swiper spaceBetween={24} slidesPerView={4} grabCursor>
               <SwiperSlide>
                 <div className="w-60.5 h-90 md:w-72 md:h-99.5 rounded-3xl bg-white shadow-1 overflow-hidden">
                   <img src="assets/images/companies/snap.png" alt="Snap" />

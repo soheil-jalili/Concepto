@@ -1,4 +1,5 @@
 import React from "react";
+import EventItem from "../EventItem/EventItem";
 
 const Events: React.FC = () => {
   return (
@@ -23,177 +24,37 @@ const Events: React.FC = () => {
         <div className="grid grid-cols-2 max-sm:hidden gap-x-6 gap-y-6">
           {/* <!-- Event Card --> */}
 
-          <div className="rounded-3xl border border-gray-2">
-            <div className="flex gap-x-3">
-              <img
-                src="assets/images/events/digikala.png"
-                alt="DigiKala"
-                className="event__image"
-              />
+          <EventItem
+            image="/assets/images/events/digikala.png"
+            title="بوت کمپ برنامه نویسی دیجی کالا"
+            location="تهران، ایران"
+            date="29 بهمن"
+            description="در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت امکان استخدام در دیجی‌کالا را خواهید داشت"
+          />
 
-              <div className="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
-                <div className="flex gap-y-3 flex-col min-h-25.5">
-                  <a href="#">
-                    <h5 className="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7">
-                      بوت کمپ برنامه نویسی دیجی کالا
-                    </h5>
-                  </a>
-                  <p className="line-clamp-2 text-sm md:text-base text-placeholder">
-                    در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید
-                    منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت
-                    امکان استخدام در دیجی‌کالا را خواهید داشت
-                  </p>
-                </div>
+          <EventItem
+            image="/assets/images/events/checkbox.png"
+            title="سکوی پرتاب غزال"
+            location="تهران، ایران"
+            date="27 دی"
+            description="سکوی پرتاب غزال، 27 دی ماه سال جاری با هدف شناسایی تیم‌ها و سرمایه‌گذاری بر استارتاپ‌های سازنده بازی های رایانه ای برگزار خواهد شد."
+          />
 
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-x-1 md:gap-x-2 text-placeholder">
-                    <svg className="w-4 md:w-5 h-4 md:h-5">
-                      <use href="#location"></use>
-                    </svg>
-                    <p className="md:text-sm text-xs">تهران، ایران</p>
-                  </div>
+          <EventItem
+            image="/assets/images/events/sako.png"
+            title="سکوی پرتاب قزوین"
+            location="قزوین، ایران"
+            date="24 آبان"
+            description="ویداد تخصصی سرمایه‌گذاری سکوی پرتاب قزوین با هدف شناسایی تیم‌ها و سرمایه‌گذاری بر استارتاپ‌های این استان ۲۴ آبان ماه سال جاری در پارک علم و فناوری قزوین برگزار می‌شود."
+          />
 
-                  <div className="flex items-center gap-x-1 md:gap-x-2">
-                    <svg className="w-4 md:w-5 h-4 md:h-5">
-                      <use href="#calendar"></use>
-                    </svg>
-                    <span className="text-placeholder md:text-sm text-xs">
-                      29 بهمن
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-gray-2">
-            <div className="flex gap-x-3">
-              <img
-                src="assets/images/events/digikala.png"
-                alt="DigiKala"
-                className="event__image"
-              />
-
-              <div className="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
-                <div className="flex gap-y-3 flex-col min-h-25.5">
-                  <a href="#">
-                    <h5 className="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7">
-                      بوت کمپ برنامه نویسی دیجی کالا
-                    </h5>
-                  </a>
-                  <p className="line-clamp-2 text-sm md:text-base text-placeholder">
-                    در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید
-                    منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت
-                    امکان استخدام در دیجی‌کالا را خواهید داشت
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-x-1 md:gap-x-2 text-placeholder">
-                    <svg className="w-4 md:w-5 h-4 md:h-5">
-                      <use href="#location"></use>
-                    </svg>
-                    <p className="md:text-sm text-xs">تهران، ایران</p>
-                  </div>
-
-                  <div className="flex items-center gap-x-1 md:gap-x-2">
-                    <svg className="w-4 md:w-5 h-4 md:h-5">
-                      <use href="#calendar"></use>
-                    </svg>
-                    <span className="text-placeholder md:text-sm text-xs">
-                      29 بهمن
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-gray-2">
-            <div className="flex gap-x-3">
-              <img
-                src="assets/images/events/digikala.png"
-                alt="DigiKala"
-                className="event__image"
-              />
-
-              <div className="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
-                <div className="flex gap-y-3 flex-col min-h-25.5">
-                  <a href="#">
-                    <h5 className="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7">
-                      بوت کمپ برنامه نویسی دیجی کالا
-                    </h5>
-                  </a>
-                  <p className="line-clamp-2 text-sm md:text-base text-placeholder">
-                    در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید
-                    منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت
-                    امکان استخدام در دیجی‌کالا را خواهید داشت
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-x-1 md:gap-x-2 text-placeholder">
-                    <svg className="w-4 md:w-5 h-4 md:h-5">
-                      <use href="#location"></use>
-                    </svg>
-                    <p className="md:text-sm text-xs">تهران، ایران</p>
-                  </div>
-
-                  <div className="flex items-center gap-x-1 md:gap-x-2">
-                    <svg className="w-4 md:w-5 h-4 md:h-5">
-                      <use href="#calendar"></use>
-                    </svg>
-                    <span className="text-placeholder md:text-sm text-xs">
-                      29 بهمن
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-3xl border border-gray-2">
-            <div className="flex gap-x-3">
-              <img
-                src="assets/images/events/digikala.png"
-                alt="DigiKala"
-                className="event__image"
-              />
-
-              <div className="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
-                <div className="flex gap-y-3 flex-col min-h-25.5">
-                  <a href="#">
-                    <h5 className="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7">
-                      بوت کمپ برنامه نویسی دیجی کالا
-                    </h5>
-                  </a>
-                  <p className="line-clamp-2 text-sm md:text-base text-placeholder">
-                    در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید
-                    منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت
-                    امکان استخدام در دیجی‌کالا را خواهید داشت
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-x-1 md:gap-x-2 text-placeholder">
-                    <svg className="w-4 md:w-5 h-4 md:h-5">
-                      <use href="#location"></use>
-                    </svg>
-                    <p className="md:text-sm text-xs">تهران، ایران</p>
-                  </div>
-
-                  <div className="flex items-center gap-x-1 md:gap-x-2">
-                    <svg className="w-4 md:w-5 h-4 md:h-5">
-                      <use href="#calendar"></use>
-                    </svg>
-                    <span className="text-placeholder md:text-sm text-xs">
-                      29 بهمن
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <EventItem
+            image="/assets/images/events/job.png"
+            title="فراخوان جذب ایده و استارتاپ"
+            location="تهران، ایران"
+            date="22 شهریور"
+            description="در حاشیه همایش معدن‌کاری دیجیتال 1401، خانه خلاق و نوآوری دنیای اقتصاد با همکاری مجموعه 100استارت‌آپ، برای ایده‌ها و استارتاپ‌های حوزه معدن جذب سرمایه می‌کند."
+          />
         </div>
       </section>
     </>

@@ -1,4 +1,8 @@
-const Jobs = () => {
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import JobItem from "../JobItem/JobItem";
+
+const Jobs: React.FC = () => {
   //   <!-- Jobs -->
   return (
     <section className="container jobs pb-40 overflow-x-hidden">
@@ -18,127 +22,57 @@ const Jobs = () => {
 
       {/* <!-- Job Body --> */}
       <div className="job__swiper relative">
-        <div className="swiper-wrapper">
-          {/* <!-- Job Item --> */}
-          <div className="swiper-slide">
-            <div className="w-38 flex items-center flex-col justify-center h-42.5 md:w-54 md:h-[189px] relative bg-gray-box-job rounded-3xl">
-              <img
-                src="assets/images/jobs/blu.png"
-                className="h-32 object-cover absolute -top-13"
-                alt="Blu"
-              />
+        <Swiper
+          spaceBetween={24}
+          slidesPerView={5}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <JobItem
+              companyName="بلو بانک"
+              image="/assets/images/jobs/blu.png"
+              title="12 فرصت شغلی"
+            />
+          </SwiperSlide>
 
-              <div className="flex flex-col gap-y-3 items-center justify-center">
-                <p className="text-gray-7 text-base md:text-lg leading-[180%]">
-                  12 فرصت شغلی
-                </p>
-                <p className="text-primary text-xs md:text-sm font-IRANSansX-Medium md:font-IRANSansX-Bold">
-                  بلو بانک
-                </p>
-              </div>
-            </div>
-          </div>
+          <SwiperSlide>
+            <JobItem
+              companyName="آسیاتک"
+              image="assets/images/jobs/asia_teck.png"
+              title="16 فرصت شغلی"
+            />
+          </SwiperSlide>
 
-          {/* <!-- Job Item --> */}
-          <div className="swiper-slide">
-            <div className="w-38 flex items-center flex-col justify-center h-42.5 md:w-54 md:h-[189px] relative bg-gray-box-job rounded-3xl">
-              <img
-                src="assets/images/jobs/asia_teck.png"
-                className="h-32 object-cover absolute -top-13"
-                alt="Blu"
-              />
-
-              <div className="flex flex-col gap-y-3 items-center justify-center">
-                <p className="text-gray-7 text-base md:text-lg leading-[180%]">
-                  16 فرصت شغلی
-                </p>
-                <p className="text-primary text-xs md:text-sm font-IRANSansX-Medium md:font-IRANSansX-Bold">
-                  آسیاتک
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* <!-- Job Item --> */}
-          <div className="swiper-slide">
-            <div className="w-38 flex items-center flex-col justify-center h-42.5 md:w-54 md:h-[189px] relative bg-gray-box-job rounded-3xl">
-              <img
-                src="assets/images/jobs/farabi.png"
-                className="h-32 object-cover absolute -top-13"
-                alt="Blu"
-              />
-
-              <div className="flex flex-col gap-y-3 items-center justify-center">
-                <p className="text-gray-7 text-base md:text-lg leading-[180%]">
-                  11 فرصت شغلی
-                </p>
-                <p className="text-primary text-xs md:text-sm font-IRANSansX-Medium md:font-IRANSansX-Bold">
-                  کارگزاری فارابی
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* <!-- Job Item --> */}
-          <div className="swiper-slide">
-            <div className="w-38 flex items-center flex-col justify-center h-42.5 md:w-54 md:h-[189px] relative bg-gray-box-job rounded-3xl">
-              <img
-                src="assets/images/jobs/blu.png"
-                className="h-32 object-cover absolute -top-13"
-                alt="Blu"
-              />
-
-              <div className="flex flex-col gap-y-3 items-center justify-center">
-                <p className="text-gray-7 text-base md:text-lg leading-[180%]">
-                  14 فرصت شغلی
-                </p>
-                <p className="text-primary text-xs md:text-sm font-IRANSansX-Medium md:font-IRANSansX-Bold">
-                  بیمه بازار
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* <!-- Job Item --> */}
-          <div className="swiper-slide">
-            <div className="w-38 flex items-center flex-col justify-center h-42.5 md:w-54 md:h-[189px] relative bg-gray-box-job rounded-3xl">
-              <img
-                src="assets/images/jobs/alibaba.png"
-                className="h-32 object-cover absolute -top-13"
-                alt="Blu"
-              />
-
-              <div className="flex flex-col gap-y-3 items-center justify-center">
-                <p className="text-gray-7 text-base md:text-lg leading-[180%]">
-                  18 فرصت شغلی
-                </p>
-                <p className="text-primary text-xs md:text-sm font-IRANSansX-Medium md:font-IRANSansX-Bold">
-                  گروه علی بابا
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* <!-- Job Item --> */}
-          <div className="swiper-slide">
-            <div className="w-38 flex items-center flex-col justify-center h-42.5 md:w-54 md:h-[189px] relative bg-gray-box-job rounded-3xl">
-              <img
-                src="assets/images/jobs/alibaba.png"
-                className="h-32 object-cover absolute -top-13"
-                alt="Blu"
-              />
-
-              <div className="flex flex-col gap-y-3 items-center justify-center">
-                <p className="text-gray-7 text-base md:text-lg leading-[180%]">
-                  18 فرصت شغلی
-                </p>
-                <p className="text-primary text-xs md:text-sm font-IRANSansX-Medium md:font-IRANSansX-Bold">
-                  گروه علی بابا
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+          <SwiperSlide>
+            <JobItem
+              companyName="کارگزاری فارابی"
+              image="assets/images/jobs/farabi.png"
+              title="11 فرصت شغلی"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <JobItem
+              companyName="بیمه بازار"
+              image="/assets/images/jobs/bimeh.png"
+              title="14 فرصت شغلی"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <JobItem
+              companyName="گروه علی بابا"
+              image="assets/images/jobs/alibaba.png"
+              title="18 فرصت شغلی"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <JobItem
+              companyName="بیمه بازار"
+              image="assets/images/jobs/asia_teck.png"
+              title="14 فرصت شغلی"
+            />
+          </SwiperSlide>
+        </Swiper>
 
         <div className="max-md:hidden job-button-next w-12.5 h-12.5 rounded-full flex items-center justify-center bg-white shadow-prev-next cursor-pointer">
           <svg className="w-6 h-6 text-black">
