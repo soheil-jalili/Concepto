@@ -1,4 +1,4 @@
-import React from "react";
+import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -20,10 +20,31 @@ const News: React.FC = () => {
         </div>
         {/* <!-- Popular News Body --> */}
         <div className="news mt-5 md:mt-14">
-          <Swiper spaceBetween={24} slidesPerView={3}>
+          <Swiper
+            spaceBetween={24}
+            slidesPerView={3}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 1.8,
+              },
+              996: {
+                slidesPerView: 1.8,  
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
             <SwiperSlide>
               <div className="swiper-slide">
-                <div className="w-60.5 h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
+                <div className="h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
                   <img src="assets/images/news/car.png" alt="Snap Record" />
 
                   <div className="px-4 flex flex-col gap-y-4 mt-4">
@@ -67,7 +88,7 @@ const News: React.FC = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide">
-                <div className="w-60.5 h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
+                <div className="h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
                   <img src="assets/images/news/phone.png" alt="Digikala" />
 
                   <div className="px-4 flex flex-col gap-y-4 mt-4">
@@ -111,7 +132,7 @@ const News: React.FC = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide">
-                <div className="w-60.5 h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
+                <div className="h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
                   <img src="assets/images/news/alibaba.png" alt="Alibaba" />
 
                   <div className="px-4 flex flex-col gap-y-4 mt-4">

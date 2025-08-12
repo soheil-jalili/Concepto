@@ -21,7 +21,7 @@ const Events: React.FC = () => {
         </div>
 
         {/* <!-- Events Body --> */}
-        <div className="grid grid-cols-2 max-sm:hidden gap-x-6 gap-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
           {/* <!-- Event Card --> */}
 
           <EventItem
@@ -56,7 +56,15 @@ const Events: React.FC = () => {
             description="در حاشیه همایش معدن‌کاری دیجیتال 1401، خانه خلاق و نوآوری دنیای اقتصاد با همکاری مجموعه 100استارت‌آپ، برای ایده‌ها و استارتاپ‌های حوزه معدن جذب سرمایه می‌کند."
           />
         </div>
+
+
+
+        
       </section>
+
+
+
+
     </>
   );
 };

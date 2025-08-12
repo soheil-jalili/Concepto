@@ -19,7 +19,7 @@ const EventItem: React.FC<EventItemType> = ({
       <div className="flex gap-x-3">
         <img src={image} alt={title} className="event__image" />
 
-        <div className="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col">
+        <div className="pl-3 pt-8 pr-2 pb-6 flex gap-y-3 flex-col justify-between">
           <div className="flex gap-y-3 flex-col min-h-25.5">
             <a href="#">
               <h5 className="font-IRANSansX-Bold text-sm md:text-[20px] text-gray-7">

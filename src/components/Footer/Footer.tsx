@@ -21,7 +21,7 @@ export default Footer;
 const MainFooter = () => {
   return (
     <>
-      <div className="bg__footer">
+      <div className="bg__footer max-[368px]:!h-auto">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-[664px_1fr] gap-x-20">
             {/* <!-- Right Section Footer --> */}
@@ -57,9 +57,9 @@ const MainFooter = () => {
                 </form>
               </div>
 
-              <div className="grid grid-cols-[139.33px_139.33px_139.33px] md:grid-cols-3 mb-9 justify-between">
+              <div className="grid grid-cols-2 gap-y-6 md:grid-cols-3 mb-9 justify-between">
                 <div className="text-white">
-                  <h6 className="mb-4 text-sm md:text-base font-IRANSansX-Bold">
+                  <h6 className="md:mb-4 mb-4.5 text-sm md:text-base font-IRANSansX-Bold">
                     کانسپتو
                   </h6>
                   <div className="inline-flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm">
@@ -71,7 +71,7 @@ const MainFooter = () => {
                 </div>
 
                 <div className="text-white">
-                  <h6 className="mb-4 text-sm md:text-base font-IRANSansX-Bold">
+                  <h6 className="md:mb-4 mb-4.5 text-sm md:text-base font-IRANSansX-Bold">
                     کانسپتو
                   </h6>
                   <div className="inline-flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm">
@@ -83,7 +83,7 @@ const MainFooter = () => {
                 </div>
 
                 <div className="text-white">
-                  <h6 className="mb-4 text-sm md:text-base font-IRANSansX-Bold">
+                  <h6 className="md:mb-4 mb-4.5 text-sm md:text-base font-IRANSansX-Bold">
                     کانسپتو
                   </h6>
                   <div className="inline-flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm">

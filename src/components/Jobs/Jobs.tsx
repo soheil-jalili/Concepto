@@ -22,12 +22,7 @@ const Jobs: React.FC = () => {
 
       {/* <!-- Job Body --> */}
       <div className="job__swiper relative">
-        <Swiper
-          spaceBetween={24}
-          slidesPerView={5}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
+        <Swiper spaceBetween={24} slidesPerView={5}>
           <SwiperSlide>
             <JobItem
               companyName="بلو بانک"

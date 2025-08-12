@@ -89,9 +89,10 @@
   --color-secondary_tint_3: #ffecb3;
 
   /* Shadows */
-  --shadow-1: 0 2px 32px 0 rgba(28, 28, 28, 0.06);
+  --shadow-1: 0 2px 12px 0 rgba(28, 28, 28, 0.06);
   --shadow-2: 0 3px 10px 0 rgba(28, 28, 28, 0.03);
   --shadow-prev-next: 0 50px 50px 0 rgba(0, 0, 0, 0.05);
+  --shadow-box: 0 2px 32px 0 rgba(28, 28, 28, 0.06);
 
   /* Blur */
   --blur-20: blur(20px);

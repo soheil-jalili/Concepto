@@ -1,4 +1,4 @@
-import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Categories: React.FC = () => {
   return (
@@ -149,258 +149,252 @@ const Categories: React.FC = () => {
         </div>
 
         {/* <!-- For Max-[lg] --> */}
-        <div className="swiper mt-6 !hidden min-[520px]:!grid lg__swiper max-[530px]:!gap-x-3.5">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/ai.png"
-                  alt="Ai"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
+        <Swiper className="mt-6 !hidden min-[520px]:!grid lg__swiper max-[530px]:!gap-x-3.5">
+          <SwiperSlide>
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/ai.png"
+                alt="Ai"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
 
-                <p>هوش مصنوعی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/python.png"
-                  alt="python"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>برنامه نویسی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/bitcoin.png"
-                  alt="bitcoin"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>ارز دیجیتال</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/accounting.png"
-                  alt="accounting"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>حسابداری</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/photoshop.png"
-                  alt="photoshop"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>گرافیک</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/photography.png"
-                  alt="photography"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>رسانه‌ها</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/aerospace.png"
-                  alt="aerospace"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>هوافضا</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/medical.png"
-                  alt="medical"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>پزشکی</p>
-              </div>
+              <p>هوش مصنوعی</p>
             </div>
 
-            <div className="swiper-slide">
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/tejarat.png"
-                  alt="tejarat"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>تجارت الکترونیک</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/knowledge.png"
-                  alt="knowledge"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>علمی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/music.png"
-                  alt="music"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>موسیقی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/bio.png"
-                  alt="bio"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>بیوتکنولوژی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/movie.png"
-                  alt="movie"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>فیلم و سینما</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/transportation.png"
-                  alt="transportation"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>حمل و نقل</p>
-              </div>
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/python.png"
+                alt="python"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>برنامه نویسی</p>
             </div>
-          </div>
-        </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/bitcoin.png"
+                alt="bitcoin"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>ارز دیجیتال</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/accounting.png"
+                alt="accounting"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>حسابداری</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/photoshop.png"
+                alt="photoshop"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>گرافیک</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/photography.png"
+                alt="photography"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>رسانه‌ها</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/aerospace.png"
+                alt="aerospace"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>هوافضا</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/medical.png"
+                alt="medical"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>پزشکی</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/tejarat.png"
+                alt="tejarat"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>تجارت الکترونیک</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/knowledge.png"
+                alt="knowledge"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>علمی</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/music.png"
+                alt="music"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>موسیقی</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/bio.png"
+                alt="bio"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>بیوتکنولوژی</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/movie.png"
+                alt="movie"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>فیلم و سینما</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/transportation.png"
+                alt="transportation"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>حمل و نقل</p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
 
         {/* <!-- For Max-[519] --> */}
-        <div className="swiper five_hundred !hidden max-[520px]:!grid mt-6">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide">
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/ai.png"
-                  alt="Ai"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
+        <Swiper className="five_hundred !hidden max-[520px]:!grid mt-6">
+          <SwiperSlide>
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/ai.png"
+                alt="Ai"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
 
-                <p>هوش مصنوعی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/python.png"
-                  alt="python"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>برنامه نویسی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/bitcoin.png"
-                  alt="bitcoin"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>ارز دیجیتال</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/accounting.png"
-                  alt="accounting"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>حسابداری</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/photoshop.png"
-                  alt="photoshop"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>گرافیک</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/photography.png"
-                  alt="photography"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>رسانه‌ها</p>
-              </div>
+              <p>هوش مصنوعی</p>
             </div>
 
-            <div className="swiper-slide">
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/tejarat.png"
-                  alt="tejarat"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>تجارت الکترونیک</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/knowledge.png"
-                  alt="knowledge"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>علمی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/music.png"
-                  alt="music"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>موسیقی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/bio.png"
-                  alt="bio"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>بیوتکنولوژی</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/movie.png"
-                  alt="movie"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>فیلم و سینما</p>
-              </div>
-
-              <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-                <img
-                  src="assets/images/categories/transportation.png"
-                  alt="transportation"
-                  className="p-1.5 border-2 border-primary rounded-full"
-                />
-                <p>حمل و نقل</p>
-              </div>
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/python.png"
+                alt="python"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>برنامه نویسی</p>
             </div>
-          </div>
-        </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/bitcoin.png"
+                alt="bitcoin"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>ارز دیجیتال</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/accounting.png"
+                alt="accounting"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>حسابداری</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/photoshop.png"
+                alt="photoshop"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>گرافیک</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/photography.png"
+                alt="photography"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>رسانه‌ها</p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/tejarat.png"
+                alt="tejarat"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>تجارت الکترونیک</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/knowledge.png"
+                alt="knowledge"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>علمی</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/music.png"
+                alt="music"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>موسیقی</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/bio.png"
+                alt="bio"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>بیوتکنولوژی</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/movie.png"
+                alt="movie"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>فیلم و سینما</p>
+            </div>
+
+            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
+              <img
+                src="assets/images/categories/transportation.png"
+                alt="transportation"
+                className="p-1.5 border-2 border-primary rounded-full"
+              />
+              <p>حمل و نقل</p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
     </>
   );
