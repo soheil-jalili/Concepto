@@ -12,6 +12,20 @@ const routes: RouteObject[] = [
     path: "/search/:slug",
     element: <Search />,
   },
+
+  {
+    path: "/account/",
+    children: [
+      {
+        path: "signup",
+        element: <h1>signup</h1>,
+      },
+      {
+        index: true,
+        element: <h1>signup</h1>,
+      },
+    ],
+  },
 ];
 
 export default routes;

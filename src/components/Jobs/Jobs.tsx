@@ -51,7 +51,7 @@ const Jobs: React.FC = () => {
             },
             900: {
               spaceBetween: 25,
-              slidesPerView: 4,
+              slidesPerView: 3.5,
             },
             1250: {
               spaceBetween: 25,

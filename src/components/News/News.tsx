@@ -21,32 +21,36 @@ const News: React.FC = () => {
         {/* <!-- Popular News Body --> */}
         <div className="news mt-5 md:mt-12">
           <Swiper
-          id="news__swiper"
-            spaceBetween={24}
-            slidesPerView={3}
+            id="news__swiper"
+            slidesPerView={1}
+            spaceBetween={30}
             breakpoints={{
-              0: {
-                slidesPerView: 1,
+              450 : {
+                slidesPerView : 1.3
+              },
+              
+              768 : {
+                slidesPerView : 1.8
               },
 
-              640: {
-                slidesPerView: 2,
-              },
-              768: {
-                slidesPerView: 1.8,
-              },
-              996: {
-                slidesPerView: 1.8,  
-              },
+
               1024: {
-                slidesPerView: 3,
+                slidesPerView: 2.3,
               },
+              
+              1279 : {
+                slidesPerView: 3,
+              }
             }}
           >
             <SwiperSlide>
               <div className="swiper-slide">
-                <div className="h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
-                  <img src="assets/images/news/car.png" alt="Snap Record" />
+                <div className="h-auto md:w-98  md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
+                  <img
+                    src="assets/images/news/car.png"
+                    alt="Snap Record"
+                    className="w-full"
+                  />
 
                   <div className="px-4 flex flex-col gap-y-4 mt-4">
                     <p className="text-xs text-placeholder">تجارت الکترونیک</p>
@@ -63,7 +67,7 @@ const News: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="flex items-center text-gray-4 justify-between mt-2">
+                    <div className="flex items-center text-gray-4 justify-between mt-2 pb-5 max-[282px]:flex-col max-[282px]:gap-3">
                       <div className="flex items-center gap-x-3">
                         <div className="w-7 h-7 rounded-full">
                           <img
@@ -89,8 +93,12 @@ const News: React.FC = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide">
-                <div className="h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
-                  <img src="assets/images/news/phone.png" alt="Digikala" />
+                <div className="h-full md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
+                  <img
+                    src="assets/images/news/phone.png"
+                    alt="Digikala"
+                    className="w-full"
+                  />
 
                   <div className="px-4 flex flex-col gap-y-4 mt-4">
                     <p className="text-xs text-placeholder">تجارت الکترونیک</p>
@@ -107,7 +115,7 @@ const News: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="flex items-center text-gray-4 justify-between mt-2">
+                    <div className="flex items-center text-gray-4 justify-between mt-2 pb-5 max-[282px]:flex-col max-[282px]:gap-3">
                       <div className="flex items-center gap-x-3">
                         <div className="w-7 h-7 rounded-full">
                           <img
@@ -133,8 +141,12 @@ const News: React.FC = () => {
             </SwiperSlide>
             <SwiperSlide>
               <div className="swiper-slide">
-                <div className="h-86 md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
-                  <img src="assets/images/news/alibaba.png" alt="Alibaba" />
+                <div className="h-full md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
+                  <img
+                    src="assets/images/news/alibaba.png"
+                    alt="Alibaba"
+                    className="w-full"
+                  />
 
                   <div className="px-4 flex flex-col gap-y-4 mt-4">
                     <p className="text-xs text-placeholder">تجارت الکترونیک</p>
@@ -151,7 +163,7 @@ const News: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="flex items-center text-gray-4 justify-between mt-2">
+                    <div className="flex items-center text-gray-4 justify-between mt-2 pb-5 max-[282px]:flex-col max-[282px]:gap-3">
                       <div className="flex items-center gap-x-3">
                         <div className="w-7 h-7 rounded-full">
                           <img

@@ -15,7 +15,7 @@ const EventItem: React.FC<EventItemType> = ({
   date,
 }) => {
   return (
-    <div className="rounded-3xl border border-gray-2">
+    <div className="rounded-3xl border border-gray-2 overflow-x-hidden">
       <div className="flex gap-x-3">
         <img src={image} alt={title} className="event__image" />
 

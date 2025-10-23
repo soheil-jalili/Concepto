@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   {
     /* <!-- Start Header --> */
@@ -17,11 +19,11 @@ const Header = () => {
               </svg>
             </button>
 
-            <a href="#">
+            <Link to="/">
               <svg className="md:w-30.5 lg:w-49.5 lg:h-6 w-25 h-4 max-[190px]:hidden">
                 <use href="#logo"></use>
               </svg>
-            </a>
+            </Link>
 
             <form
               action="#"
@@ -53,15 +55,15 @@ const Header = () => {
                   رایگان شروع کن!{" "}
                 </span>
               </a>
-              <a
-                href="#"
+              <Link
+                to={"/account/"}
                 className="flex items-center gap-x-2 border border-gray-8 px-4 rounded-xl h-12 text-lg shrink-0"
               >
                 <svg className="w-6 h-6">
                   <use href="#login"></use>
                 </svg>
                 <span className="hidden xl:inline-block"> ورود/ثبت نام </span>
-              </a>
+              </Link>
             </div>
           </div>
           {/* <!-- End Main Header Item --> */}
