@@ -230,3 +230,7 @@
 #news__swiper > .swiper-wrapper{
   padding: 1rem 0;
 }
+
+#job__swiper > .swiper-wrapper{
+  padding: 2rem 0;
+}

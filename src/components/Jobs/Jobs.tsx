@@ -27,6 +27,7 @@ const Jobs: React.FC = () => {
       {/* <!-- Job Body --> */}
       <div className="job__swiper relative">
         <Swiper
+        id="job__swiper"
           modules={[Navigation]}
           spaceBetween={20}
           slidesPerView={1}
