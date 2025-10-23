@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import BackDrop from "../BackDrop";
 
 const Header = () => {
-  {
-    /* <!-- Start Header --> */
-  }
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const openHandler = () => setIsOpen(true);
+  const closeHandler = () => setIsOpen(false);
+
+  /* <!-- Start Header --> */
   return (
     <>
       <header className="lg:pt-6 pt-3 border-b border-b-search_box md:border-none pb-4 md:pb-0">
@@ -13,6 +18,7 @@ const Header = () => {
             <button
               className="md:hidden w-8 h-8 rounded-lg bg-search_box justify-center flex items-center cursor-pointer"
               id="btn__menu"
+              onClick={openHandler}
             >
               <svg className="w-5 h-5">
                 <use href="#bars"></use>
@@ -90,7 +96,11 @@ const Header = () => {
 
           {/* <!-- Start Mobile Menu --> */}
           <div
-            className="fixed w-1/2 max-[325px]:w-3/4 max-[325px]:-right-3/4 px-3 bg-white md:hidden bottom-0 -right-1/2 to-0 h-full transition-all z-50"
+            className={`fixed w-1/2 max-[325px]:w-3/4 ${
+              isOpen ? "right-0" : "max-[325px]:-right-3/4"
+            } px-3 bg-white md:hidden bottom-0  to-0 h-full transition-all z-50 ${
+              isOpen ? "right-0" : "-right-1/2"
+            }`}
             id="menu__items"
           >
             <div className="flex items-center border-b border-search_box pb-2 justify-between mt-2 max-[160px]:flex-wrap max-[160px]:justify-center">
@@ -100,7 +110,11 @@ const Header = () => {
                 </svg>
               </a>
 
-              <button className="cursor-pointer" id="closeBtn">
+              <button
+                className="cursor-pointer"
+                id="closeBtn"
+                onClick={closeHandler}
+              >
                 <svg className="w-5 h-5">
                   <use href="#close"></use>
                 </svg>
@@ -146,6 +160,13 @@ const Header = () => {
         </div>
       </header>
       {/* <!-- End Header --> */}
+
+      {isOpen ? (
+        <BackDrop
+          clickHandler={() => setIsOpen(false)}
+          className={`${isOpen ? "opacity-100" : "opacity-0"}`}
+        />
+      ) : null}
     </>
   );
 };

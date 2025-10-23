@@ -1,8 +1,8 @@
 import React from "react";
 import { useRoutes } from "react-router-dom";
 import routes from "./routes";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Header from "./components/modules/Header/Header";
+import Footer from "./components/modules/Footer/Footer";
 
 const App: React.FC = () => {
   const router = useRoutes(routes);

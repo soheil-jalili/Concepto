@@ -1,11 +1,11 @@
-import Categories from "../../components/Categories/Categories";
-import Events from "../../components/Events/Events";
-import Features from "../../components/Features/Features";
-import HeroImage from "../../components/HeroImages/HeroImage";
-import Jobs from "../../components/Jobs/Jobs";
-import News from "../../components/News/News";
-import PopularCompanies from "../../components/PopularCompanies/PopularCompanies";
-import Statistics from "../../components/Statistics/Statistics";
+import Categories from "../../components/templates/index/Categories/Categories";
+import Events from "../../components/templates/index/Events/Events";
+import Features from "../../components/templates/index/Features/Features";
+import HeroImage from "../../components/templates/index/HeroImages/HeroImage";
+import Jobs from "../../components/templates/index/Jobs/Jobs";
+import News from "../../components/templates/index/News/News";
+import PopularCompanies from "../../components/templates/index/PopularCompanies/PopularCompanies";
+import Statistics from "../../components/templates/index/Statistics/Statistics";
 
 const Index = () => {
   return (
