@@ -2,6 +2,10 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import JobItem from "../JobItem/JobItem";
 
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
 const Jobs: React.FC = () => {
   //   <!-- Jobs -->
   return (
@@ -22,7 +26,38 @@ const Jobs: React.FC = () => {
 
       {/* <!-- Job Body --> */}
       <div className="job__swiper relative">
-        <Swiper spaceBetween={24} slidesPerView={5}>
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation={{
+            nextEl: ".slide__next",
+            prevEl: ".slide__prev",
+          }}
+          breakpoints={{
+            450: {
+              spaceBetween: 45,
+              slidesPerView: 2,
+            },
+
+            600: {
+              spaceBetween: 25,
+              slidesPerView: 2.5,
+            },
+            750: {
+              spaceBetween: 25,
+              slidesPerView: 3,
+            },
+            900: {
+              spaceBetween: 25,
+              slidesPerView: 4,
+            },
+            1250: {
+              spaceBetween: 25,
+              slidesPerView: 5,
+            },
+          }}
+        >
           <SwiperSlide>
             <JobItem
               companyName="بلو بانک"
@@ -69,12 +104,12 @@ const Jobs: React.FC = () => {
           </SwiperSlide>
         </Swiper>
 
-        <div className="max-md:hidden job-button-next w-12.5 h-12.5 rounded-full flex items-center justify-center bg-white shadow-prev-next cursor-pointer">
+        <div className="slide__prev max-md:hidden job-button-next w-12.5 h-12.5 rounded-full flex items-center justify-center bg-white shadow-prev-next cursor-pointer">
           <svg className="w-6 h-6 text-black">
             <use href="#chevron-right"></use>
           </svg>
         </div>
-        <div className="max-md:hidden job-button-prev w-12.5 h-12.5 rounded-full flex items-center justify-center bg-white shadow-2xl cursor-pointer">
+        <div className="slide__next max-md:hidden job-button-prev w-12.5 h-12.5 rounded-full flex items-center justify-center bg-white shadow-2xl cursor-pointer">
           <svg className="w-6 h-6 text-black">
             <use href="#chevron-left"></use>
           </svg>

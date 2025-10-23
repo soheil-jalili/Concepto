@@ -19,8 +19,9 @@ const News: React.FC = () => {
           </a>
         </div>
         {/* <!-- Popular News Body --> */}
-        <div className="news mt-5 md:mt-14">
+        <div className="news mt-5 md:mt-12">
           <Swiper
+          id="news__swiper"
             spaceBetween={24}
             slidesPerView={3}
             breakpoints={{

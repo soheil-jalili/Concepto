@@ -221,3 +221,12 @@
     display: none !important;
   }
 }
+
+
+#popular__swiper > .swiper-wrapper{
+  padding: 1rem 0;
+}
+
+#news__swiper > .swiper-wrapper{
+  padding: 1rem 0;
+}
