@@ -44,10 +44,10 @@ const MainFooter = () => {
                     className="outline-0 w-full text-xs md:text-base"
                   />
                   <button
-                    className="w-[93px] h-8 bg-primary rounded-lg cursor-pointer flex items-center gap-x-1 px-3 justify-center"
+                    className="w-[93px] max-[240px]:w-[50px] h-8 bg-primary rounded-lg cursor-pointer flex items-center gap-x-1 px-3 justify-center"
                     type="submit"
                   >
-                    <span className="text-sm md:text-base text-white font-IRANSansX-Medium">
+                    <span className="text-sm md:text-base text-white font-IRANSansX-Medium max-[246px]:hidden">
                       عضویت
                     </span>
                     <svg className="text-white w-5 h-5">
@@ -166,7 +166,7 @@ const MainFooter = () => {
               </div>
 
               {/* <!-- Socials --> */}
-              <div className="md:mt-8 flex justify-between items-start mb-9 md:mb-0">
+              <div className="md:mt-8 flex justify-between items-start mb-9 md:mb-0 max-[330px]:flex-col max-[330px]:gap-9">
                 <div className="flex flex-col gap-y-4">
                   <p className="font-IRANSansX-Medium md:font-IRANSansX-Bold text-white text-sm md:text-base">
                     ما را در شبکه های اجتماعی دنبال کنید:

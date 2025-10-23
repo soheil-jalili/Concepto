@@ -96,19 +96,19 @@ const Header = () => {
 
           {/* <!-- Start Mobile Menu --> */}
           <div
-            className={`fixed w-1/2 max-[325px]:w-3/4 ${
-              isOpen ? "right-0" : "max-[325px]:-right-3/4"
-            } px-3 bg-white md:hidden bottom-0  to-0 h-full transition-all z-50 ${
+            className={`fixed w-1/2 max-[325px]:w-full ${
+              isOpen ? "right-0" : "max-[325px]:-right-full"
+            } px-3 bg-white md:hidden bottom-0 top-0 h-full transition-all z-50 ${
               isOpen ? "right-0" : "-right-1/2"
             }`}
             id="menu__items"
           >
             <div className="flex items-center border-b border-search_box pb-2 justify-between mt-2 max-[160px]:flex-wrap max-[160px]:justify-center">
-              <a href="#">
+              <Link to="/">
                 <svg className="w-20 h-6">
                   <use href="#logo"></use>
                 </svg>
-              </a>
+              </Link>
 
               <button
                 className="cursor-pointer"
@@ -121,39 +121,41 @@ const Header = () => {
               </button>
             </div>
 
-            {/* <!-- Mobile Menu Item --> */}
-            <ul className="flex gap-y-6 mt-5 pb-5 max-[310px]:border-b border-b-search_box flex-col">
-              <li>
-                <a href="#">شرکت ها</a>
-              </li>
-              <li>
-                <a href="#">فرصت های شغلی</a>
-              </li>
-              <li>
-                <a href="#">اخبار و رویدادها</a>
-              </li>
-              <li>
-                <a href="#">درباره ما</a>
-              </li>
-              <li>
-                <a href="#">تماس با ما</a>
-              </li>
-            </ul>
+            <div className="flex flex-col ">
+              {/* <!-- Mobile Menu Item --> */}
+              <ul className="flex gap-y-6 mt-5 pb-5 max-[310px]:border-b border-b-search_box flex-col">
+                <li>
+                  <a href="#">شرکت ها</a>
+                </li>
+                <li>
+                  <a href="#">فرصت های شغلی</a>
+                </li>
+                <li>
+                  <a href="#">اخبار و رویدادها</a>
+                </li>
+                <li>
+                  <a href="#">درباره ما</a>
+                </li>
+                <li>
+                  <a href="#">تماس با ما</a>
+                </li>
+              </ul>
 
-            {/* <!-- Main Btns max:[325px] --> */}
-            <div className="mt-3 hidden max-[325px]:flex flex-col gap-y-6">
-              <a href="#" className="flex items-center gap-x-2 shrink-0">
-                <svg className="w-5 h-5">
-                  <use href="#bolt"></use>
-                </svg>
-                <span> رایگان شروع کن! </span>
-              </a>
-              <a href="#" className="flex items-center gap-x-2 shrink-0">
-                <svg className="w-5 h-5">
-                  <use href="#login"></use>
-                </svg>
-                <span> ورود/ثبت نام </span>
-              </a>
+              {/* <!-- Main Btns max:[325px] --> */}
+              <div className="mt-3 hidden max-[325px]:flex flex-col gap-y-6  border-t border-t-gray-1 pt-6 max-[325px]:absolute max-[325px]:bottom-6 w-full">
+                <a href="#" className="flex items-center gap-x-2 shrink-0">
+                  <svg className="w-5 h-5">
+                    <use href="#bolt"></use>
+                  </svg>
+                  <span> رایگان شروع کن! </span>
+                </a>
+                <a href="#" className="flex items-center gap-x-2 shrink-0">
+                  <svg className="w-5 h-5">
+                    <use href="#login"></use>
+                  </svg>
+                  <span> ورود/ثبت نام </span>
+                </a>
+              </div>
             </div>
           </div>
           {/* <!-- End Mobile Menu --> */}

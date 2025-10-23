@@ -8,15 +8,15 @@ const Events: React.FC = () => {
     <>
       <section className="container pb-20 xl:pb-40">
         {/* <!-- Title Events Section --> */}
-        <div className="flex items-center gap-x-2 mb-9 md:mb-10">
+        <div className="flex items-center gap-x-2 mb-9 md:mb-10 max-[320px]:justify-between">
           <h4 className="text-gray-7 md:text-placeholder shrink-0 text-base md:text-2xl">
             دسته بندی ها
           </h4>
-          <span className="border border-r border-gray-2 w-full max-[210px]:hidden"></span>
+          <span className="max-[320px]:hidden border border-r border-gray-2 w-full max-[210px]:hidden"></span>
 
           <div className="flex items-center shrink-0 text-placeholder">
             <a href="#">مشاهده همه</a>
-            <svg className="w-6 h-6">
+            <svg className="max-[248px]:hidden w-6 md:h-6">
               <use href="#left-arrow"></use>
             </svg>
           </div>
