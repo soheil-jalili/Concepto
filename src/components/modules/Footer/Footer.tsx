@@ -172,7 +172,7 @@ const MainFooter = () => {
                     ما را در شبکه های اجتماعی دنبال کنید:
                   </p>
 
-                  <div className="flex items-center gap-x-8">
+                  <div className="flex items-center gap-x-8 max-[247px]:gap-x-4">
                     <a href="#">
                       <svg className="w-6 h-6">
                         <use href="#twitter"></use>

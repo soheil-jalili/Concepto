@@ -28,14 +28,14 @@ const PopularCompaniesCart: React.FC<PopularCompaniesCartProps> = ({
   rating,
 }: PopularCompaniesCartProps) => {
   return (
-    <div className="w-full max-w-full max-[350px]:h-92 h-99.5 rounded-3xl bg-white flex flex-col justify-between shadow-box">
+    <div className="w-full max-w-full max-[350px]:h-92 h-99.5 max-[247px]:h-auto rounded-3xl bg-white flex flex-col justify-between shadow-box">
       <div>
         <img
           src={mainImage}
           alt={mainImageAlt}
           className="w-full object-cover"
         />
-        <div className="flex -translate-y-4 items-end gap-x-4 px-4">
+        <div className="flex -translate-y-4 items-end gap-x-4 px-4 max-[247px]:flex-wrap max-[247px]:justify-center">
           <a href="#">
             <img src={thumbnailImage} alt={mainImageAlt} />
           </a>
@@ -47,8 +47,8 @@ const PopularCompaniesCart: React.FC<PopularCompaniesCartProps> = ({
           </div>
         </div>
       </div>
-      <div className="px-4 flex flex-col gap-y-3.5">
-        <div className="flex items-center gap-x-2.5 *:p-2">
+      <div className="px-4 flex flex-col gap-y-3.5 ">
+        <div className="flex items-center gap-x-2.5 *:p-2 max-[247px]:flex-wrap max-[247px]:justify-center max-[247px]:gap-4">
           <div className="rounded-[8px] border border-gray-1 flex gap-y-2 flex-col">
             <p className="text-xs">سرمایه گذاران جدید</p>
             <p className="text-primary font-IRANSansX-Bold text-sm">

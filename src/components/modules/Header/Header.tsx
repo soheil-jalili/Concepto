@@ -100,7 +100,7 @@ const Header = () => {
               isOpen ? "right-0" : "max-[325px]:-right-full"
             } px-3 bg-white md:hidden bottom-0 top-0 h-full transition-all z-50 ${
               isOpen ? "right-0" : "-right-1/2"
-            }`}
+            } overflow-x-hidden`}
             id="menu__items"
           >
             <div className="flex items-center border-b border-search_box pb-2 justify-between mt-2 max-[160px]:flex-wrap max-[160px]:justify-center">
@@ -123,7 +123,7 @@ const Header = () => {
 
             <div className="flex flex-col ">
               {/* <!-- Mobile Menu Item --> */}
-              <ul className="flex gap-y-6 mt-5 pb-5 max-[310px]:border-b border-b-search_box flex-col">
+              <ul className="flex gap-y-6 mt-5 pb-5 flex-col">
                 <li>
                   <a href="#">شرکت ها</a>
                 </li>
