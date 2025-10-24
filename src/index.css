@@ -208,6 +208,8 @@
   }
 }
 
+
+
 @media only screen and (max-width: 275px) {
   .five_hundred > .swiper-wrapper .swiper-slide {
     grid-template-columns: repeat(1, 110px);
@@ -226,11 +228,29 @@
   #swiper__event {
     display: none;
   }
+
+
+  #footer__wrapper{
+    height: 870px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #footer__wrapper{
+    height: 29.427rem !important;
+  }
+}
+
+@media only screen and (min-width: 2900px) {
+  #footer__wrapper{
+    height: 700px !important;
+    display: flex;
+    align-items: center;
+  }
 }
 
 
 #popular__swiper > .swiper-wrapper{
-  padding: 1rem 0;
+  padding: 3rem 0;
 }
 
 #news__swiper > .swiper-wrapper{

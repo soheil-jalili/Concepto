@@ -19,7 +19,7 @@ const News: React.FC = () => {
           </a>
         </div>
         {/* <!-- Popular News Body --> */}
-        <div className="news mt-5 md:mt-12">
+        <div className="news mt-5 md:mt-12 min-[2370px]:!mt-0">
           <Swiper
             id="news__swiper"
             slidesPerView={1}

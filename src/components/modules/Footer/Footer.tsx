@@ -21,11 +21,11 @@ export default Footer;
 const MainFooter = () => {
   return (
     <>
-      <div className="bg__footer max-[368px]:!h-auto">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-[664px_1fr] gap-x-20">
+      <div className="bg__footer max-[368px]:!h-auto" id='footer__wrapper'>
+        <div className="container min-[2900px]:h-[310px]">
+          <div className="grid grid-cols-1 xl:grid-cols-[664px_1fr] gap-x-20">
             {/* <!-- Right Section Footer --> */}
-            <div className="mt-32 md:mt-38">
+            <div className="mt-32 md:mt-38 md:flex md:flex-col-reverse md:gap-10 xl:block">
               <div className="flex flex-col md:hidden gap-y-4 mb-9 md:mb-0">
                 <p className="text-white font-IRANSansX-Bold text-base">
                   برای کسب اطلاعات بیشتر در خبرنامه ما عضو شوید
@@ -108,7 +108,7 @@ const MainFooter = () => {
             </div>
 
             {/* <!-- Right Section Footer --> */}
-            <div className="md:mt-38">
+            <div className="md:mt-20 xl:mt-38">
               {/* <!-- New News --> */}
               <p className="text-white font-IRANSansX-Bold text-base hidden md:block">
                 از جـدیدتریـن اخبار مطلع شـویـد :
