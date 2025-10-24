@@ -6,7 +6,7 @@ import "swiper/css";
 const Events: React.FC = () => {
   return (
     <>
-      <section className="container max-[769px]:pb-20 ">
+      <section className="container max-md:pb-20 pb-25">
         {/* <!-- Title Events Section --> */}
         <div className="flex items-center gap-x-2  md:mb-10 max-[320px]:justify-between">
           <h4 className="max-[248px]:hidden text-gray-7 md:text-placeholder shrink-0 text-base md:text-2xl">
