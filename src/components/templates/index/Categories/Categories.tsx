@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const Categories: React.FC = () => {
   return (
     <>
-      <section className="pb-20 xl:pb-20">
+      <section className="pb-20 xl:pb-20 2xl:!pb-0">
         {/* <!-- Title Categories Section --> */}
         <div className="flex items-center gap-x-2">
           <h4 className="text-gray-7 md:text-placeholder shrink-0 text-base md:text-2xl">
