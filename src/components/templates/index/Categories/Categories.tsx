@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Categories: React.FC = () => {
@@ -26,8 +27,7 @@ const Categories: React.FC = () => {
               alt="Ai"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-
-            <p>هوش مصنوعی</p>
+            <Link to={'/'}>هوش مصنوعی</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -36,7 +36,7 @@ const Categories: React.FC = () => {
               alt="python"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>برنامه نویسی</p>
+            <Link to={'/'}>برنامه نویسی</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -45,7 +45,7 @@ const Categories: React.FC = () => {
               alt="bitcoin"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>ارز دیجیتال</p>
+            <Link to={'/'}>ارز دیجیتال</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -54,7 +54,7 @@ const Categories: React.FC = () => {
               alt="accounting"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>حسابداری</p>
+            <Link to={'/'}>حسابداری</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -63,7 +63,7 @@ const Categories: React.FC = () => {
               alt="photoshop"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>گرافیک</p>
+            <Link to={'/'}>گرافیک</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -72,7 +72,7 @@ const Categories: React.FC = () => {
               alt="photography"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>رسانه‌ها</p>
+            <Link to={'/'}>رسانه‌ها</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -81,7 +81,7 @@ const Categories: React.FC = () => {
               alt="aerospace"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>هوافضا</p>
+            <Link to={'/'}>هوافضا</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -90,7 +90,7 @@ const Categories: React.FC = () => {
               alt="medical"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>پزشکی</p>
+            <Link to={'/'}>پزشکی</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -99,7 +99,7 @@ const Categories: React.FC = () => {
               alt="tejarat"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>تجارت الکترونیک</p>
+            <Link to={'/'}>تجارت الکترونیک</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -108,7 +108,7 @@ const Categories: React.FC = () => {
               alt="knowledge"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>علمی</p>
+            <Link to={'/'}>علمی</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -117,7 +117,7 @@ const Categories: React.FC = () => {
               alt="music"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>موسیقی</p>
+            <Link to={'/'}>موسیقی</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -126,7 +126,7 @@ const Categories: React.FC = () => {
               alt="bio"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>بیوتکنولوژی</p>
+            <Link to={'/'}>بیوتکنولوژی</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -135,7 +135,7 @@ const Categories: React.FC = () => {
               alt="movie"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>فیلم و سینما</p>
+            <Link to={'/'}>فیلم و سینما</Link>
           </div>
 
           <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -144,7 +144,7 @@ const Categories: React.FC = () => {
               alt="transportation"
               className="p-1.5 border-2 border-primary rounded-full"
             />
-            <p>حمل و نقل</p>
+            <Link to={'/'}>حمل و نقل</Link>
           </div>
         </div>
 
@@ -158,7 +158,7 @@ const Categories: React.FC = () => {
                 className="p-1.5 border-2 border-primary rounded-full"
               />
 
-              <p>هوش مصنوعی</p>
+              <Link to={'/'}>هوش مصنوعی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -167,7 +167,7 @@ const Categories: React.FC = () => {
                 alt="python"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>برنامه نویسی</p>
+              <Link to={'/'}>برنامه نویسی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -176,7 +176,7 @@ const Categories: React.FC = () => {
                 alt="bitcoin"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>ارز دیجیتال</p>
+              <Link to={'/'}>ارز دیجیتال</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -185,7 +185,7 @@ const Categories: React.FC = () => {
                 alt="accounting"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>حسابداری</p>
+              <Link to={'/'}>حسابداری</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -194,7 +194,7 @@ const Categories: React.FC = () => {
                 alt="photoshop"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>گرافیک</p>
+              <Link to={'/'}>گرافیک</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -203,7 +203,7 @@ const Categories: React.FC = () => {
                 alt="photography"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>رسانه‌ها</p>
+              <Link to={'/'}>رسانه‌ها</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -221,7 +221,7 @@ const Categories: React.FC = () => {
                 alt="medical"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>پزشکی</p>
+              <Link to={'/'}>پزشکی</Link>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -231,7 +231,7 @@ const Categories: React.FC = () => {
                 alt="tejarat"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>تجارت الکترونیک</p>
+              <Link to={'/'}>تجارت الکترونیک</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -240,7 +240,7 @@ const Categories: React.FC = () => {
                 alt="knowledge"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>علمی</p>
+              <Link to={'/'}>علمی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -249,7 +249,7 @@ const Categories: React.FC = () => {
                 alt="music"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>موسیقی</p>
+              <Link to={'/'}>موسیقی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -258,7 +258,7 @@ const Categories: React.FC = () => {
                 alt="bio"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>بیوتکنولوژی</p>
+              <Link to={'/'}>بیوتکنولوژی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -267,7 +267,7 @@ const Categories: React.FC = () => {
                 alt="movie"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>فیلم و سینما</p>
+              <Link to={'/'}>فیلم و سینما</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -276,7 +276,7 @@ const Categories: React.FC = () => {
                 alt="transportation"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>حمل و نقل</p>
+              <Link to={'/'}>حمل و نقل</Link>
             </div>
           </SwiperSlide>
         </Swiper>
@@ -291,7 +291,7 @@ const Categories: React.FC = () => {
                 className="p-1.5 border-2 border-primary rounded-full"
               />
 
-              <p>هوش مصنوعی</p>
+              <Link to={'/'}>هوش مصنوعی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -300,7 +300,7 @@ const Categories: React.FC = () => {
                 alt="python"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>برنامه نویسی</p>
+              <Link to={'/'}>برنامه نویسی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -309,7 +309,7 @@ const Categories: React.FC = () => {
                 alt="bitcoin"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>ارز دیجیتال</p>
+              <Link to={'/'}>ارز دیجیتال</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -318,7 +318,7 @@ const Categories: React.FC = () => {
                 alt="accounting"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>حسابداری</p>
+              <Link to={'/'}>حسابداری</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -327,7 +327,7 @@ const Categories: React.FC = () => {
                 alt="photoshop"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>گرافیک</p>
+              <Link to={'/'}>گرافیک</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -336,7 +336,7 @@ const Categories: React.FC = () => {
                 alt="photography"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>رسانه‌ها</p>
+              <Link to={'/'}>رسانه‌ها</Link>
             </div>
           </SwiperSlide>
           <SwiperSlide>
@@ -346,7 +346,7 @@ const Categories: React.FC = () => {
                 alt="tejarat"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>تجارت الکترونیک</p>
+              <Link to={'/'}>تجارت الکترونیک</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -355,7 +355,7 @@ const Categories: React.FC = () => {
                 alt="knowledge"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>علمی</p>
+              <Link to={'/'}>علمی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -364,7 +364,7 @@ const Categories: React.FC = () => {
                 alt="music"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>موسیقی</p>
+              <Link to={'/'}>موسیقی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -373,7 +373,7 @@ const Categories: React.FC = () => {
                 alt="bio"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>بیوتکنولوژی</p>
+              <Link to={'/'}>بیوتکنولوژی</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -382,7 +382,7 @@ const Categories: React.FC = () => {
                 alt="movie"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>فیلم و سینما</p>
+              <Link to={'/'}>فیلم و سینما</Link>
             </div>
 
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
@@ -391,7 +391,7 @@ const Categories: React.FC = () => {
                 alt="transportation"
                 className="p-1.5 border-2 border-primary rounded-full"
               />
-              <p>حمل و نقل</p>
+              <Link to={'/'}>حمل و نقل</Link>
             </div>
           </SwiperSlide>
         </Swiper>

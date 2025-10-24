@@ -121,7 +121,7 @@ const Header = () => {
               </button>
             </div>
 
-            <div className="flex flex-col ">
+            <div className="flex flex-col max-[325px]:justify-between max-[325px]:h-[91%]">
               {/* <!-- Mobile Menu Item --> */}
               <ul className="flex gap-y-6 mt-5 pb-5 flex-col">
                 <li>
@@ -142,19 +142,19 @@ const Header = () => {
               </ul>
 
               {/* <!-- Main Btns max:[325px] --> */}
-              <div className="mt-3 hidden max-[325px]:flex flex-col gap-y-6  border-t border-t-gray-1 pt-6 max-[325px]:absolute max-[325px]:bottom-6 w-full">
+              <div className="mt-3 hidden max-[325px]:flex flex-col gap-y-6  border-t border-t-gray-1 pt-6 w-full">
                 <a href="#" className="flex items-center gap-x-2 shrink-0">
                   <svg className="w-5 h-5">
                     <use href="#bolt"></use>
                   </svg>
                   <span> رایگان شروع کن! </span>
                 </a>
-                <a href="#" className="flex items-center gap-x-2 shrink-0">
+                <Link to="/account" className="flex items-center gap-x-2 shrink-0">
                   <svg className="w-5 h-5">
                     <use href="#login"></use>
                   </svg>
                   <span> ورود/ثبت نام </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
