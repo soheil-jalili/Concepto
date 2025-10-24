@@ -4,7 +4,7 @@ import "swiper/css";
 
 const News: React.FC = () => {
   return (
-    <section className="bg__banner mb-50">
+    <section className="bg__banner mb-20">
       <div className="container 2xl:p-0 overflow-x-hidden rounded-3xl">
         {/* <!-- News Companis Header --> */}
         <div className="flex items-center justify-between text-white max-md:pb-4 pt-20 text-base gap-x-1 md:gap-x-0 gap-y-4 sm:gap-y-14 sm:text-2xl">

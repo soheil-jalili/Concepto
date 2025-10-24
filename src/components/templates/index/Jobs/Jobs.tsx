@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 const Jobs: React.FC = () => {
   //   <!-- Jobs -->
   return (
-    <section className="container jobs pb-40 overflow-x-hidden">
+    <section className="container jobs pb-20 overflow-x-hidden">
       {/* <!-- Job Header --> */}
       <div className="flex items-center gap-x-2 mb-9 md:mb-10">
         <h4 className="text-gray-7 md:text-placeholder shrink-0 text-base md:text-2xl">
