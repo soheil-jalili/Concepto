@@ -21,7 +21,7 @@ export default Footer;
 const MainFooter = () => {
   return (
     <>
-      <div className="bg__footer max-[368px]:!h-auto" id='footer__wrapper'>
+      <div className="bg__footer max-[368px]:!h-auto" id="footer__wrapper">
         <div className="container min-[2900px]:h-[310px]">
           <div className="grid grid-cols-1 xl:grid-cols-[664px_1fr] gap-x-20">
             {/* <!-- Right Section Footer --> */}
@@ -117,7 +117,7 @@ const MainFooter = () => {
               {/* <!-- Email News --> */}
               <form
                 action="#"
-                className="text-sm hidden md:flex md:text-base md:mt-4 bg-white h-13 rounded-lg md:rounded-[50px] justify-between items-center gap-x-4 pr-3 pl-[6px]"
+                className="text-sm hidden md:flex md:text-base md:mt-4 bg-white h-13 rounded-lg md:rounded-[50px] justify-between items-center gap-x-4 pr-3 pl-[6px] md:max-w-[416px] xl:max-w-none"
                 id="email__news"
               >
                 <input
