@@ -54,7 +54,8 @@ const Events: React.FC = () => {
             description="در حاشیه همایش معدن‌کاری دیجیتال 1401، خانه خلاق و نوآوری دنیای اقتصاد با همکاری مجموعه 100استارت‌آپ، برای ایده‌ها و استارتاپ‌های حوزه معدن جذب سرمایه می‌کند."
           />
         </div>
-        <Swiper className="sm:hidden" grabCursor spaceBetween={30} id='swiper__event'>
+        <Swiper className="sm:hidden rounded-3xl" grabCursor spaceBetween={30} id='swiper__event'
+        >
           <SwiperSlide>
             <EventItem
               image="/assets/images/events/digikala.png"
@@ -66,7 +67,7 @@ const Events: React.FC = () => {
           </SwiperSlide>
           <SwiperSlide>
             <EventItem
-              image="/assets/images/events/checkbox.png"
+              image="/assets/images/events/qazal.png"
               title="سکوی پرتاب غزال"
               location="تهران، ایران"
               date="27 دی"

@@ -149,7 +149,7 @@ const Categories: React.FC = () => {
         </div>
 
         {/* <!-- For Max-[lg] --> */}
-        <Swiper className="mt-6 !hidden min-[520px]:!grid lg__swiper max-[530px]:!gap-x-3.5">
+        <Swiper className="mt-6 !hidden min-[520px]:!grid lg__swiper max-[530px]:!gap-x-3.5 rounded-3xl ">
           <SwiperSlide>
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
               <img
@@ -282,7 +282,7 @@ const Categories: React.FC = () => {
         </Swiper>
 
         {/* <!-- For Max-[519] --> */}
-        <Swiper className="five_hundred !hidden max-[520px]:!grid mt-6">
+        <Swiper className="five_hundred !hidden max-[520px]:!grid mt-6 rounded-3xl ">
           <SwiperSlide>
             <div className="flex items-center justify-center gap-y-3 flex-col text-base">
               <img

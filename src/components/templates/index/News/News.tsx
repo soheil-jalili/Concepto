@@ -21,6 +21,7 @@ const News: React.FC = () => {
         {/* <!-- Popular News Body --> */}
         <div className="news mt-5 md:mt-12 min-[2370px]:!mt-0">
           <Swiper
+          className="rounded-3xl "
             id="news__swiper"
             slidesPerView={1}
             spaceBetween={30}

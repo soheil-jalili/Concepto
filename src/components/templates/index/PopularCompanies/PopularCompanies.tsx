@@ -9,8 +9,9 @@ const PopularCompanies: React.FC = () => {
           {/* <!-- Popular Companis Header --> */}
           <PopularCompaniesHeader />
           {/* <!-- Popular Companis Body --> */}
-          <div className="popular__swiper rounded-3xl mt-4 md:mt-12">
+          <div className="popular__swiper mt-4 md:mt-12">
             <Swiper
+            className="rounded-3xl "
               id="popular__swiper"
               spaceBetween={24}
               slidesPerView={4}
