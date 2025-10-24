@@ -33,7 +33,7 @@ const Events: React.FC = () => {
             description="در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت امکان استخدام در دیجی‌کالا را خواهید داشت"
           />
           <EventItem
-            image="/assets/images/events/checkbox.png"
+            image="/assets/images/events/qazal.png"
             title="سکوی پرتاب غزال"
             location="تهران، ایران"
             date="27 دی"
