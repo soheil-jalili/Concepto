@@ -1,5 +1,3 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
 /node_modules
 /.pnp
@@ -39,3 +37,33 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Django
+*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# Django Secret Keys
+*.env
+*.env.local
+*.env.*.local
+
+# Django Migrations
+*/migrations/__pycache__/
+*/migrations/*.py
+
+# DRF
+*.token
+*.cache
+
+# PostgreSQL
+*.sql
+*.psql
+pgdata/
+postgres-data/
