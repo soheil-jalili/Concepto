@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import JobItem from "../JobItem/JobItem";
@@ -7,7 +7,16 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const Jobs: React.FC = () => {
+type JobOpportunityType = {
+  id: number;
+  companyName: string;
+  image: string;
+  opportunity: number;
+};
+type Prop = {
+  jobOpportunities: JobOpportunityType[];
+};
+const Jobs: React.FC<Prop> = ({ jobOpportunities }: Prop) => {
   //   <!-- Jobs -->
   return (
     <section className="container jobs pb-20 overflow-x-hidden">
@@ -28,8 +37,8 @@ const Jobs: React.FC = () => {
       {/* <!-- Job Body --> */}
       <div className="job__swiper relative">
         <Swiper
-        className="rounded-3xl"
-        id="job__swiper"
+          className="rounded-3xl"
+          id="job__swiper"
           modules={[Navigation]}
           spaceBetween={20}
           slidesPerView={1}
@@ -61,50 +70,17 @@ const Jobs: React.FC = () => {
             },
           }}
         >
-          <SwiperSlide>
-            <JobItem
-              companyName="بلو بانک"
-              image="/assets/images/jobs/blu.png"
-              title="12 فرصت شغلی"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <JobItem
-              companyName="آسیاتک"
-              image="assets/images/jobs/asia_teck.png"
-              title="16 فرصت شغلی"
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <JobItem
-              companyName="کارگزاری فارابی"
-              image="assets/images/jobs/farabi.png"
-              title="11 فرصت شغلی"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <JobItem
-              companyName="بیمه بازار"
-              image="/assets/images/jobs/bimeh.png"
-              title="14 فرصت شغلی"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <JobItem
-              companyName="گروه علی بابا"
-              image="assets/images/jobs/alibaba.png"
-              title="18 فرصت شغلی"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <JobItem
-              companyName="بیمه بازار"
-              image="assets/images/jobs/asia_teck.png"
-              title="14 فرصت شغلی"
-            />
-          </SwiperSlide>
+          {jobOpportunities.map((jobOpportunity: JobOpportunityType) => {
+            return (
+              <SwiperSlide key={jobOpportunity.id}>
+                <JobItem
+                  companyName={jobOpportunity.companyName}
+                  image={"http://127.0.0.1:8000" + jobOpportunity.image}
+                  title={`${jobOpportunity.opportunity} فرصت شغلی`}
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         <div className="slide__prev max-md:hidden job-button-next w-12.5 h-12.5 rounded-full flex items-center justify-center bg-white shadow-prev-next cursor-pointer">

@@ -1,9 +1,21 @@
-'use client'
+"use client";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-const News: React.FC = () => {
+type NewnNewsType = {
+  id: number;
+  company_name: string;
+  main_image: string;
+  short_description: string;
+  author_name: string;
+  title: string;
+  created_at: string;
+};
+type Prop = {
+  newNews: NewnNewsType[];
+};
+const News: React.FC<Prop> = ({ newNews }: Prop) => {
   return (
     <section className="bg__banner mb-20 md:mb-40">
       <div className="container 2xl:p-0 overflow-x-hidden rounded-3xl">
@@ -22,173 +34,84 @@ const News: React.FC = () => {
         {/* <!-- Popular News Body --> */}
         <div className="news mt-5 md:mt-12 min-[2370px]:!mt-0">
           <Swiper
-          className="rounded-3xl "
+            className="rounded-3xl "
             id="news__swiper"
             slidesPerView={1}
             spaceBetween={30}
             breakpoints={{
-              450 : {
-                slidesPerView : 1.3
-              },
-              
-              768 : {
-                slidesPerView : 1.8
+              450: {
+                slidesPerView: 1.3,
               },
 
+              768: {
+                slidesPerView: 1.8,
+              },
 
               1024: {
                 slidesPerView: 2.3,
               },
-              
-              1279 : {
+
+              1279: {
                 slidesPerView: 3,
-              }
+              },
             }}
           >
-            <SwiperSlide>
-              <div className="swiper-slide">
-                <div className="h-auto md:w-98  md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
-                  <img
-                    src="assets/images/news/car.png"
-                    alt="Snap Record"
-                    className="w-full"
-                  />
+            {newNews.map((news) => {
+              return (
+                <SwiperSlide key={news.id}>
+                  <div className="swiper-slide">
+                    <div className="h-auto md:w-98  md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
+                      <img
+                        src="assets/images/news/car.png"
+                        alt="Snap Record"
+                        className="w-full"
+                      />
 
-                  <div className="px-4 flex flex-col gap-y-4 mt-4">
-                    <p className="text-xs text-placeholder">تجارت الکترونیک</p>
+                      <div className="px-4 flex flex-col gap-y-4 mt-4">
+                        <p className="text-xs text-placeholder">
+                          {news.company_name}
+                        </p>
 
-                    <h6 className="text-gray-7 line-clamp-2 max-h-12.5 font-IRANSansX-Bold text-sm md:text-base">
-                      اسنپ رکورد خود را با بیش از ۵ میلیون سفر روزانه شکست
-                    </h6>
+                        <h6 className="text-gray-7 line-clamp-2 max-h-12.5 font-IRANSansX-Bold text-sm md:text-base">
+                          {news.title}
+                        </h6>
 
-                    <div className="min-h-12.5">
-                      <p className="line-clamp-2 text-gray-6 text-xs md:text-sm">
-                        در ماه پایانی سال ۱۴۰۲، اسنپ رکورد ۵ میلیون و ۱۳۹ هزار و
-                        ۶۵ سفر روزانه در سرویس خودرو و باکس را زد. این رکورد در
-                        روز چهارشنبه، دوم اسفند، ثبت شد.
-                      </p>
-                    </div>
-
-                    <div className="flex items-center text-gray-4 justify-between mt-2 pb-5 max-[282px]:flex-col max-[282px]:gap-3">
-                      <div className="flex items-center gap-x-3">
-                        <div className="w-7 h-7 rounded-full">
-                          <img
-                            src="assets/images/profiles/farhad1.png"
-                            alt="Farhad"
-                          />
+                        <div className="min-h-12.5">
+                          <p className="line-clamp-2 text-gray-6 text-xs md:text-sm">
+                            {news.short_description}
+                          </p>
                         </div>
-                        <p className="text-sm">فرهاد رئوفی</p>
-                      </div>
 
-                      <div className="flex items-center gap-x-2">
-                        <svg className="w-5 h-5">
-                          <use href="#calendar"></use>
-                        </svg>
-                        <span className="text-placeholder text-sm">
-                          1402/12/11
-                        </span>
+                        <div className="flex items-center text-gray-4 justify-between mt-2 pb-5 max-[282px]:flex-col max-[282px]:gap-3">
+                          <div className="flex items-center gap-x-3">
+                            <div className="w-7 h-7 rounded-full">
+                              <img
+                                src="assets/images/profiles/farhad1.png"
+                                alt="Farhad"
+                              />
+                            </div>
+                            <p className="text-sm">{news.author_name}</p>
+                          </div>
+
+                          <div className="flex items-center gap-x-2">
+                            <svg className="w-5 h-5">
+                              <use href="#calendar"></use>
+                            </svg>
+                            <span className="text-placeholder text-sm">
+                              {
+                                new Date(news.created_at)
+                                  .toLocaleString("fa-IR")
+                                  .split(",")[0]
+                              }
+                            </span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide">
-                <div className="h-full md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
-                  <img
-                    src="assets/images/news/phone.png"
-                    alt="Digikala"
-                    className="w-full"
-                  />
-
-                  <div className="px-4 flex flex-col gap-y-4 mt-4">
-                    <p className="text-xs text-placeholder">تجارت الکترونیک</p>
-
-                    <h6 className="text-gray-7 line-clamp-2 max-h-12.5 font-IRANSansX-Bold text-sm md:text-base">
-                      بار دیگر اسنپ فود به دلیل مشکل فنی از دسترس خارج شد
-                    </h6>
-
-                    <div className="min-h-12.5">
-                      <p className="line-clamp-2 text-gray-6 text-xs md:text-sm">
-                        بار دیگر اسنپ‌فود به‌دلیل مشکل فنی از دسترس کاربران خارج
-                        شد. این مشکل اوایل بهمن هم تکرار شده بود و رفع آن
-                        ساعت‌ها طول کشید.
-                      </p>
-                    </div>
-
-                    <div className="flex items-center text-gray-4 justify-between mt-2 pb-5 max-[282px]:flex-col max-[282px]:gap-3">
-                      <div className="flex items-center gap-x-3">
-                        <div className="w-7 h-7 rounded-full">
-                          <img
-                            src="assets/images/profiles/amir2.png"
-                            alt="Farhad"
-                          />
-                        </div>
-                        <p className="text-sm">امیر بختیاری</p>
-                      </div>
-
-                      <div className="flex items-center gap-x-2">
-                        <svg className="w-5 h-5">
-                          <use href="#calendar"></use>
-                        </svg>
-                        <span className="text-placeholder text-sm">
-                          1402/12/15
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="swiper-slide">
-                <div className="h-full md:w-98 md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
-                  <img
-                    src="assets/images/news/alibaba.png"
-                    alt="Alibaba"
-                    className="w-full"
-                  />
-
-                  <div className="px-4 flex flex-col gap-y-4 mt-4">
-                    <p className="text-xs text-placeholder">تجارت الکترونیک</p>
-
-                    <h6 className="text-gray-7 line-clamp-2 max-h-12.5 font-IRANSansX-Bold text-sm md:text-base">
-                      رکورد ثبت سفارش آنلاین خدمات گردشگری شکسته شد: ثبت 2 خدمت
-                      در هر ثانیه
-                    </h6>
-
-                    <div className="min-h-12.5">
-                      <p className="line-clamp-2 text-gray-6 text-xs md:text-sm leading-[180%]">
-                        با نزدیکی به سال نو و افزایش سفرهای بین شهری، رکورد ثبت
-                        سفارش آنلاین خدمات گردشگری شکسته شد.
-                      </p>
-                    </div>
-
-                    <div className="flex items-center text-gray-4 justify-between mt-2 pb-5 max-[282px]:flex-col max-[282px]:gap-3">
-                      <div className="flex items-center gap-x-3">
-                        <div className="w-7 h-7 rounded-full">
-                          <img
-                            src="assets/images/profiles/atosa3.png"
-                            alt="Farhad"
-                          />
-                        </div>
-                        <p className="text-sm">آتوسا صفوی زاده</p>
-                      </div>
-
-                      <div className="flex items-center gap-x-2">
-                        <svg className="w-5 h-5">
-                          <use href="#calendar"></use>
-                        </svg>
-                        <span className="text-placeholder text-sm">
-                          1402/12/3
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SwiperSlide>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>

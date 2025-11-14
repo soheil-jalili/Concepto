@@ -1,16 +1,19 @@
 import React from "react";
 
-const HeroImage: React.FC = () => {
+type Prop = {
+  title: string;
+  shortDescription: string;
+};
+
+const HeroImage: React.FC<Prop> = ({ title, shortDescription } : Prop) => {
   return (
     <>
       {/* <!-- Hero Section --> */}
       <section className="mt-8 lg:mt-20 flex flex-col gap-y-6 max-[310px]:gap-y-4 text-center">
         <h1 className="text-Primary_shade_7 font-IRANSansX-Bold text-xl md:text-[56px]">
-          با سرچ کمتر نتیجه بهتر بگیر
+          {title}
         </h1>
-        <p className="text-Primary_shade_5">
-          کانسپتو اولین مرجع معتبر معرفی استارتاپ ها و شرکت های ایرانی
-        </p>
+        <p className="text-Primary_shade_5">{shortDescription}</p>
 
         <div className="flex items-center gap-x-4 justify-center flex-wrap gap-y-2">
           <a

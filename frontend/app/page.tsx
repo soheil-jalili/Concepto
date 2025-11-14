@@ -9,30 +9,39 @@ import Statistics from "@/components/templates/Index/Statistics/Statistics";
 import React from "react";
 
 const Index: React.FC = async () => {
-  // const response = await fetch('')
-  // const data = await response.json()
+  const response = await fetch("http://localhost:8000/api/home/");
+  const {
+    slogans,
+    categries_home,
+    popular_companies,
+    job_opportunities,
+    new_news,
+  } = await response.json();
 
   return (
     <main>
       <div className="container">
         {/* <!-- Hero Images --> */}
-        <HeroImage />
+        <HeroImage
+          title={slogans.title}
+          shortDescription={slogans.short_description}
+        />
         {/* <!-- Statistics --> */}
         <Statistics />
         {/* <!-- Features --> */}
         <Features />
         {/* <!-- Categories --> */}
-        <Categories />
+        <Categories categories={categries_home} />
       </div>
-      
+
       {/* <!-- Popular Companies --> */}
-      <PopularCompanies />
+      <PopularCompanies popularCompanies={popular_companies} />
 
       {/* <!-- Jobs --> */}
-      <Jobs />
+      <Jobs jobOpportunities={job_opportunities} />
 
       {/* <!-- News --> */}
-      <News />
+      <News newNews={new_news} />
 
       {/* <!-- Events --> */}
       <Events />

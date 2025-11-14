@@ -1,8 +1,22 @@
-'use client'
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PopularCompaniesCart from "../PopularCompaniesCart/PopularCompaniesCart";
 
-const PopularCompanies: React.FC = () => {
+type PopularCompaniesType = {
+  main_image: string;
+  company_logo: string;
+  company_name: string;
+  company_short_description: string;
+  new_inventors: number;
+  new_contact: number;
+  country: string;
+  city: string;
+  rate: number;
+};
+type Prop = {
+  popularCompanies: PopularCompaniesType[];
+};
+const PopularCompanies: React.FC<Prop> = ({ popularCompanies }: Prop) => {
   return (
     <>
       <section className="bg__banner mb-50">
@@ -12,7 +26,7 @@ const PopularCompanies: React.FC = () => {
           {/* <!-- Popular Companis Body --> */}
           <div className="popular__swiper mt-4 md:mt-12">
             <Swiper
-            className="rounded-3xl "
+              className="rounded-3xl "
               id="popular__swiper"
               spaceBetween={24}
               slidesPerView={4}
@@ -46,77 +60,29 @@ const PopularCompanies: React.FC = () => {
               }}
               grabCursor
             >
-              <SwiperSlide>
-                <PopularCompaniesCart
-                  mainImage="assets/images/companies/snap.png"
-                  mainImageAlt="Snap"
-                  thumbnailImage="assets/images/companies/thumbnail/snap.png"
-                  companyName="شرکت اسنپ"
-                  companyDescription="تجارت الکترونیک"
-                  newInventorsNumber="21.394"
-                  newContact={398}
-                  description="از درخواست خودرو گرفته تا سفارش غذا، خرید سوپرمارکتی، خرید بلیط سفر،
-                            مشاوره‌ی پزشکی و روانشناسی، رزرو هتل و را میتوانید با سوپراپلیکیشن
-                            اسنپ انجام دهید."
-                  city="تهران"
-                  country="ایران"
-                  rating={5}
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <PopularCompaniesCart
-                  mainImage="assets/images/companies/digikala.png"
-                  mainImageAlt="Digikala"
-                  thumbnailImage="assets/images/companies/thumbnail/digikala.png"
-                  companyName="شرکت دیجی کالا"
-                  companyDescription="تجارت الکترونیک"
-                  newInventorsNumber="25,120"
-                  newContact={432}
-                  description="هر آنچه که نیاز دارید با بهترین قیمت از دیجی‌کالا بخرید!
-                        جدیدترین انواع گوشی موبایل، لپ تاپ، لباس، لوازم آرایشی و
-                        بهداشتی، کتاب، لوازم خانگی، خودرو و."
-                  city="تهران"
-                  country="ایران"
-                  rating={4}
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <PopularCompaniesCart
-                  mainImage="assets/images/companies/farabi_company.png"
-                  mainImageAlt="Farabi"
-                  thumbnailImage="assets/images/companies/thumbnail/farabi.png"
-                  companyName="کارگزاری فارابی"
-                  companyDescription="تجارت الکترونیک"
-                  newInventorsNumber="29,120"
-                  newContact={392}
-                  description="کارگزاری بورس خدماتی شامل خرید و فروش سهام و دریافت کد
-                        بورسی را ارائه می‌کند؛ همه این خدمات در کارگزاری فارابی
-                        به‌صورت غیرحضوری در اختیار شماست."
-                  city="تهران"
-                  country="ایران"
-                  rating={5}
-                />
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <PopularCompaniesCart
-                  mainImage="assets/images/companies/alibaba_company.png"
-                  mainImageAlt="Alibaba"
-                  thumbnailImage="assets/images/companies/thumbnail/alibaba.png"
-                  companyName="شرکت علی بابا"
-                  companyDescription="تجارت الکترونیک"
-                  newInventorsNumber="26,750"
-                  newContact={234}
-                  description="علی‌بابا برندی از هلدینگ پرافتخار توشا (توسعه تجربه
-                        شایسته سفر) است، سامانه‌ای که به‌واسطه پشتیبانی و حمایت
-                        شما در سکوی اول گردشگری کشور ایستاده."
-                  city="تهران"
-                  country="ایران"
-                  rating={5}
-                />
-              </SwiperSlide>
+              {popularCompanies.map((popularCompany: PopularCompaniesType) => {
+                return (
+                  <SwiperSlide>
+                    <PopularCompaniesCart
+                      mainImage={
+                        "http://127.0.0.1:8000" + popularCompany.main_image
+                      }
+                      mainImageAlt={popularCompany.company_name}
+                      thumbnailImage={
+                        "http://127.0.0.1:8000" + popularCompany.company_logo
+                      }
+                      companyName={popularCompany.company_name}
+                      companyDescription="تجارت الکترونیک"
+                      newInventorsNumber="21.394"
+                      newContact={popularCompany.new_contact}
+                      description={popularCompany.company_short_description}
+                      city={popularCompany.city}
+                      country={popularCompany.country}
+                      rating={popularCompany.rate}
+                    />
+                  </SwiperSlide>
+                );
+              })}
             </Swiper>
           </div>
         </div>

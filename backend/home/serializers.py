@@ -39,7 +39,7 @@ class NewNewsSerializer(ModelSerializer):
 
     class Meta:
         model = News
-        fields = ('id', 'company_name', 'main_image', 'short_description', 'author_name')
+        fields = ('id', 'title','created_at', 'company_name', 'main_image', 'short_description', 'author_name')
 
     def get_author_name(self, obj):
         return f"{obj.author.first_name} {obj.author.last_name}"

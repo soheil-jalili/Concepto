@@ -1,8 +1,16 @@
-'use client'
+"use client";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const Categories: React.FC = () => {
+type CategoryType = {
+  id: number;
+  title: string;
+  image: string;
+};
+type Prop = {
+  categories: CategoryType[];
+};
+const Categories: React.FC<Prop> = ({ categories }: Prop) => {
   return (
     <>
       <section className="pb-20 xl:pb-20 2xl:!pb-0">
@@ -22,378 +30,110 @@ const Categories: React.FC = () => {
 
         {/* <!-- Category Item --> */}
         <div className="hidden lg:grid [grid-template-columns:repeat(4,56px)] [grid-template-rows:repeat(2,86px)] md:[grid-template-columns:repeat(7,108px)] md:[grid-template-rows:repeat(2,141px)] justify-between gap-x-5 gap-y-5 mt-6">
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/ai.png"
-              alt="Ai"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>هوش مصنوعی</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/python.png"
-              alt="python"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>برنامه نویسی</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/bitcoin.png"
-              alt="bitcoin"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>ارز دیجیتال</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/accounting.png"
-              alt="accounting"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>حسابداری</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/photoshop.png"
-              alt="photoshop"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>گرافیک</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/photography.png"
-              alt="photography"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>رسانه‌ها</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/aerospace.png"
-              alt="aerospace"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>هوافضا</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/medical.png"
-              alt="medical"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>پزشکی</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/tejarat.png"
-              alt="tejarat"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>تجارت الکترونیک</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/knowledge.png"
-              alt="knowledge"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>علمی</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/music.png"
-              alt="music"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>موسیقی</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/bio.png"
-              alt="bio"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>بیوتکنولوژی</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/movie.png"
-              alt="movie"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>فیلم و سینما</Link>
-          </div>
-
-          <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-            <img
-              src="assets/images/categories/transportation.png"
-              alt="transportation"
-              className="p-1.5 border-2 border-primary rounded-full"
-            />
-            <Link href={'/'}>حمل و نقل</Link>
-          </div>
+          {categories.map((category: CategoryType) => {
+            return (
+              <div
+                className="flex items-center justify-center gap-y-3 flex-col text-base"
+                key={category.id}
+              >
+                <img
+                  src={"http://127.0.0.1:8000/" + category.image}
+                  alt={category.title}
+                  className="p-1.5 border-2 border-primary rounded-full"
+                />
+                <Link href={`/category/${category.title}`}>
+                  {category.title}
+                </Link>
+              </div>
+            );
+          })}
         </div>
 
         {/* <!-- For Max-[lg] --> */}
-        <Swiper className="mt-6 !hidden min-[520px]:!grid lg__swiper max-[530px]:!gap-x-3.5 rounded-3xl ">
+        <Swiper className="mt-6 !hidden min-[520px]:!grid lg__swiper max-[530px]:!gap-x-3.5 rounded-3xl">
           <SwiperSlide>
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/ai.png"
-                alt="Ai"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-
-              <Link href={'/'}>هوش مصنوعی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/python.png"
-                alt="python"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>برنامه نویسی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/bitcoin.png"
-                alt="bitcoin"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>ارز دیجیتال</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/accounting.png"
-                alt="accounting"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>حسابداری</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/photoshop.png"
-                alt="photoshop"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>گرافیک</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/photography.png"
-                alt="photography"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>رسانه‌ها</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/aerospace.png"
-                alt="aerospace"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <p>هوافضا</p>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/medical.png"
-                alt="medical"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>پزشکی</Link>
-            </div>
+            {categories.slice(0, 8).map((category: CategoryType) => {
+              return (
+                <div
+                  className="flex items-center justify-center gap-y-3 flex-col text-base"
+                  key={category.id}
+                >
+                  <img
+                    src={"http://127.0.0.1:8000/" + category.image}
+                    alt={category.title}
+                    className="p-1.5 border-2 border-primary rounded-full"
+                  />
+                  <Link href={`/category/${category.title}`}>
+                    {category.title}
+                  </Link>
+                </div>
+              );
+            })}
           </SwiperSlide>
+
           <SwiperSlide>
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/tejarat.png"
-                alt="tejarat"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>تجارت الکترونیک</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/knowledge.png"
-                alt="knowledge"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>علمی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/music.png"
-                alt="music"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>موسیقی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/bio.png"
-                alt="bio"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>بیوتکنولوژی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/movie.png"
-                alt="movie"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>فیلم و سینما</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/transportation.png"
-                alt="transportation"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>حمل و نقل</Link>
-            </div>
+            {categories
+              .slice(9, categories.length)
+              .map((category: CategoryType) => {
+                return (
+                  <div
+                    className="flex items-center justify-center gap-y-3 flex-col text-base"
+                    key={category.id}
+                  >
+                    <img
+                      src={"http://127.0.0.1:8000/" + category.image}
+                      alt={category.title}
+                      className="p-1.5 border-2 border-primary rounded-full"
+                    />
+                    <Link href={`/category/${category.title}`}>
+                      {category.title}
+                    </Link>
+                  </div>
+                );
+              })}
           </SwiperSlide>
         </Swiper>
 
         {/* <!-- For Max-[519] --> */}
         <Swiper className="five_hundred !hidden max-[520px]:!grid mt-6 rounded-3xl ">
           <SwiperSlide>
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/ai.png"
-                alt="Ai"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-
-              <Link href={'/'}>هوش مصنوعی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/python.png"
-                alt="python"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>برنامه نویسی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/bitcoin.png"
-                alt="bitcoin"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>ارز دیجیتال</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/accounting.png"
-                alt="accounting"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>حسابداری</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/photoshop.png"
-                alt="photoshop"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>گرافیک</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/photography.png"
-                alt="photography"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>رسانه‌ها</Link>
-            </div>
+            {categories.slice(0, 6).map((category: CategoryType) => {
+              return (
+                <div
+                  className="flex items-center justify-center gap-y-3 flex-col text-base"
+                  key={category.id}
+                >
+                  <img
+                    src={"http://127.0.0.1:8000/" + category.image}
+                    alt={category.title}
+                    className="p-1.5 border-2 border-primary rounded-full"
+                  />
+                  <Link href={`/category/${category.title}`}>
+                    {category.title}
+                  </Link>
+                </div>
+              );
+            })}
           </SwiperSlide>
+
           <SwiperSlide>
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/tejarat.png"
-                alt="tejarat"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>تجارت الکترونیک</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/knowledge.png"
-                alt="knowledge"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>علمی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/music.png"
-                alt="music"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>موسیقی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/bio.png"
-                alt="bio"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>بیوتکنولوژی</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/movie.png"
-                alt="movie"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>فیلم و سینما</Link>
-            </div>
-
-            <div className="flex items-center justify-center gap-y-3 flex-col text-base">
-              <img
-                src="assets/images/categories/transportation.png"
-                alt="transportation"
-                className="p-1.5 border-2 border-primary rounded-full"
-              />
-              <Link href={'/'}>حمل و نقل</Link>
-            </div>
+            {categories.slice(7, 13).map((category: CategoryType) => {
+              return (
+                <div
+                  className="flex items-center justify-center gap-y-3 flex-col text-base"
+                  key={category.id}
+                >
+                  <img
+                    src={"http://127.0.0.1:8000/" + category.image}
+                    alt={category.title}
+                    className="p-1.5 border-2 border-primary rounded-full"
+                  />
+                  <Link href={`/category/${category.title}`}>
+                    {category.title}
+                  </Link>
+                </div>
+              );
+            })}
           </SwiperSlide>
         </Swiper>
       </section>
