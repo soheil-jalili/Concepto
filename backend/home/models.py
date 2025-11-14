@@ -1,0 +1,177 @@
+from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
+from django.contrib.auth.models import User
+from django.dispatch import receiver
+from django.db.models.signals import post_save
+from django.utils.text import slugify
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        UserProfile.objects.create(user=instance)  
+        
+class UserProfile(models.Model):
+    ROLE_CHOICES = [
+        ("author", "Author"),
+        ("admin", "Admin"),
+    ]
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES, blank=True, null=True) 
+    
+
+        
+class Menu(models.Model):
+    name = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    
+    def __str__(self):
+        return self.name
+    
+    
+class Slogan(models.Model):
+    title = models.CharField(max_length=255)
+    short_description = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.title
+    
+
+class CategoryHome(models.Model):
+    title = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='images/home/category-home/')
+    slug = models.SlugField(unique=True , blank=True , null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    
+    def __str__(self):
+        return self.title
+    
+    def save(self, *args , **kwargs):
+        self.slug = slugify(self.title)
+        return super().save(*args , **kwargs)
+    
+
+class Company(models.Model):
+    main_image = models.ImageField(upload_to='images/company/main-images/')
+    company_logo = models.ImageField(upload_to='images/company/logos/')
+    company_name = models.CharField(max_length=255)
+    company_short_description = models.CharField(max_length=255)
+    new_inventors = models.FloatField(default=0)
+    new_contact = models.PositiveBigIntegerField(default=0)
+    description = models.TextField()
+    country = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    rate = models.PositiveIntegerField(
+        validators=[
+            MinValueValidator(1),
+            MaxValueValidator(5)
+        ]
+    )
+    slug = models.SlugField(unique=True , blank=True , null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.company_name)
+        return super().save(*args, **kwargs)
+        
+    
+    def __str__(self):
+        return self.company_name
+    
+class JobOpportunity(models.Model):
+    company_name = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='images/job_opportunity/company/')
+    opportunity = models.PositiveIntegerField()
+    slug = models.SlugField(blank=True , null=True , unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.company_name)
+        return super().save(*args, **kwargs)
+    
+    def __str__(self):
+        return self.company_name
+    
+
+
+class News(models.Model):
+    company_name = models.CharField(max_length=255)
+    main_image = models.ImageField(upload_to='images/news/main-image/company/')
+    title = models.CharField(max_length=255)
+    short_description = models.CharField(max_length=255)
+    author = models.ForeignKey(User , on_delete=models.CASCADE)
+    slug = models.SlugField(blank=True , null=True , unique=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
+    
+    def __str__(self):
+        return self.company_name
+    
+
+class Category(models.Model):
+    image = models.ImageField(upload_to='images/categories/')
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    country = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    slug = models.SlugField()
+    created = models.DateField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+            
+    def __str__(self):
+        return self.title
+    
+    
+      
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
+    
+    
+    
+    class Meta:
+        verbose_name= "category"
+        verbose_name_plural = "categories"
+
+
+class FooterLinkMain(models.Model):
+    title = models.CharField(max_length=255)
+    
+    def __str__(self):
+        return self.title
+    
+
+class FooterLink(models.Model):
+    title = models.CharField(max_length=255)
+    slug = models.SlugField()
+    
+    
+    def save(self, *args , **kwargs):
+        self.slug = slugify(self.title)
+        return super().save(*args , **kwargs)
+    
+    def __str__(self):
+        return self.title
+    
+
+class SocialLink (models.Model):
+    icons = models.TextField()
+    title = models.CharField(max_length=255)
+    link = models.URLField()
+    
+    
+    def __str__(self):
+        return self.title

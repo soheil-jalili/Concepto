@@ -1,69 +1,68 @@
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# ======================
+# Frontend (Next.js / Node)
+# ======================
+/frontend/node_modules/
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+# Yarn / pnpm
+/frontend/.pnp
+/frontend/.pnp.*
+/frontend/.yarn/*
+!/frontend/.yarn/patches
+!/frontend/.yarn/plugins
+!/frontend/.yarn/releases
+!/frontend/.yarn/versions
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/.pnpm-debug.log*
 
-# testing
-/coverage
+# Frontend env
+/frontend/.env*
+/frontend/next-env.d.ts
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+# Misc
 .DS_Store
 *.pem
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
+# Vercel
 .vercel
 
-# typescript
+# TypeScript build info
 *.tsbuildinfo
-next-env.d.ts
 
+# ======================
+# Backend (Django / Python)
+# ======================
+/backend/__pycache__/
+/backend/**/*.pyc
+/backend/**/*.pyo
+/backend/**/*.pyd
+/backend/db.sqlite3
+/backend/media/
+/backend/staticfiles/
 
-# Django
-*/__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.sqlite3
-db.sqlite3
-media/
-staticfiles/
+# Django secret keys / env
+/backend/*.env
+/backend/*.env.local
+/backend/*.env.*.local
 
-# Django Secret Keys
-*.env
-*.env.local
-*.env.*.local
+# Django migrations
+/backend/**/migrations/__pycache__/
+/backend/**/migrations/*.py
 
-# Django Migrations
-*/migrations/__pycache__/
-*/migrations/*.py
-
-# DRF
-*.token
-*.cache
+# DRF / Cache
+/backend/*.token
+/backend/*.cache
 
 # PostgreSQL
-*.sql
-*.psql
-pgdata/
-postgres-data/
+/backend/*.sql
+/backend/*.psql
+/backend/pgdata/
+/backend/postgres-data/
+
+# ======================
+# Coverage / Testing
+# ======================
+/coverage/
