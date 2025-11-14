@@ -19,6 +19,7 @@ const Footer: React.FC = () => {
 export default Footer;
 
 const MainFooter = () => {
+  const 
   return (
     <>
       <div className="bg__footer max-[368px]:!h-auto" id="footer__wrapper">

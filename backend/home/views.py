@@ -40,7 +40,7 @@ class GetHome(APIView):
         new_news_serializer = NewNewsSerializer(instance = new_news_home,many=True)
         
         # Category Events
-        category_events_homes= reversed(News.objects.order_by('-updated_at')[:4])
+        category_events_homes= reversed(Category.objects.order_by('-updated_at')[:4])
         
 
         category_events_serializer = CategoryEventsSerializer(instance = category_events_homes,many=True)

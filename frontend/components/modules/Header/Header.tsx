@@ -1,13 +1,21 @@
-'use client'
-import { useState } from "react";
+"use client";
+import { useEffect, useState } from "react";
 import BackDrop from "../Backdrop/BackDrop";
 import Link from "next/link";
+import { getHeaderLinks } from "@/redux/slices/home-slice";
+import { useDispatch, useSelector } from "react-redux";
+import { AppDispatch, RootState } from "@/redux/store";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
   const openHandler = () => setIsOpen(true);
   const closeHandler = () => setIsOpen(false);
+  const dispatch = useDispatch<AppDispatch>();
+  const headerLinks = useSelector((state: RootState) => state.home.header_menu);
+
+  useEffect(() => {
+    dispatch(getHeaderLinks());
+  }, [dispatch]);
 
   /* <!-- Start Header --> */
   return (
@@ -77,21 +85,13 @@ const Header = () => {
 
           {/* <!-- Start Sub Header --> */}
           <ul className="md:flex items-center gap-x-8 pt-5.5 hidden">
-            <li>
-              <a href="#">شرکت ها</a>
-            </li>
-            <li>
-              <a href="#">فرصت های شغلی</a>
-            </li>
-            <li>
-              <a href="#">اخبار و رویدادها</a>
-            </li>
-            <li>
-              <a href="#">درباره ما</a>
-            </li>
-            <li>
-              <a href="#">تماس با ما</a>
-            </li>
+            {headerLinks.map((headerLink: { route: string; id: number }) => {
+              return (
+                <li key={headerLink.id}>
+                  <a href="#">{headerLink.route}</a>
+                </li>
+              );
+            })}
           </ul>
           {/* <!-- End Sub Header --> */}
 
@@ -150,7 +150,10 @@ const Header = () => {
                   </svg>
                   <span> رایگان شروع کن! </span>
                 </a>
-                <Link href="/account" className="flex items-center gap-x-2 shrink-0">
+                <Link
+                  href="/account"
+                  className="flex items-center gap-x-2 shrink-0"
+                >
                   <svg className="w-5 h-5">
                     <use href="#login"></use>
                   </svg>
