@@ -3,7 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.status import HTTP_200_OK
 from rest_framework.response import Response
 from .models import Menu,Slogan,CategoryHome,Company,JobOpportunity,News,Category,FooterLinkMain,FooterLink,SocialLink
-from .serializers import MenuSerializer,SloganSerializer,CategoryHomeSerializer,PopularCompanySerializer , JobOpportunitySerializer , NewNewsSerializer
+from .serializers import MenuSerializer,SloganSerializer,CategoryHomeSerializer,PopularCompanySerializer , JobOpportunitySerializer , NewNewsSerializer,CategoryEventsSerializer
 
 
 class GetHome(APIView):
@@ -39,7 +39,13 @@ class GetHome(APIView):
         new_news_home= reversed(News.objects.order_by('-updated_at')[:3])
         new_news_serializer = NewNewsSerializer(instance = new_news_home,many=True)
         
+        # Category Events
+        category_events_homes= reversed(News.objects.order_by('-updated_at')[:4])
         
-        return Response({'home': {'menus': menu_serializer.data} , 'slogans' :slogan_serializer.data , 'categries_home' : category_home_serializer.data , 'popular_companies' : popular_company_serializer.data , 'job_opportunities' : job_opportunity_serializer.data , 'new_news' : new_news_serializer.data },status=HTTP_200_OK)
+
+        category_events_serializer = CategoryEventsSerializer(instance = category_events_homes,many=True)
+        
+        
+        return Response({'home': {'menus': menu_serializer.data} , 'slogans' :slogan_serializer.data , 'categries_home' : category_home_serializer.data , 'popular_companies' : popular_company_serializer.data , 'job_opportunities' : job_opportunity_serializer.data , 'new_news' : new_news_serializer.data , 'category_events' :  category_events_serializer.data},status=HTTP_200_OK)
 
     

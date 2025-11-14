@@ -4,7 +4,20 @@ import EventItem from "../EventItem/EventItem";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-const Events: React.FC = () => {
+type CategoryEventsType = {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  country: string;
+  city: string;
+  created_at: string;
+};
+type Prop = {
+  categoryEvents: CategoryEventsType[];
+};
+
+const Events: React.FC<Prop> = ({ categoryEvents }: Prop) => {
   return (
     <>
       <section className="container max-md:pb-20 pb-25">
@@ -26,34 +39,18 @@ const Events: React.FC = () => {
         {/* <!-- Events Body --> */}
         <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-6">
           {/* <!-- Event Card --> */}
-          <EventItem
-            image="/assets/images/events/digikala.png"
-            title="بوت کمپ برنامه نویسی دیجی کالا"
-            location="تهران، ایران"
-            date="29 بهمن"
-            description="در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت امکان استخدام در دیجی‌کالا را خواهید داشت"
-          />
-          <EventItem
-            image="/assets/images/events/qazal.png"
-            title="سکوی پرتاب غزال"
-            location="تهران، ایران"
-            date="27 دی"
-            description="سکوی پرتاب غزال، 27 دی ماه سال جاری با هدف شناسایی تیم‌ها و سرمایه‌گذاری بر استارتاپ‌های سازنده بازی های رایانه ای برگزار خواهد شد."
-          />
-          <EventItem
-            image="/assets/images/events/sako.png"
-            title="سکوی پرتاب قزوین"
-            location="قزوین، ایران"
-            date="24 آبان"
-            description="ویداد تخصصی سرمایه‌گذاری سکوی پرتاب قزوین با هدف شناسایی تیم‌ها و سرمایه‌گذاری بر استارتاپ‌های این استان ۲۴ آبان ماه سال جاری در پارک علم و فناوری قزوین برگزار می‌شود."
-          />
-          <EventItem
-            image="/assets/images/events/job.png"
-            title="فراخوان جذب ایده و استارتاپ"
-            location="تهران، ایران"
-            date="22 شهریور"
-            description="در حاشیه همایش معدن‌کاری دیجیتال 1401، خانه خلاق و نوآوری دنیای اقتصاد با همکاری مجموعه 100استارت‌آپ، برای ایده‌ها و استارتاپ‌های حوزه معدن جذب سرمایه می‌کند."
-          />
+          {categoryEvents.map((category: CategoryEventsType) => {
+            return (
+              <EventItem
+                key={category.id}
+                image={"http://127.0.0.1:8000" + category.image}
+                title={category.title}
+                location={`${category.city}، ${category.country}`}
+                date={category.created_at}
+                description={category.description}
+              />
+            );
+          })}
         </div>
         <Swiper
           className="sm:hidden rounded-3xl"
@@ -61,44 +58,19 @@ const Events: React.FC = () => {
           spaceBetween={30}
           id="swiper__event"
         >
-          <SwiperSlide>
-            <EventItem
-              image="/assets/images/events/digikala.png"
-              title="بوت کمپ برنامه نویسی دیجی کالا"
-              location="تهران، ایران"
-              date="29 بهمن"
-              description="در این دوره شما بر اساس سرفصل‌های تعیین شده توسط اساتید منتخب دیجی‌کالا، بوژان و کوئرا آموزش می‌بینید و در نهایت امکان استخدام در دیجی‌کالا را خواهید داشت"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <EventItem
-              image="/assets/images/events/qazal.png"
-              title="سکوی پرتاب غزال"
-              location="تهران، ایران"
-              date="27 دی"
-              description="سکوی پرتاب غزال، 27 دی ماه سال جاری با هدف شناسایی تیم‌ها و سرمایه‌گذاری بر استارتاپ‌های سازنده بازی های رایانه ای برگزار خواهد شد."
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <EventItem
-              image="/assets/images/events/sako.png"
-              title="سکوی پرتاب قزوین"
-              location="قزوین، ایران"
-              date="24 آبان"
-              description="ویداد تخصصی سرمایه‌گذاری سکوی پرتاب قزوین با هدف شناسایی تیم‌ها و سرمایه‌گذاری بر استارتاپ‌های این استان ۲۴ آبان ماه سال جاری در پارک علم و فناوری قزوین برگزار می‌شود."
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <EventItem
-              image="/assets/images/events/job.png"
-              title="فراخوان جذب ایده و استارتاپ"
-              location="تهران، ایران"
-              date="22 شهریور"
-              description="در حاشیه همایش معدن‌کاری دیجیتال 1401، خانه خلاق و نوآوری دنیای اقتصاد با همکاری مجموعه 100استارت‌آپ، برای ایده‌ها و استارتاپ‌های حوزه معدن جذب سرمایه می‌کند."
-            />
-          </SwiperSlide>
+          {categoryEvents.map((category: CategoryEventsType) => {
+            return (
+              <SwiperSlide key={category.id}>
+                <EventItem
+                  image={"http://127.0.0.1:8000" + category.image}
+                  title={category.title}
+                  location={`${category.city}، ${category.country}`}
+                  date={category.created_at}
+                  description={category.description}
+                />
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </section>
     </>

@@ -121,8 +121,8 @@ class Category(models.Model):
     description = models.TextField()
     country = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
-    created = models.DateField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
             
     def __str__(self):
         return self.title
@@ -135,6 +135,8 @@ class Category(models.Model):
 
 class FooterLinkMain(models.Model):
     title = models.CharField(max_length=255)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return self.title
@@ -142,6 +144,8 @@ class FooterLinkMain(models.Model):
 
 class FooterLink(models.Model):
     title = models.CharField(max_length=255)
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return self.title
@@ -151,6 +155,8 @@ class SocialLink (models.Model):
     icons = models.TextField()
     title = models.CharField(max_length=255)
     link = models.URLField()
+    created_at = models.DateField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
     
     
     def __str__(self):

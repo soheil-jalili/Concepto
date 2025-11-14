@@ -62,7 +62,7 @@ const News: React.FC<Prop> = ({ newNews }: Prop) => {
                   <div className="swiper-slide">
                     <div className="h-auto md:w-98  md:h-[418.2px] rounded-3xl bg-white shadow-1 overflow-hidden">
                       <img
-                        src="assets/images/news/car.png"
+                        src={"http://127.0.0.1:8000" + news.main_image}
                         alt="Snap Record"
                         className="w-full"
                       />
@@ -90,7 +90,11 @@ const News: React.FC<Prop> = ({ newNews }: Prop) => {
                                 alt="Farhad"
                               />
                             </div>
-                            <p className="text-sm">{news.author_name}</p>
+                            <p className="text-sm">
+                              {news.author_name !== null
+                                ? news.author_name
+                                : "ناشناس"}
+                            </p>
                           </div>
 
                           <div className="flex items-center gap-x-2">

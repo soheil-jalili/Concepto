@@ -42,4 +42,12 @@ class NewNewsSerializer(ModelSerializer):
         fields = ('id', 'title','created_at', 'company_name', 'main_image', 'short_description', 'author_name')
 
     def get_author_name(self, obj):
-        return f"{obj.author.first_name} {obj.author.last_name}"
+        if obj.author.first_name and obj.author.last_name:
+            return f"{obj.author.first_name} {obj.author.last_name}"
+        return None
+
+class CategoryEventsSerializer(ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ('id', 'image','title', 'description', 'country', 'city', 'created_at')
+

@@ -16,7 +16,10 @@ const Index: React.FC = async () => {
     popular_companies,
     job_opportunities,
     new_news,
+    category_events
   } = await response.json();
+
+
 
   return (
     <main>
@@ -44,7 +47,7 @@ const Index: React.FC = async () => {
       <News newNews={new_news} />
 
       {/* <!-- Events --> */}
-      <Events />
+      <Events categoryEvents={category_events}/>
     </main>
   );
 };
