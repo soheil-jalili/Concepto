@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.models import User
-from home.models import UserProfile,Menu,Slogan,CategoryHome,Company,JobOpportunity,News,Category,FooterLinkMain,FooterLink,SocialLink
+from home.models import UserProfile,Menu,Slogan,CategoryHome,Company,JobOpportunity,News,Category,FooterLinkMain,FooterLink
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
@@ -39,6 +39,3 @@ class FooterLinkMainAdmin(admin.ModelAdmin):
 class FooterLinkAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(SocialLink)
-class SocialLinkAdmin(admin.ModelAdmin):
-    pass

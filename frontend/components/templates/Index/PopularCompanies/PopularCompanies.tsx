@@ -6,6 +6,7 @@ type PopularCompaniesType = {
   main_image: string;
   company_logo: string;
   company_name: string;
+  company_description: string;
   company_short_description: string;
   new_inventors: number;
   new_contact: number;
@@ -72,7 +73,7 @@ const PopularCompanies: React.FC<Prop> = ({ popularCompanies }: Prop) => {
                         "http://127.0.0.1:8000" + popularCompany.company_logo
                       }
                       companyName={popularCompany.company_name}
-                      companyDescription="تجارت الکترونیک"
+                      companyDescription={popularCompany.company_description}
                       newInventorsNumber="21.394"
                       newContact={popularCompany.new_contact}
                       description={popularCompany.company_short_description}

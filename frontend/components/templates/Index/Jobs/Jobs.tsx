@@ -7,9 +7,9 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-type JobOpportunityType = {
+export type JobOpportunityType = {
   id: number;
-  companyName: string;
+  company_name: string;
   image: string;
   opportunity: number;
 };
@@ -74,7 +74,7 @@ const Jobs: React.FC<Prop> = ({ jobOpportunities }: Prop) => {
             return (
               <SwiperSlide key={jobOpportunity.id}>
                 <JobItem
-                  companyName={jobOpportunity.companyName}
+                  company_name={jobOpportunity.company_name}
                   image={"http://127.0.0.1:8000" + jobOpportunity.image}
                   title={`${jobOpportunity.opportunity} فرصت شغلی`}
                 />

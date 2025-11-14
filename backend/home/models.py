@@ -58,6 +58,7 @@ class Company(models.Model):
     main_image = models.ImageField(upload_to='images/company/main-images/')
     company_logo = models.ImageField(upload_to='images/company/logos/')
     company_name = models.CharField(max_length=255)
+    company_description = models.CharField(max_length=255)
     company_short_description = models.CharField(max_length=255)
     new_inventors = models.FloatField(default=0)
     new_contact = models.PositiveBigIntegerField(default=0)
@@ -143,21 +144,12 @@ class FooterLinkMain(models.Model):
     
 
 class FooterLink(models.Model):
+    main_footer = models.ForeignKey(FooterLinkMain , on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
+    
     created_at = models.DateField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     def __str__(self):
         return self.title
     
-
-class SocialLink (models.Model):
-    icons = models.TextField()
-    title = models.CharField(max_length=255)
-    link = models.URLField()
-    created_at = models.DateField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    
-    
-    def __str__(self):
-        return self.title

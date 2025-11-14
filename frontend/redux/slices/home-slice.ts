@@ -9,7 +9,6 @@ const initialState = {
   isLoading: false,
   error: "",
   header_menu: [],
-  footer_main: [],
   footer_link_main: [],
 };
 
@@ -24,8 +23,7 @@ const HomeSlice = createSlice({
     builder.addCase(getHeaderLinks.fulfilled, (state, action) => {
       state.isLoading = false;
       state.header_menu = action.payload.home.menus || [];
-      // state.footer_main = action.payload.footer_main;
-      // state.footer_link_main = action.payload.footer_link_main;
+      state.footer_link_main = action.payload.footer_link_main || [];
     });
     builder.addCase(getHeaderLinks.rejected, (state, action) => {
       state.error = action.payload;

@@ -6,6 +6,7 @@ type Prop = {
 };
 
 const HeroImage: React.FC<Prop> = ({ title, shortDescription } : Prop) => {
+  
   return (
     <>
       {/* <!-- Hero Section --> */}

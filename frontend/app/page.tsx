@@ -20,7 +20,6 @@ const Index: React.FC = async () => {
   } = await response.json();
 
 
-
   return (
     <main>
       <div className="container">

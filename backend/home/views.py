@@ -2,8 +2,8 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.status import HTTP_200_OK
 from rest_framework.response import Response
-from .models import Menu,Slogan,CategoryHome,Company,JobOpportunity,News,Category,FooterLinkMain,FooterLink,SocialLink
-from .serializers import MenuSerializer,SloganSerializer,CategoryHomeSerializer,PopularCompanySerializer , JobOpportunitySerializer , NewNewsSerializer,CategoryEventsSerializer
+from .models import Menu,Slogan,CategoryHome,Company,JobOpportunity,News,Category,FooterLinkMain,FooterLink
+from .serializers import MenuSerializer,SloganSerializer,CategoryHomeSerializer,PopularCompanySerializer , JobOpportunitySerializer , NewNewsSerializer,CategoryEventsSerializer , FooterLinksMainSerializer 
 
 
 class GetHome(APIView):
@@ -42,10 +42,15 @@ class GetHome(APIView):
         # Category Events
         category_events_homes= reversed(Category.objects.order_by('-updated_at')[:4])
         
-
         category_events_serializer = CategoryEventsSerializer(instance = category_events_homes,many=True)
         
+        # Footer Link Main with related links
+        footer_links_main = FooterLinkMain.objects.order_by('updated_at')[:3]
+        footer_links_serializer = FooterLinksMainSerializer(
+            instance=footer_links_main,
+            many=True
+        )
         
-        return Response({'home': {'menus': menu_serializer.data} , 'slogans' :slogan_serializer.data , 'categries_home' : category_home_serializer.data , 'popular_companies' : popular_company_serializer.data , 'job_opportunities' : job_opportunity_serializer.data , 'new_news' : new_news_serializer.data , 'category_events' :  category_events_serializer.data},status=HTTP_200_OK)
+        return Response({'home': {'menus': menu_serializer.data} , 'slogans' :slogan_serializer.data , 'categries_home' : category_home_serializer.data , 'popular_companies' : popular_company_serializer.data , 'job_opportunities' : job_opportunity_serializer.data , 'new_news' : new_news_serializer.data , 'category_events' :  category_events_serializer.data , 'footer_link_main' : footer_links_serializer.data},status=HTTP_200_OK)
 
     

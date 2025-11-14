@@ -67,12 +67,12 @@ const News: React.FC<Prop> = ({ newNews }: Prop) => {
                         className="w-full"
                       />
 
-                      <div className="px-4 flex flex-col gap-y-4 mt-4">
+                      <div className="px-4 flex flex-col mt-2 gap-y-2 md:gap-y-4 md:mt-4">
                         <p className="text-xs text-placeholder">
                           {news.company_name}
                         </p>
 
-                        <h6 className="text-gray-7 line-clamp-2 max-h-12.5 font-IRANSansX-Bold text-sm md:text-base">
+                        <h6 className="text-gray-7 line-clamp-2 h-10 font-IRANSansX-Bold text-sm md:text-base">
                           {news.title}
                         </h6>
 

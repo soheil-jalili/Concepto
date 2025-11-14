@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer,SerializerMethodField
-from .models import Menu,Slogan,CategoryHome,Company,JobOpportunity,News,Category,FooterLinkMain,FooterLink,SocialLink
+from .models import Menu,Slogan,CategoryHome,Company,JobOpportunity,News,Category,FooterLinkMain,FooterLink
 
 class MenuSerializer(ModelSerializer):
     class Meta:
@@ -51,3 +51,16 @@ class CategoryEventsSerializer(ModelSerializer):
         model = Category
         fields = ('id', 'image','title', 'description', 'country', 'city', 'created_at')
 
+
+
+class FooterLinksSerializer(ModelSerializer):
+    class Meta:
+        model = FooterLink
+        fields = ('id', 'title')
+
+class FooterLinksMainSerializer(ModelSerializer):
+    links = FooterLinksSerializer(source='footerlink_set', many=True)  
+
+    class Meta:
+        model = FooterLinkMain
+        fields = ('id', 'title', 'links')
