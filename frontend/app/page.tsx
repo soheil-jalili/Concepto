@@ -8,7 +8,10 @@ import PopularCompanies from "@/components/templates/Index/PopularCompanies/Popu
 import Statistics from "@/components/templates/Index/Statistics/Statistics";
 import React from "react";
 
-const Index: React.FC = () => {
+const Index: React.FC = async () => {
+  // const response = await fetch('')
+  // const data = await response.json()
+
   return (
     <main>
       <div className="container">

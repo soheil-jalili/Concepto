@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib.auth.models import User
 from home.models import UserProfile,Menu,Slogan,CategoryHome,Company,JobOpportunity,News,Category,FooterLinkMain,FooterLink,SocialLink
 
 @admin.register(UserProfile)
@@ -19,9 +20,15 @@ class CompanyAdmin(admin.ModelAdmin):
 @admin.register(JobOpportunity)
 class JobOpportunityAdmin(admin.ModelAdmin):
     pass
-@admin.register(News)
+
 class NewsAdmin(admin.ModelAdmin):
-    pass
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if db_field.name == "author":
+            kwargs["queryset"] = User.objects.filter(userprofile__role="author")
+        return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+admin.site.register(News, NewsAdmin)
+
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     pass

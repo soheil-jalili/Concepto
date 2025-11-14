@@ -18,16 +18,18 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     role = models.CharField(max_length=20, choices=ROLE_CHOICES, blank=True, null=True) 
     
-
+    def __str__(self):
+        return self.user.username if self.user else "No user"
+    
         
 class Menu(models.Model):
-    name = models.CharField(max_length=255)
+    route = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     
     def __str__(self):
-        return self.name
+        return self.route
     
     
 class Slogan(models.Model):
@@ -43,7 +45,6 @@ class Slogan(models.Model):
 class CategoryHome(models.Model):
     title = models.CharField(max_length=255)
     image = models.ImageField(upload_to='images/home/category-home/')
-    slug = models.SlugField(unique=True , blank=True , null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -51,9 +52,6 @@ class CategoryHome(models.Model):
     def __str__(self):
         return self.title
     
-    def save(self, *args , **kwargs):
-        self.slug = slugify(self.title)
-        return super().save(*args , **kwargs)
     
 
 class Company(models.Model):
@@ -63,7 +61,7 @@ class Company(models.Model):
     company_short_description = models.CharField(max_length=255)
     new_inventors = models.FloatField(default=0)
     new_contact = models.PositiveBigIntegerField(default=0)
-    description = models.TextField()
+    description = models.TextField(blank=True,null=True)
     country = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
     rate = models.PositiveIntegerField(
@@ -72,14 +70,14 @@ class Company(models.Model):
             MaxValueValidator(5)
         ]
     )
-    slug = models.SlugField(unique=True , blank=True , null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.company_name)
-        return super().save(*args, **kwargs)
-        
+       
+    
+    class Meta:
+        verbose_name = 'company'
+        verbose_name_plural = 'companies'
     
     def __str__(self):
         return self.company_name
@@ -88,14 +86,9 @@ class JobOpportunity(models.Model):
     company_name = models.CharField(max_length=255)
     image = models.ImageField(upload_to='images/job_opportunity/company/')
     opportunity = models.PositiveIntegerField()
-    slug = models.SlugField(blank=True , null=True , unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
-    
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.company_name)
-        return super().save(*args, **kwargs)
     
     def __str__(self):
         return self.company_name
@@ -108,15 +101,16 @@ class News(models.Model):
     title = models.CharField(max_length=255)
     short_description = models.CharField(max_length=255)
     author = models.ForeignKey(User , on_delete=models.CASCADE)
-    slug = models.SlugField(blank=True , null=True , unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        return super().save(*args, **kwargs)
+    class Meta:
+        verbose_name= "news"
+        verbose_name_plural = "news"
+
     
+
     def __str__(self):
         return self.company_name
     
@@ -127,19 +121,11 @@ class Category(models.Model):
     description = models.TextField()
     country = models.CharField(max_length=255)
     city = models.CharField(max_length=255)
-    slug = models.SlugField()
     created = models.DateField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
             
     def __str__(self):
         return self.title
-    
-    
-      
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        return super().save(*args, **kwargs)
-    
     
     
     class Meta:
@@ -156,12 +142,6 @@ class FooterLinkMain(models.Model):
 
 class FooterLink(models.Model):
     title = models.CharField(max_length=255)
-    slug = models.SlugField()
-    
-    
-    def save(self, *args , **kwargs):
-        self.slug = slugify(self.title)
-        return super().save(*args , **kwargs)
     
     def __str__(self):
         return self.title
