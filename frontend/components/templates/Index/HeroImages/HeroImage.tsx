@@ -47,12 +47,12 @@ const HeroImage: React.FC<Prop> = ({ title, shortDescription } : Prop) => {
           <img
             src="assets/images/hero/3.png"
             alt="Hero 3"
-            className="hidden w-[287px] absolute right-0 top-0 lg:block lg:-right-[2rem] lg:-top-[8rem] xl:-top-[7rem] xl:-right-[7rem]"
+            className="hidden w-[287px] absolute right-0 top-0 lg:block lg:-right-8 lg:-top-32 xl:-top-28 xl:-right-28"
           />
           <img
             src="assets/images/hero/1.png"
             alt="Hero 1"
-            className="absolute -bottom-[8rem] hidden xl:block xl:-left-[5rem] 2xl:-left-[7rem] max-w-[447px]"
+            className="absolute -bottom-32 hidden xl:block xl:-left-20 2xl:-left-28 max-w-[447px]"
           />
           <img
             src="assets/images/hero/hero_mobile.png"
@@ -60,6 +60,8 @@ const HeroImage: React.FC<Prop> = ({ title, shortDescription } : Prop) => {
             className="w-full h-auto object-cover max-[460px]:block hidden"
           />
         </div>
+
+        
       </section>
     </>
   );

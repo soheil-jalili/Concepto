@@ -42,7 +42,7 @@ const Header = () => {
 
             <form
               action="#"
-              className="order-1 md:order-none max-[224px]:gap-x-1 lg:order-none w-full md:w-[439px] h-12 bg-search_box rounded-xl flex items-center gap-x-2.5 px-2"
+              className="order-1 md:order-0 max-[224px]:gap-x-1 lg:order-0 w-full md:w-[439px] h-12 bg-search_box rounded-xl flex items-center gap-x-2.5 px-2"
             >
               <button className="cursor-pointer">
                 <svg className="w-6 h-6 text-placeholder" id="search__icon">

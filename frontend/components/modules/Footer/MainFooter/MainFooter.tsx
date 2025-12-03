@@ -14,7 +14,7 @@ const MainFooter = () => {
 
   return (
     <>
-      <div className="bg__footer max-[368px]:!h-auto" id="footer__wrapper">
+      <div className="bg__footer max-[368px]:h-auto!" id="footer__wrapper">
         <div className="container min-[2900px]:h-[300px]">
           <div className="grid grid-cols-1 xl:grid-cols-[664px_1fr] gap-x-20">
             {/* <!-- Right Section Footer --> */}
@@ -64,7 +64,11 @@ const MainFooter = () => {
                         </h6>
                         <div className="inline-flex gap-y-2 flex-col text-xs *:font-IRANSansX-Medium md:*:text-sm">
                           {footer.links.map((sub_footer: LinksType) => {
-                            return <Link href="/" key={sub_footer.id}>{sub_footer.title}</Link>;
+                            return (
+                              <Link href="/" key={sub_footer.id}>
+                                {sub_footer.title}
+                              </Link>
+                            );
                           })}
                         </div>
                       </div>
@@ -95,7 +99,7 @@ const MainFooter = () => {
               {/* <!-- Email News --> */}
               <form
                 action="#"
-                className="text-sm hidden md:flex md:text-base md:mt-4 bg-white h-13 rounded-lg md:rounded-[50px] justify-between items-center gap-x-4 pr-3 pl-[6px] md:max-w-[416px] xl:max-w-none"
+                className="text-sm hidden md:flex md:text-base md:mt-4 bg-white h-13 rounded-lg md:rounded-[50px] justify-between items-center gap-x-4 pr-3 pl-1.5 md:max-w-[416px] xl:max-w-none"
                 id="email__news"
               >
                 <input
@@ -150,7 +154,7 @@ const MainFooter = () => {
                     ما را در شبکه های اجتماعی دنبال کنید:
                   </p>
 
-                  <div className="flex items-center gap-x-8 max-[247px]:gap-x-4 max-[330px]:!justify-between">
+                  <div className="flex items-center gap-x-8 max-[247px]:gap-x-4 max-[330px]:justify-between!">
                     <a href="#">
                       <svg className="w-6 h-6">
                         <use href="#twitter"></use>

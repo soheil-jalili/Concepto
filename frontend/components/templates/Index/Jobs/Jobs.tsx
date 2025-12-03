@@ -1,11 +1,5 @@
-"use client";
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import JobItem from "../JobItem/JobItem";
-
-import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+import JobItems from "./JobItems/JobItems";
 
 export type JobOpportunityType = {
   id: number;
@@ -36,53 +30,7 @@ const Jobs: React.FC<Prop> = ({ jobOpportunities }: Prop) => {
 
       {/* <!-- Job Body --> */}
       <div className="job__swiper relative">
-        <Swiper
-          className="rounded-3xl"
-          id="job__swiper"
-          modules={[Navigation]}
-          spaceBetween={20}
-          slidesPerView={1}
-          navigation={{
-            nextEl: ".slide__next",
-            prevEl: ".slide__prev",
-          }}
-          breakpoints={{
-            450: {
-              spaceBetween: 45,
-              slidesPerView: 2,
-            },
-
-            600: {
-              spaceBetween: 25,
-              slidesPerView: 2.5,
-            },
-            750: {
-              spaceBetween: 25,
-              slidesPerView: 3,
-            },
-            900: {
-              spaceBetween: 25,
-              slidesPerView: 3.5,
-            },
-            1250: {
-              spaceBetween: 25,
-              slidesPerView: 5,
-            },
-          }}
-        >
-          {jobOpportunities.map((jobOpportunity: JobOpportunityType) => {
-            return (
-              <SwiperSlide key={jobOpportunity.id}>
-                <JobItem
-                  company_name={jobOpportunity.company_name}
-                  image={"http://127.0.0.1:8000" + jobOpportunity.image}
-                  title={`${jobOpportunity.opportunity} فرصت شغلی`}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-
+        <JobItems jobOpportunities={jobOpportunities} />
         <div className="slide__prev max-md:hidden job-button-next w-12.5 h-12.5 rounded-full flex items-center justify-center bg-white shadow-prev-next cursor-pointer">
           <svg className="w-6 h-6 text-black">
             <use href="#chevron-right"></use>

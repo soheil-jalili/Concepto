@@ -49,13 +49,13 @@ const PopularCompaniesCart: React.FC<PopularCompaniesCartProps> = ({
       </div>
       <div className="px-4 flex flex-col gap-y-3.5 ">
         <div className="flex items-center gap-x-2.5 *:p-2 max-[247px]:flex-wrap max-[247px]:justify-center max-[247px]:gap-4">
-          <div className="rounded-[8px] border border-gray-1 flex gap-y-2 flex-col">
+          <div className="rounded-lg border border-gray-1 flex gap-y-2 flex-col">
             <p className="text-xs">سرمایه گذاران جدید</p>
             <p className="text-primary font-IRANSansX-Bold text-sm">
               {newInventorsNumber}
             </p>
           </div>
-          <div className="rounded-[8px] border border-gray-1 flex gap-y-2 flex-col">
+          <div className="rounded-lg border border-gray-1 flex gap-y-2 flex-col">
             <p className="text-xs">مخاطبین جدید</p>
             <p className="text-primary font-IRANSansX-Bold text-sm">
               {newContact}

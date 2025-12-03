@@ -1,10 +1,8 @@
-"use client";
 import React from "react";
 import EventItem from "../EventItem/EventItem";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import EventsItem from "./EventsItem/EventsItem";
 
-type CategoryEventsType = {
+export type CategoryEventsType = {
   id: number;
   image: string;
   title: string;
@@ -52,26 +50,7 @@ const Events: React.FC<Prop> = ({ categoryEvents }: Prop) => {
             );
           })}
         </div>
-        <Swiper
-          className="sm:hidden rounded-3xl"
-          grabCursor
-          spaceBetween={30}
-          id="swiper__event"
-        >
-          {categoryEvents.map((category: CategoryEventsType) => {
-            return (
-              <SwiperSlide key={category.id}>
-                <EventItem
-                  image={"http://127.0.0.1:8000" + category.image}
-                  title={category.title}
-                  location={`${category.city}، ${category.country}`}
-                  date={category.created_at}
-                  description={category.description}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        <EventsItem categoryEvents={categoryEvents} />
       </section>
     </>
   );
