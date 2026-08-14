@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/modules/Header/Header";
-import Footer from "@/components/modules/Footer/Footer";
 import ReduxProvider from "@/components/redux/Provider";
 
 export const metadata: Metadata = {
@@ -19,7 +17,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-return (
+  return (
     <html lang="fa" dir="rtl">
       <body>
         <svg className="hidden">
@@ -433,11 +431,7 @@ return (
           </symbol>
         </svg>
         {/* <div id="root"></div> */}
-        <ReduxProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ReduxProvider>
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );

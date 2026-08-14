@@ -1,3 +1,5 @@
+import Footer from "@/components/modules/Footer/Footer";
+import Header from "@/components/modules/Header/Header";
 import Categories from "@/components/templates/Index/Categories/Categories";
 import Events from "@/components/templates/Index/Events/Events";
 import Features from "@/components/templates/Index/Features/Features";
@@ -16,38 +18,42 @@ const Index: React.FC = async () => {
     popular_companies,
     job_opportunities,
     new_news,
-    category_events
+    category_events,
   } = await response.json();
 
-
   return (
-    <main>
-      <div className="container">
-        {/* <!-- Hero Images --> */}
-        <HeroImage
-          title={slogans.title}
-          shortDescription={slogans.short_description}
-        />
-        {/* <!-- Statistics --> */}
-        <Statistics />
-        {/* <!-- Features --> */}
-        <Features />
-        {/* <!-- Categories --> */}
-        <Categories categories={categries_home} />
-      </div>
+    <>
+      <Header />
 
-      {/* <!-- Popular Companies --> */}
-      <PopularCompanies popularCompanies={popular_companies} />
+      <main>
+        <div className="container">
+          {/* <!-- Hero Images --> */}
+          <HeroImage
+            title={slogans.title}
+            shortDescription={slogans.short_description}
+          />
+          {/* <!-- Statistics --> */}
+          <Statistics />
+          {/* <!-- Features --> */}
+          <Features />
+          {/* <!-- Categories --> */}
+          <Categories categories={categries_home} />
+        </div>
 
-      {/* <!-- Jobs --> */}
-      <Jobs jobOpportunities={job_opportunities} />
+        {/* <!-- Popular Companies --> */}
+        <PopularCompanies popularCompanies={popular_companies} />
 
-      {/* <!-- News --> */}
-      <News newNews={new_news} />
+        {/* <!-- Jobs --> */}
+        <Jobs jobOpportunities={job_opportunities} />
 
-      {/* <!-- Events --> */}
-      <Events categoryEvents={category_events}/>
-    </main>
+        {/* <!-- News --> */}
+        <News newNews={new_news} />
+
+        {/* <!-- Events --> */}
+        <Events categoryEvents={category_events} />
+      </main>
+      <Footer />
+    </>
   );
 };
 
