@@ -1,13 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import BackDrop from "../Backdrop/BackDrop";
 import Link from "next/link";
 import { getHeaderLinks } from "@/redux/slices/home-slice";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/redux/store";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [searchInput, setSearchInput] = useState<string>("");
   const openHandler = () => setIsOpen(true);
   const closeHandler = () => setIsOpen(false);
   const dispatch = useDispatch<AppDispatch>();
@@ -16,6 +19,14 @@ const Header = () => {
   useEffect(() => {
     dispatch(getHeaderLinks());
   }, [dispatch]);
+
+  const searchInputHandler = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setSearchInput(event.target.value);
+
+  const formHandler = (e: React.FormEvent) => {
+    e.preventDefault();
+    router.push(`/search?search=${searchInput}`);
+  };
 
   /* <!-- Start Header --> */
   return (
@@ -41,7 +52,7 @@ const Header = () => {
             </Link>
 
             <form
-              action="#"
+              onSubmit={formHandler}
               className="order-1 md:order-0 max-[224px]:gap-x-1 lg:order-0 w-full md:w-[439px] h-12 bg-search_box rounded-xl flex items-center gap-x-2.5 px-2"
             >
               <button className="cursor-pointer">
@@ -54,6 +65,8 @@ const Header = () => {
                 placeholder="جستجو کسب‌ و کار"
                 className="w-full outline-none placeholder:text-placeholder"
                 id="search__input"
+                value={searchInput}
+                onChange={searchInputHandler}
               />
             </form>
 
